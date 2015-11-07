@@ -1,0 +1,6 @@
+- flash.each do |name, msg|
+  - if msg.is_a?(String)
+    - if name.to_s == 'notice'
+      div data-alert="" class="alert-box success"
+        = msg
+        a.close href="" ×
