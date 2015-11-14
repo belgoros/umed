@@ -1,0 +1,22 @@
+- if @themes.empty?
+  h1 Pas de thèmes trouvés
+- else
+  h1 Liste des themes
+
+  table
+    thead
+      tr
+        th Thème
+        th Matière
+        th
+        th
+        th
+
+    tbody
+      - @themes.each do |theme|
+        tr
+          td = theme.name
+          td = theme.subject.name
+          td = link_to 'Questions', theme
+          td = link_to 'Edit', edit_theme_path(theme)
+          td = link_to 'Destroy', theme, data: {:confirm => 'Are you sure?'}, :method => :delete

@@ -1,0 +1,22 @@
+h3
+  strong #{@theme.subject.name} - #{@theme.name} questions
+- if @theme.questions.empty?
+  h4 Aucune question trouvée
+- else
+  table
+    thead
+      tr
+        th Question
+        th
+        th
+        th
+    tbody
+      - @theme.questions.each do |question|
+        tr
+          td = question.text
+          td = link_to 'Réponses', question
+          td = link_to 'Edit', edit_question_path(question)
+          td = link_to 'Destroy', question, data: {:confirm => 'Are you sure?'}, :method => :delete
+= link_to 'Ajouter une question', new_theme_question_path(@theme)
+'|
+= link_to 'Retour aux Thèmes', @theme.subject

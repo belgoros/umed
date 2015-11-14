@@ -7,10 +7,11 @@ html
     meta content="width=device-width, initial-scale=1" name="viewport" /
     = stylesheet_link_tag    "application"
     = javascript_include_tag "vendor/modernizr"
-    = javascript_include_tag "application", 'data-turbolinks-track' => true
+    = javascript_include_tag "application"
     = csrf_meta_tags
     = render 'layouts/shim'
   body
+    = render 'layouts/navbar'
     .row
-      = render 'layouts/messages'
-      = yield
+        = render 'layouts/messages'
+        = yield

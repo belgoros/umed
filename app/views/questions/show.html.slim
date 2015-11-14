@@ -1,0 +1,22 @@
+h3
+  strong #{@question.theme.subject.name} - #{@question.theme.name} answers
+- if @question.answers.empty?
+  h4 No answers found for this question
+- else
+  table
+    thead
+      tr
+        th Text
+        th Correct
+        th
+        th
+    tbody
+      - @question.answers.each do |answer|
+        tr
+          td = answer.text
+          td = boolean_to_text(answer.correct?)
+          td = link_to 'Edit', edit_answer_path(answer)
+          td = link_to 'Destroy', answer, data: {:confirm => 'Are you sure?'}, :method => :delete
+= link_to 'New Answer', new_question_answer_path(@question)
+'|
+= link_to 'Back To Questions', @question.theme

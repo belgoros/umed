@@ -1,0 +1,8 @@
+h3
+  strong Question: #{@answer.question.text} - réponse: #{@answer.text}
+  p Description
+  p = @answer.text
+  br
+= link_to 'Edit', edit_answer_path(@answer)
+'|
+= link_to 'Retour aux questions', questions_path

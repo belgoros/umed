@@ -1,6 +1,5 @@
 - flash.each do |name, msg|
   - if msg.is_a?(String)
-    - if name.to_s == 'notice'
-      div data-alert="" class="alert-box success"
-        = msg
-        a.close href="" ×
+    div data-alert="" class="alert-box #{name.to_s == 'notice' ? 'success' : 'alert'}"
+      = msg
+      a.close href="" ×

@@ -1,0 +1,22 @@
+- if @questions.empty?
+  h1 Pas de questions trouvées
+- else
+  h1 Liste des questions
+
+  table
+    thead
+      tr
+        th Question
+        th Thème
+        th
+        th
+        th
+
+    tbody
+      - @questions.each do |question|
+        tr
+          td = question.text
+          td = question.theme.name
+          td = link_to 'Réponses', question
+          td = link_to 'Edit', edit_question_path(question)
+          td = link_to 'Destroy', question, data: {:confirm => 'Are you sure?'}, :method => :delete

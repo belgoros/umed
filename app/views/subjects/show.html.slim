@@ -1,9 +1,23 @@
-p#notice = notice
+h3
+  strong #{@subject.name} thèmes
+- if @subject.themes.empty?
+  h4 Aucun thème trouvé
+- else
+  table
+    thead
+      tr
+        th Thème
+        th
+        th
+        th
+    tbody
+      - @subject.themes.each do |theme|
+        tr
+          td = theme.name
+          td = link_to 'Questions', theme
+          td = link_to 'Edit', edit_theme_path(theme)
+          td = link_to 'Destroy', theme, data: {:confirm => 'Are you sure?'}, :method => :delete
 
-p
-  strong Name:
-  = @subject.name
-
-= link_to 'Edit', edit_subject_path(@subject)
+= link_to 'Ajouter', new_subject_theme_path(@subject)
 '|
-= link_to 'Back', subjects_path
+= link_to 'Retour aux matières', subjects_path
