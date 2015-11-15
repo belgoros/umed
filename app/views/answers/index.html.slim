@@ -1,7 +1,9 @@
+= provide(:title, t('.title'))
+
 - if @answers.empty?
-  h1 Aucune réponse trouvée
+  h1 = t('.empty')
 - else
-  h1 Liste des réponses
+  h1 = t('.title')
 
   table
     thead

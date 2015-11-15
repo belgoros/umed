@@ -1,5 +1,42 @@
 fr:
   base_title: "U-Med"
+
+  subjects:
+    index:
+      title: 'Liste des matières'
+      empty: 'Aucune matière trouvée'
+    new:
+      title: 'Nouvelle matière'
+    edit:
+      title: 'Modifier la matière'
+  themes:
+    index:
+      title: 'Liste des thèmes'
+      empty: 'Aucun thème trouvé'
+    new:
+      title: "Nouveau thème"
+    edit:
+      title: 'Modifier le thème'
+  questions:
+    index:
+      title: 'Liste des questions'
+      empty: 'Aucune question trouvée'
+    new:
+      title: 'Nouvelle question'
+    edit:
+      title: 'Modifier la question'
+  answers:
+    index:
+      title: 'Liste des réponses'
+      empty: 'Aucune réponse trouvée'
+    new:
+      title: 'Nouvelle réponse'
+    edit:
+      title: 'Modifier la réponse'
+
+  simple_form:
+    error_notification:
+      default_message: "Veuillez corriger les erreurs ci-dessous:"
   devise:
     confirmations:
       confirmed: 'Votre compte a été confirmé avec succès.'
@@ -11,7 +48,6 @@ fr:
       invalid: "%{authentication_keys} ou mot de passe incorrect."
       locked: "Votre compte est verrouillé."
       last_attempt: "Vous avez droit à une tentative avant que votre compte ne soit verrouillé."
-      locked: "Votre compte est verrouillé."
       not_found_in_database: "%{authentication_keys} ou mot de passe incorrect."
       timeout: "Votre session est expirée. Veuillez vous reconnecter pour continuer."
       unauthenticated: "Vous devez vous connecter ou vous inscrire pour continuer."
@@ -271,41 +307,19 @@ fr:
       <<: *errors
   activerecord:
     models:
-      admin: Administrateur
-      client: Client
-      account: Compte
-      operation: Opération
+      subject: Matière
+      theme: Thème
+      question: Question
+      answer: Réponse
     attributes:
-      admin:
-        password: "Mot de passe"
-        password_digest: "Mot de passe"
-        email: "E-mail"
-        firstname: "Prénom"
-        lastname: "Nom"
-      client:
-        firstname: "Prénom"
-        lastname: "Nom"
-        street: "Rue"
-        house: "Numéro"
-        box: "Boîte"
-        zipcode: "Code postal"
-        city: "Ville"
-        country: "Pays"
-        phone: "Téléphone"
-      operation:
-        withdrawal: "Retrait"
-        deposit: "Dépôt"
-        remission: "Remise"
-        value_date: "Date"
-        close_date: "Date de calcul"
-        operation_type: "Type d'opération"
-        duration: "Durée"
-        rate: "Taux"
-        interests: "Intérêts"
-        sum: "Somme"
-        withholding: "Précompte"
-        total: "Total"
-      account:
-        acc_number: "Numéro de compte"
+      subject:
+        name: 'Nom'
+      theme:
+        name: 'Nom'
+      question:
+        text: 'Text'
+      answer:
+        text: 'Text'
+        correct: 'Correct'
     errors:
       <<: *errors

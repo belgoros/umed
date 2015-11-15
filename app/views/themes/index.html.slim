@@ -1,7 +1,9 @@
+= provide(:title, t('.title'))
+
 - if @themes.empty?
-  h1 Pas de thèmes trouvés
+  h1 = t('.empty')
 - else
-  h1 Liste des themes
+  h1 = t('.title')
 
   table
     thead

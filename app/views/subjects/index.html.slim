@@ -1,7 +1,9 @@
+= provide(:title, t('.title'))
+
 - if @subjects.empty?
-  h1 Aucune matière trouvée
+  h1 = t('.empty')
 - else
-  h1 Liste des matières
+  h1 = t('.title')
 
   table
     thead
