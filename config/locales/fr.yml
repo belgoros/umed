@@ -258,6 +258,7 @@ fr:
   errors: &errors
     format: "%{attribute} %{message}"
     messages: &errors_messages
+      access_denied: "Oups, vous n'avez pas le droit d'accéder à cette page."
       inclusion: "n'est pas inclus(e) dans la liste"
       exclusion: "n'est pas disponible"
       invalid: "n'est pas valide"
