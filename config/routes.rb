@@ -13,4 +13,5 @@ Rails.application.routes.draw do
     resources :themes,    only: :index
     resources :questions, only: :index
     resources :answers,   only: :index
+    resources :levels
 end
