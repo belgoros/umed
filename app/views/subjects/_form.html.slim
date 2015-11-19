@@ -3,6 +3,7 @@
 
   .form-inputs
     = f.input :name
+    = f.association :level, collection: Level.order(:name), label_method: :name, values_method: :id, prompt: "Choose a Level"
 
   .form-actions
     = f.button :submit
