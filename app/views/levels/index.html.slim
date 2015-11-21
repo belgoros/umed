@@ -1,21 +1,23 @@
-h1 Listing levels
+= provide(:title, t('.title'))
+- if @levels.empty?
+  h1 = t('.empty')
+- else
+  h1 = t('.title')
 
-table
-  thead
-    tr
-      th Name
-      th
-      th
-      th
-
-  tbody
-    - @levels.each do |level|
+  table.responsive
+    thead
       tr
-        td = level.name
-        td = link_to 'Show', level
-        td = link_to 'Edit', edit_level_path(level)
-        td = link_to 'Destroy', level, data: {:confirm => 'Are you sure?'}, :method => :delete
+        th = t('.name')
+        th
+        th
+
+    tbody
+      - @levels.each do |level|
+        tr
+          td = level.name
+          td = link_to t('links.edit'), edit_level_path(level)
+          td = link_to t('links.delete'), level, data: {:confirm => 'Are you sure?'}, :method => :delete
 
 br
 
-= link_to 'New Level', new_level_path
+= link_to t('links.new'), new_level_path

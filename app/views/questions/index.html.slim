@@ -5,7 +5,7 @@
 - else
   h1 = t('.title')
 
-  table
+  table.responsive
     thead
       tr
         th Question
@@ -19,6 +19,6 @@
         tr
           td = question.text
           td = question.theme.name
-          td = link_to 'Réponses', question
-          td = link_to 'Edit', edit_question_path(question)
-          td = link_to 'Destroy', question, data: {:confirm => 'Are you sure?'}, :method => :delete
+          td = link_to t('links.answers'), question
+          td = link_to t('links.edit'), edit_question_path(question)
+          td = link_to t('links.delete'), question, data: {:confirm => 'Are you sure?'}, :method => :delete

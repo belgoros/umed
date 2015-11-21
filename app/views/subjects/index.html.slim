@@ -5,11 +5,11 @@
 - else
   h1 = t('.title')
 
-  table
+  table.responsive
     thead
       tr
-        th Matière
-        th Level
+        th = t('.name')
+        th = t('.level')
         th
         th
         th
@@ -19,10 +19,10 @@
         tr
           td = subject.name
           td = subject.level.name
-          td = link_to 'Thèmes', subject
-          td = link_to 'Edit', edit_subject_path(subject)
-          td = link_to 'Destroy', subject, data: {:confirm => 'Are you sure?'}, :method => :delete
+          td = link_to t('links.themes'), subject
+          td = link_to t('links.edit'), edit_subject_path(subject)
+          td = link_to t('links.delete'), subject, data: {:confirm => 'Are you sure?'}, :method => :delete
 
-br
+  br
 
-= link_to 'Ajouter', new_subject_path
+  = link_to t('links.new'), new_subject_path
