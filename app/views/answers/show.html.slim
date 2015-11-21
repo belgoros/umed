@@ -1,9 +1,0 @@
-h3
-  strong Question: #{@answer.question.text} - réponse: #{@answer.text}
-  p Description
-  p = @answer.text
-  br
-= link_to t('links.edit'), edit_answer_path(@answer)
-'|
-= link_to t('links.back_to'), answers_path
-

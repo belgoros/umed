@@ -1,17 +1,12 @@
 class AnswersController < ApplicationController
-  before_action :sign_in_admin, except: [:index, :show]
+  before_action :sign_in_admin, except: [:index]
   before_action :find_question, only: [:new, :create]
-  before_action :set_answer, only: [:show, :edit, :update, :destroy]
+  before_action :set_answer, only: [:edit, :update, :destroy]
 
   # GET /answers
   # GET /answers.json
   def index
     @answers = Answer.all
-  end
-
-  # GET /answers/1
-  # GET /answers/1.json
-  def show
   end
 
   # GET /answers/new
