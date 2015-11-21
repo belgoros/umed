@@ -15,8 +15,8 @@ h3
         tr
           td = answer.text
           td = boolean_to_text(answer.correct?)
-          td = link_to 'Edit', edit_answer_path(answer)
-          td = link_to 'Destroy', answer, data: {:confirm => 'Are you sure?'}, :method => :delete
-= link_to 'New Answer', new_question_answer_path(@question)
+          td = link_to t('links.edit'), edit_answer_path(answer)
+          td = link_to t('links.delete'), answer, data: {:confirm => 'Are you sure?'}, :method => :delete
+= link_to t('links.new'), new_question_answer_path(@question)
 '|
-= link_to 'Back To Questions', @question.theme
+= link_to t('links.back_to'), @question.theme

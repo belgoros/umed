@@ -1,8 +1,7 @@
-h1 Editing level
+= provide(:title, t('.title'))
+
+h1 = t('.title')
 
 == render 'form'
 
-= link_to 'Show', @level
-'|
-= link_to 'Back', levels_path
-
+= link_to t('links.back_to'), levels_path

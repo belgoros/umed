@@ -8,22 +8,23 @@ nav.top-bar.fixed data-topbar="" role="navigation"
         span
   section.top-bar-section
     ul.right
-      li = link_to 'Levels', levels_path
-      li = link_to 'Matières', subjects_path
+      li = link_to t('links.levels'), levels_path
       li.divider
-      li = link_to 'Thèmes', themes_path
+      li = link_to t('links.subjects'), subjects_path
       li.divider
-      li = link_to 'Questions', questions_path
+      li = link_to t('links.themes'), themes_path
       li.divider
-      li = link_to 'Réponses', answers_path
+      li = link_to t('links.questions'), questions_path
+      li.divider
+      li = link_to t('links.answers'), answers_path
       li.divider
       - if user_signed_in?
         li.has-dropdown
-          a href=""  Compte
+          a href=""  = t('links.dashboard')
           ul.dropdown
             li
-              = link_to 'Profile', edit_user_registration_path
+              = link_to t('links.profile'), edit_user_registration_path
             li.active
-              = link_to 'Sign out', destroy_user_session_path, :method=>'delete'
+              = link_to t('links.sign_out'), destroy_user_session_path, :method=>'delete'
       - else
-        li = link_to 'Sign In', new_user_session_path
+        li = link_to t('links.sign_in'), new_user_session_path

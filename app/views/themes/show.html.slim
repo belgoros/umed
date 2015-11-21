@@ -14,9 +14,9 @@ h3
       - @theme.questions.each do |question|
         tr
           td = question.text
-          td = link_to 'Réponses', question
-          td = link_to 'Edit', edit_question_path(question)
-          td = link_to 'Destroy', question, data: {:confirm => 'Are you sure?'}, :method => :delete
-= link_to 'Ajouter une question', new_theme_question_path(@theme)
+          td = link_to t('links.questions'), question
+          td = link_to t('links.edit'), edit_question_path(question)
+          td = link_to t('links.delete'), question, data: {:confirm => 'Are you sure?'}, :method => :delete
+= link_to t('links.new'), new_theme_question_path(@theme)
 '|
-= link_to 'Retour aux Thèmes', @theme.subject
+= link_to t('links.back_to'), @theme.subject

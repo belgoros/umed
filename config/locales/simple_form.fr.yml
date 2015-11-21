@@ -1,0 +1,15 @@
+fr:
+  simple_form:
+    error_notification:
+      default_message: "Veuillez corriger les erreurs ci-dessous:"
+    required:
+      text: 'obligatoire'
+      mark: '*'
+    labels:
+      subject:
+        name: 'Nom'
+        level: 'Niveau'
+      theme:
+        name: 'Nom'
+    "yes": 'Oui'
+    "no": 'Non'

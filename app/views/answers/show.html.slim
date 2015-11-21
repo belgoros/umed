@@ -3,6 +3,7 @@ h3
   p Description
   p = @answer.text
   br
-= link_to 'Edit', edit_answer_path(@answer)
+= link_to t('links.edit'), edit_answer_path(@answer)
 '|
-= link_to 'Retour aux questions', questions_path
+= link_to t('links.back_to'), answers_path
+

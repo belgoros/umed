@@ -1,12 +1,12 @@
-h3
-  strong #{@subject.name} thèmes
+= provide(:title, t('.title', subject: @subject.name))
+h3 = t('.title', subject: @subject.name)
 - if @subject.themes.empty?
-  h4 Aucun thème trouvé
+  h4 = t('.empty')
 - else
   table
     thead
       tr
-        th Thème
+        th =t('.theme')
         th
         th
         th
@@ -14,10 +14,10 @@ h3
       - @subject.themes.each do |theme|
         tr
           td = theme.name
-          td = link_to 'Questions', theme
-          td = link_to 'Edit', edit_theme_path(theme)
-          td = link_to 'Destroy', theme, data: {:confirm => 'Are you sure?'}, :method => :delete
+          td = link_to t('links.questions'), theme
+          td = link_to t('links.edit'), edit_theme_path(theme)
+          td = link_to t('links.delete'), theme, data: {:confirm => 'Are you sure?'}, :method => :delete
 
-= link_to 'Ajouter', new_subject_theme_path(@subject)
+= link_to t('links.new'), new_subject_theme_path(@subject)
 '|
-= link_to 'Retour aux matières', subjects_path
+= link_to t('links.back_to'), subjects_path
