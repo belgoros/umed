@@ -5,12 +5,12 @@
 - else
   h1 = t('.title')
 
-  table.responsive
+  table
     thead
       tr
-        th Text
-        th Question
-        th Correct
+        th = t('.text')
+        th = t('.question')
+        th = t('.correct')
         th
         th
         th
@@ -21,6 +21,5 @@
           td = answer.text
           td = answer.question.text
           td = boolean_to_text(answer.correct?)
-          td = link_to t('links.show'), answer
           td = link_to t('links.edit'), edit_answer_path(answer)
           td = link_to t('links.delete'), answer, data: {:confirm => 'Are you sure?'}, :method => :delete

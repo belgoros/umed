@@ -59,6 +59,9 @@ fr:
     index:
       title: 'Liste des réponses'
       empty: 'Aucune réponse trouvée'
+      text: 'Text'
+      question: 'Quesion'
+      correct: 'Correcte ou Non'
     new:
       title: 'Nouvelle réponse'
     edit:
