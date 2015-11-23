@@ -11,5 +11,6 @@ fr:
         level: 'Niveau'
       theme:
         name: 'Nom'
+
     "yes": 'Oui'
     "no": 'Non'

@@ -13,8 +13,11 @@ fr:
     dashboard: 'Dashboard'
     profile: 'Profil'
     sign_in: "Se connecter"
-    sign_up: "S'inscrire"
+    sign_up: "S'enregistrer"
     sign_out: "Se déconnecter"
+    forgot_password: "Mot de passe oublié ?"
+    confirmation_instructions_not_received: "Pas reçu les instructions pour modifier le mot de passe ?"
+    unlock_instructions_not_received: "Pas reçu les instructions pour débloquer le compte ?"
     back_to: "Retour"
   levels:
     index:
@@ -66,6 +69,13 @@ fr:
       title: 'Nouvelle réponse'
     edit:
       title: 'Modifier la réponse'
+  devise:
+    sessions:
+      new:
+        title: "Se connecter"
+    registrations:
+      new:
+        title: "S'enregistrer"
 
   date:
     formats:
@@ -285,6 +295,7 @@ fr:
       theme: "Thème"
       question: "Question"
       answer: "Réponse"
+      user: Utilisateur
     attributes:
       level:
         name: "Description"
@@ -298,5 +309,11 @@ fr:
       answer:
         text: "Text"
         correct: "Correct"
+      user:
+        current_password: Mot de passe actuel
+        email: Adresse e-mail
+        password: Mot de passe
+        password_confirmation: Confirmation du mot de passe
+        remember_me: Se souvenir de moi
     errors:
       <<: *errors
