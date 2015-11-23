@@ -2,10 +2,21 @@
 
 fr:
   devise:
+    shared:
+      links:
+        back: Retour
+        didn_t_receive_confirmation_instructions: Vous n'avez pas reçu le courriel de confirmation ?
+        didn_t_receive_unlock_instructions: Vous n'avez pas reçu le courriel de déblocage ?
+        forgot_your_password: Mot de passe oublié ?
+        sign_in: Connexion
+        sign_in_with_provider: Connexion avec %{provider}
+        sign_up: Inscription
     user:
       email: E-mail
       password: Mot de passe
     confirmations:
+      new:
+        resend_confirmation_instructions: Renvoyer les instructions de confirmation
       confirmed: 'Votre compte a été confirmé avec succès.'
       send_instructions: 'Vous allez recevoir un e-mail avec les instructions nécessaires à la confirmation de votre compte dans quelques minutes.'
       send_paranoid_instructions: 'Si votre e-mail existe dans notre base de données, vous allez bientôt recevoir un e-mail contenant les instructions de confirmation de votre compte.'
@@ -21,21 +32,52 @@ fr:
       unconfirmed: "Vous devez confirmer votre compte pour continuer."
     mailer:
       confirmation_instructions:
-        subject: "Instructions de confirmation"
+        action: Confirmer mon courriel
+        greeting: Bienvenue %{recipient}!
+        instruction: 'Vous pouvez confirmer votre courriel grâce au lien ci-dessous:'
       reset_password_instructions:
-        subject: "Instructions pour changer le mot de passe"
+        action: Changer mon mot de passe
+        greeting: Bonjour %{recipient}!
+        instruction: "Quelqu''un a demandé un lien pour changer votre mot de passe, le voici :"
+        instruction_2: "Si vous n'avez pas émis cette demande, merci d'ignorer ce courriel."
+        instruction_3: "Votre mot de passe ne changera pas tant que vous n'aurez pas cliqué sur ce lien et renseigné un nouveau mot de passe."
       unlock_instructions:
-        subject: "Instructions pour déverrouiller le compte"
+        action: Débloquer mon compte
+        greeting: Bonjour %{recipient}!
+        instruction: 'Suivez ce lien pour débloquer votre compte:'
+        message: Votre compte a été bloqué suite à un nombre d'essais de connexions manquées trop important
     omniauth_callbacks:
       failure: "Nous n'avons pas pu vous authentifier via %{kind} : '%{reason}'."
       success: 'Authentifié avec succès via %{kind}.'
     passwords:
+      edit:
+        change_my_password: Changer mon mot de passe
+        change_your_password: Changer votre mot de passe
+        confirm_new_password: Confirmez votre nouveau mot de passe
+        new_password: Nouveau mot de passe
+        hint: "%{length} caractères minimum"
+      new:
+        forgot_your_password: Mot de passe oublié ?
+        send_me_reset_password_instructions: Envoyez-moi des instructions pour réinitialiser mon mot de passe
       no_token: "Vous ne pouvez accéder à cette page sans passer par un e-mail de réinitialisation de mot de passe. Si vous êtes passé par un e-mail de ce type, assurez-vous d'utiliser l'URL complète."
       send_instructions: 'Vous allez recevoir les instructions de réinitialisation du mot de passe dans quelques instants'
       send_paranoid_instructions: "Si votre e-mail existe dans notre base de données, vous allez recevoir un lien de réinitialisation par e-mail"
       updated: 'Votre mot de passe a été édité avec succès, vous êtes maintenant connecté'
       updated_not_active: 'Votre mot de passe a été changé avec succès.'
     registrations:
+      edit:
+        back: Retour
+        are_you_sure: "Êtes-vous sûr ?"
+        cancel_my_account: Supprimer mon compte
+        currently_waiting_confirmation_for_email: 'Confirmation en attente pour: %{email}'
+        leave_blank_if_you_don_t_want_to_change_it: laissez ce champ vide pour le laisser inchangé
+        title: "Éditer %{resource}"
+        unhappy: 'Pas content ? '
+        update: Modifier
+        we_need_your_current_password_to_confirm_your_changes: nous avons besoin de votre mot de passe actuel pour valider ces modifications
+      new:
+        sign_up: Inscription
+        hint: "%{length} caractères minimum"
       destroyed: 'Votre compte a été supprimé avec succès. Nous espérons vous revoir bientôt.'
       signed_up: 'Bienvenue, vous êtes connecté.'
       signed_up_but_inactive: "Vous êtes bien enregistré. Vous ne pouvez cependant pas vous connecter car votre compte n'est pas encore activé."
@@ -47,7 +89,11 @@ fr:
       signed_in: "Connecté avec succès."
       signed_out: "Déconnecté avec succès."
       already_signed_out: "Déconnecté avec succès."
+      new:
+        sign_in: Connexion
     unlocks:
+      new:
+        resend_unlock_instructions: Renvoyer les instructions de déblocage
       send_instructions: 'Vous allez recevoir les instructions nécessaires au déverrouillage de votre compte dans quelques instants'
       send_paranoid_instructions: 'Si votre compte existe, vous allez bientôt recevoir un email contenant les instructions pour le déverrouiller.'
       unlocked: 'Votre compte a été déverrouillé avec succès, veuillez vous connecter pour continuer.'
