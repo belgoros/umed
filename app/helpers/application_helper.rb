@@ -1,4 +1,5 @@
 module ApplicationHelper
+
   def full_title(page_title)
     base_title = I18n.t(:base_title)
     if page_title.empty?
@@ -6,5 +7,9 @@ module ApplicationHelper
     else
       "#{base_title} | #{page_title}"
     end
+  end
+
+  def association_size(association)
+    "[#{association.size}]" unless association.empty?
   end
 end
