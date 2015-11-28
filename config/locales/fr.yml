@@ -35,8 +35,8 @@ fr:
       name: 'Matière'
       level: 'Niveau'
     show:
-      title: "%{subject}: thémes disponibles"
-      empty: 'Aucun théme disponible'
+      title: "%{subject}: thèmes disponibles"
+      empty: 'Aucun thème disponible'
       theme: 'Thème'
     edit:
       title: 'Modifier la matière'
@@ -69,13 +69,6 @@ fr:
       title: 'Nouvelle réponse'
     edit:
       title: 'Modifier la réponse'
-  devise:
-    sessions:
-      new:
-        title: "Se connecter"
-    registrations:
-      new:
-        title: "S'enregistrer"
 
   date:
     formats:
