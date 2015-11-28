@@ -16,7 +16,7 @@ h3 = t('.title', subject: @subject.name)
           td = theme.name
           td = link_to "#{ t('links.questions')} #{association_size(theme.questions)}", theme
           td = link_to t('links.edit'), edit_theme_path(theme)
-          td = link_to t('links.delete'), theme, data: {:confirm => 'Are you sure?'}, :method => :delete
+          td = link_to t('links.delete'), theme, data: {:confirm => t('are_you_sure')}, :method => :delete
 
 = link_to t('links.new'), new_subject_theme_path(@subject)
 '|

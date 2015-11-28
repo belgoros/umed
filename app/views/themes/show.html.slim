@@ -1,12 +1,12 @@
-h3
-  strong #{@theme.subject.name} - #{@theme.name} questions
+= provide(:title, t('.title', theme: @theme.name))
+h3 = t('.title', theme: @theme.name)
 - if @theme.questions.empty?
-  h4 Aucune question trouvée
+  h4 = t('.empty')
 - else
   table
     thead
       tr
-        th Question
+        th = t('.question')
         th
         th
         th
@@ -16,7 +16,7 @@ h3
           td = question.text
           td = link_to t('links.answers'), question
           td = link_to t('links.edit'), edit_question_path(question)
-          td = link_to t('links.delete'), question, data: {:confirm => 'Are you sure?'}, :method => :delete
+          td = link_to t('links.delete'), question, data: {:confirm => t('are_you_sure')}, :method => :delete
 = link_to t('links.new'), new_theme_question_path(@theme)
 '|
 = link_to t('links.back_to'), @theme.subject

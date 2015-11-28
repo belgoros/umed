@@ -1,5 +1,7 @@
 fr:
   base_title: "U-Med"
+  are_you_sure: "Êtes-vous sûr ?"
+
   links:
     new: 'Ajouter'
     edit: 'Modifier'
@@ -50,6 +52,10 @@ fr:
       title: "Nouveau thème"
     edit:
       title: 'Modifier le thème'
+    show:
+      title: "%{theme}: questions disponibles"
+      empty: Aucune question disponible
+      question: Question
   questions:
     index:
       title: 'Liste des questions'
@@ -58,6 +64,11 @@ fr:
       title: 'Nouvelle question'
     edit:
       title: 'Modifier la question'
+    show:
+      title: "%{question}: réponses disponibles"
+      empty: Aucune réponse trouvée
+      answer: Réponse
+      correct: Correct/Non
   answers:
     index:
       title: 'Liste des réponses'

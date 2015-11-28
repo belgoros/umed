@@ -1,13 +1,14 @@
-h3
-  strong #{@question.theme.subject.name} - #{@question.theme.name} answers
+= provide(:title, truncate(t('.title', question: @question.text)))
+h3 = t('.title', question: @question.text)
+
 - if @question.answers.empty?
-  h4 No answers found for this question
+  h4 = t('.empty')
 - else
   table
     thead
       tr
-        th Text
-        th Correct
+        th = t('.answer')
+        th = t('.correct')
         th
         th
     tbody
@@ -16,7 +17,7 @@ h3
           td = answer.text
           td = boolean_to_text(answer.correct?)
           td = link_to t('links.edit'), edit_answer_path(answer)
-          td = link_to t('links.delete'), answer, data: {:confirm => 'Are you sure?'}, :method => :delete
+          td = link_to t('links.delete'), answer, data: {:confirm => t('are_you_sure')}, :method => :delete
 = link_to t('links.new'), new_question_answer_path(@question)
 '|
 = link_to t('links.back_to'), @question.theme
