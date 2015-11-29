@@ -21,4 +21,4 @@
           td = answer.question.text
           td = boolean_to_text(answer.correct?)
           td = link_to t('links.edit'), edit_answer_path(answer)
-          td = link_to t('links.delete'), answer, data: {:confirm => 'Are you sure?'}, :method => :delete
+          td = link_to t('links.delete'), answer, data: {:confirm => t('are_you_sure')}, :method => :delete

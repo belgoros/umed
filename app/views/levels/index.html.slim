@@ -16,7 +16,7 @@
         tr
           td = level.name
           td = link_to t('links.edit'), edit_level_path(level)
-          td = link_to t('links.delete'), level, data: {:confirm => 'Are you sure?'}, :method => :delete
+          td = link_to t('links.delete'), level, data: {:confirm => t('are_you_sure')}, :method => :delete
 
 br
 
