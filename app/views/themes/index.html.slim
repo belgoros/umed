@@ -8,8 +8,8 @@
   table
     thead
       tr
-        th Thème
-        th Matière
+        th = t('.theme')
+        th = t('.subject')
         th
         th
         th
@@ -21,4 +21,4 @@
           td = theme.subject.name
           td = link_to t('links.questions'), theme
           td = link_to t('links.edit'), edit_theme_path(theme)
-          td = link_to t('links.delete'), theme, data: {:confirm => 'Are you sure?'}, :method => :delete
+          td = link_to t('links.delete'), theme, data: {:confirm => t('are_you_sure')}, :method => :delete

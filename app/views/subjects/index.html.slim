@@ -21,7 +21,7 @@
           td = subject.level.name
           td = link_to "#{ t('links.themes')} #{association_size(subject.themes)}", subject
           td = link_to t('links.edit'), edit_subject_path(subject)
-          td = link_to t('links.delete'), subject, data: {:confirm => 'Are you sure?'}, :method => :delete
+          td = link_to t('links.delete'), subject, data: {:confirm => t('are_you_sure')}, :method => :delete
 
   br
 

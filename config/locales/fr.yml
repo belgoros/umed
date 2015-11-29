@@ -1,6 +1,9 @@
 fr:
   base_title: "U-Med"
   are_you_sure: "Êtes-vous sûr ?"
+  created_success: "%{model} créé(e) avec succès"
+  updated_success: "%{model} modifié(e) avec succès"
+  destroyed_success: "%{model} supprimé(e) avec succès"
 
   links:
     new: 'Ajouter'
@@ -48,6 +51,8 @@ fr:
     index:
       title: 'Liste des thèmes'
       empty: 'Aucun thème trouvé'
+      theme: Thème
+      subject: Matière
     new:
       title: "Nouveau thème"
     edit:
@@ -60,6 +65,8 @@ fr:
     index:
       title: 'Liste des questions'
       empty: 'Aucune question trouvée'
+      question: Question
+      theme: Thème
     new:
       title: 'Nouvelle question'
     edit:
