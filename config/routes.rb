@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :subjects, shallow: true do
     resources :themes, shallow: true, except: :index do
       resources :questions, shallow: true, except: :index do
+        resources :images, except: :index
         resources :answers, except: :index
         resources :images, except: :index
       end
@@ -22,5 +23,4 @@ Rails.application.routes.draw do
     resources :steps, only: [:show, :update], controller: 'quiz/steps'
     resources :questions, only: [:show, :update], controller: 'quiz/questions'
   end
-
 end
