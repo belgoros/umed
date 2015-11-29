@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'images/index'
+
   root 'home#index'
   devise_for :users
 
@@ -14,4 +16,5 @@ Rails.application.routes.draw do
     resources :questions, only: :index
     resources :answers,   only: :index
     resources :levels
+    resources :images, except: :show
 end
