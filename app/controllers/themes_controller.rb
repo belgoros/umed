@@ -30,7 +30,7 @@ class ThemesController < ApplicationController
 
     respond_to do |format|
       if @theme.save
-        format.html { redirect_to @subject, notice: 'Theme was successfully created.' }
+        format.html { redirect_to @subject, notice: t(:created_success, model: Theme.model_name.human) }
         format.json { render :show, status: :created, location: @theme }
       else
         format.html { render :new }
@@ -44,7 +44,7 @@ class ThemesController < ApplicationController
   def update
     respond_to do |format|
       if @theme.update(theme_params)
-        format.html { redirect_to @theme.subject, notice: 'Theme was successfully updated.' }
+        format.html { redirect_to @theme.subject, t(:updated_success, model: Theme.model_name.human) }
         format.json { render :show, status: :ok, location: @theme }
       else
         format.html { render :edit }
@@ -59,7 +59,7 @@ class ThemesController < ApplicationController
     subject = @theme.subject
     @theme.destroy
     respond_to do |format|
-      format.html { redirect_to subject, notice: 'Theme was successfully destroyed.' }
+      format.html { redirect_to subject, notice: t(:destroyed_success, model: Theme.model_name.human) }
       format.json { head :no_content }
     end
   end
