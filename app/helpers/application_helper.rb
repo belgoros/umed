@@ -12,4 +12,8 @@ module ApplicationHelper
   def association_size(association)
     "[#{association.size}]" unless association.empty?
   end
+
+  def flash_by_name(name)
+    "#{name.to_s == 'notice' ? 'success' : 'alert'}"
+  end
 end
