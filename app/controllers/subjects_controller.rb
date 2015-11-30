@@ -11,6 +11,7 @@ class SubjectsController < ApplicationController
   # GET /subjects/1
   # GET /subjects/1.json
   def show
+    @themes = @subject.themes.page params[:page]
   end
 
   # GET /subjects/new
