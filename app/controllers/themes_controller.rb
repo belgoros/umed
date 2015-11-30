@@ -12,6 +12,7 @@ class ThemesController < ApplicationController
   # GET /themes/1
   # GET /themes/1.json
   def show
+    @questions = @theme.questions.page params[:page]
   end
 
   # GET /themes/new
