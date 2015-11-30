@@ -14,6 +14,7 @@ gem 'uglifier',         '>= 1.3.0'
 gem 'coffee-rails',     '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
+gem 'kaminari',         '~> 0.16.3'
 gem 'jbuilder',         '~> 2.0'
 gem 'sdoc',             '~> 0.4.0', group: :doc
 
@@ -24,8 +25,9 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.3.3'
   gem 'pry'
   gem 'pry-nav'
-  gem 'pry-rails', '~> 0.3.2'
+  gem 'pry-rails',  '~> 0.3.2'
   gem 'figaro',     '~> 1.1.1'
+  gem 'ffaker',     '~> 2.1.0'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
@@ -38,7 +40,6 @@ end
 
 group :test do
   gem 'factory_girl_rails'
-  gem 'ffaker'
   gem 'capybara',     '~> 2.5.0'
   gem 'database_cleaner'
   gem 'launchy', '~> 2.4.3'

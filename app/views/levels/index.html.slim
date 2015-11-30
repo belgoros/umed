@@ -3,6 +3,7 @@
   h1 = t('.empty')
 - else
   h1 = t('.title')
+  = paginate @levels
 
   table
     thead
@@ -19,5 +20,7 @@
           td = link_to t('links.delete'), level, data: {:confirm => t('are_you_sure')}, :method => :delete
 
 br
+  = paginate @levels
+
 
 = link_to t('links.new'), new_level_path

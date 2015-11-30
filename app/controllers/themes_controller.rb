@@ -6,7 +6,7 @@ class ThemesController < ApplicationController
   # GET /themes
   # GET /themes.json
   def index
-    @themes = Theme.all
+    @themes = Theme.all.page params[:page]
   end
 
   # GET /themes/1

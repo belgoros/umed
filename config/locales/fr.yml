@@ -4,6 +4,14 @@ fr:
   created_success: "%{model} créé(e) avec succès"
   updated_success: "%{model} modifié(e) avec succès"
   destroyed_success: "%{model} supprimé(e) avec succès"
+  #kaminari pagination
+  views:
+    pagination:
+      first: "&laquo; Première"
+      last: "Dernière &raquo;"
+      previous: "&lsaquo; Précédent"
+      next: "Suivant &rsaquo;"
+      truncate: "&hellip;"
 
   links:
     new: 'Ajouter'
@@ -257,6 +265,15 @@ fr:
       create: "Créer %{model}"
       update: "Modifier %{model}"
       submit: "Enregistrer %{model}"
+    #kaminari
+    page_entries_info:
+      one_page:
+        display_entries:
+          zero: "No %{entry_name} found"
+          one: "Displaying <b>1</b> %{entry_name}"
+          other: "Displaying <b>all %{count}</b> %{entry_name}"
+      more_pages:
+        display_entries: "Displaying %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b> of <b>%{total}</b> in total"
 
   errors: &errors
     format: "%{attribute} %{message}"
