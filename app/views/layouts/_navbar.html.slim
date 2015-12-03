@@ -24,7 +24,7 @@ nav.top-bar.fixed data-topbar="" role="navigation"
             ul.dropdown
               li
                 = link_to t('links.profile'), edit_user_registration_path
-              li.active
+              li
                 = link_to t('links.sign_out'), destroy_user_session_path, :method=>'delete'
         - else
           li = link_to t('links.sign_in'), new_user_session_path
