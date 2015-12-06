@@ -1,12 +1,13 @@
-nav.top-bar.fixed data-topbar="" role="navigation"
-  ul.title-area
-    li.name
-      h1
-        = link_to 'U-Med', root_path
-    li.toggle-topbar.menu-icon
-      a href="#"
-        span
-  section.top-bar-section
+.fixed
+  nav.top-bar data-topbar="" role="navigation"
+    ul.title-area
+      li.name
+        h1
+          = link_to 'U-Med', root_path
+      li.toggle-topbar.menu-icon
+        a href="#"
+          span
+    section.top-bar-section
       ul.right
         - if user_signed_in?
           li = link_to t('links.levels'), levels_path

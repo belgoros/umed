@@ -12,7 +12,5 @@ html
     = render 'layouts/shim'
   body
     = render 'layouts/navbar'
-    .row
-      .small-12.small-centered.columns
-        = render 'layouts/messages'
-        = yield
+    = render 'layouts/messages'
+    = yield

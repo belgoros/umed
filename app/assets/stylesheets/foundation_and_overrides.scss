@@ -82,6 +82,7 @@ $include-html-global-classes: $include-html-classes;
 // $row-width: rem-calc(1000);
 // $total-columns: 12;
 // $column-gutter: rem-calc(30);
+$row-width: rem-calc(1300);
 
 // c. Global
 // - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -132,7 +133,7 @@ $success-color: #baedcd;
 // $body-font-family: $font-family-sans-serif;
 // $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
-$body-bg: #FFFAF7;
+
 
 
 // We use this to control font-smoothing
@@ -403,6 +404,7 @@ $body-bg: #FFFAF7;
 
 // $align-block-grid-to-grid: false;
 // @if $align-block-grid-to-grid {$block-grid-default-spacing: $column-gutter;}
+
 
 // Enables media queries for block-grid classes. Set to false if writing semantic HTML.
 // $block-grid-media-queries: true;
@@ -999,6 +1001,8 @@ $button-bg-color:#024772;
 // $panel-border-style: solid;
 // $panel-border-size: 1px;
 // $callout-panel-bg: scale-color($primary-color, $lightness: 94%);
+$callout-panel-bg: scale-color(#A8A8A8, $lightness: 94%);
+
 
 // We use this % to control how much we darken things on hover
 // $panel-border-color: scale-color($panel-bg, $lightness: -11%);
@@ -1416,6 +1420,8 @@ $topbar-bg-color:#024772 ;
 // $topbar-height: rem-calc(45);
 // $topbar-margin-bottom: 0;
 $topbar-height: rem-calc(52.5);
+$topbar-margin-bottom: 20px;
+
 
 // Controlling the styles for the title in the top bar
 // $topbar-title-weight: $font-weight-normal;
