@@ -2,10 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-/*
-.top-bar {
-  margin-bottom: 20px;
-}
 
 .fullWidth {
   width: 100%;
@@ -14,8 +10,12 @@
   max-width: initial;
 }
 
-.column, .columns {
-  padding-left: 30px;
-  padding-right: 30px;
+footer {
+  background-color:#024772;
+  padding: 30px;
 }
-*/
+
+img {
+  display: block;
+  margin:auto;
+}
