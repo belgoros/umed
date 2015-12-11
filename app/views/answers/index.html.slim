@@ -1,27 +1,28 @@
 = provide(:title, t('.title'))
+.row
+  .small-12.columns
+    - if @answers.empty?
+      h1 = t('.empty')
+    - else
+      h1 = t('.title')
+      = paginate @answers
+      br
 
-- if @answers.empty?
-  h1 = t('.empty')
-- else
-  h1 = t('.title')
-  = paginate @answers
-  br
+      table
+        thead
+          tr
+            th = t('.text')
+            th = t('.question')
+            th = t('.correct')
+            th
+            th
 
-  table
-    thead
-      tr
-        th = t('.text')
-        th = t('.question')
-        th = t('.correct')
-        th
-        th
-
-    tbody
-      - @answers.each do |answer|
-        tr
-          td = answer.text
-          td = answer.question.text
-          td = boolean_to_text(answer.correct?)
-          td = link_to t('links.edit'), edit_answer_path(answer)
-          td = link_to t('links.delete'), answer, data: {:confirm => t('are_you_sure')}, :method => :delete
-  = paginate @answers
+        tbody
+          - @answers.each do |answer|
+            tr
+              td = answer.text
+              td = answer.question.text
+              td = boolean_to_text(answer.correct?)
+              td = link_to t('links.edit'), edit_answer_path(answer)
+              td = link_to t('links.delete'), answer, data: {:confirm => t('are_you_sure')}, :method => :delete
+      = paginate @answers

@@ -1,31 +1,32 @@
 = provide(:title, t('.title'))
+.row
+  .small-12.columns
+    - if @subjects.empty?
+      h1 = t('.empty')
+    - else
+      h1 = t('.title')
+      = paginate @subjects
+      br
 
-- if @subjects.empty?
-  h1 = t('.empty')
-- else
-  h1 = t('.title')
-  = paginate @subjects
-  br
+      table
+        thead
+          tr
+            th = t('.name')
+            th = t('.level')
+            th
+            th
+            th
 
-  table
-    thead
-      tr
-        th = t('.name')
-        th = t('.level')
-        th
-        th
-        th
+        tbody
+          - @subjects.each do |subject|
+            tr
+              td = subject.name
+              td = subject.level.name
+              td = link_to "#{ t('links.themes')} #{association_size(subject.themes)}", subject
+              td = link_to t('links.edit'), edit_subject_path(subject)
+              td = link_to t('links.delete'), subject, data: {:confirm => t('are_you_sure')}, :method => :delete
 
-    tbody
-      - @subjects.each do |subject|
-        tr
-          td = subject.name
-          td = subject.level.name
-          td = link_to "#{ t('links.themes')} #{association_size(subject.themes)}", subject
-          td = link_to t('links.edit'), edit_subject_path(subject)
-          td = link_to t('links.delete'), subject, data: {:confirm => t('are_you_sure')}, :method => :delete
+      = paginate @subjects
+      br
 
-  = paginate @subjects
-  br
-
-  = link_to t('links.new'), new_subject_path
+      = link_to t('links.new'), new_subject_path

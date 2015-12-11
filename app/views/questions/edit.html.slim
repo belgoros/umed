@@ -1,9 +1,10 @@
 = provide(:title, t('.title'))
+.row
+  .small-12.columns
+    h1 = t('.title')
 
-h1 = t('.title')
+    == render 'form'
 
-== render 'form'
-
-= link_to t('links.answers'), @question
-'|
-= link_to t('links.back_to'), @question.theme
+    = link_to t('links.answers'), @question
+    '|
+    = link_to t('links.back_to'), @question.theme
