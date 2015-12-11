@@ -1,26 +1,28 @@
 = provide(:title, t('.title'))
-- if @levels.empty?
-  h1 = t('.empty')
-- else
-  h1 = t('.title')
-  = paginate @levels
-  br
+.row
+  .small-12.columns
+    - if @levels.empty?
+      h1 = t('.empty')
+    - else
+      h1 = t('.title')
+      = paginate @levels
+      br
 
-  table
-    thead
-      tr
-        th = t('.name')
-        th
-        th
+      table
+        thead
+          tr
+            th = t('.name')
+            th
+            th
 
-    tbody
-      - @levels.each do |level|
-        tr
-          td = level.name
-          td = link_to t('links.edit'), edit_level_path(level)
-          td = link_to t('links.delete'), level, data: {:confirm => t('are_you_sure')}, :method => :delete
+        tbody
+          - @levels.each do |level|
+            tr
+              td = level.name
+              td = link_to t('links.edit'), edit_level_path(level)
+              td = link_to t('links.delete'), level, data: {:confirm => t('are_you_sure')}, :method => :delete
 
-  = paginate @levels
-  br
+      = paginate @levels
+      br
 
-= link_to t('links.new'), new_level_path
+    = link_to t('links.new'), new_level_path

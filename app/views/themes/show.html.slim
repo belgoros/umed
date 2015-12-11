@@ -1,26 +1,28 @@
 = provide(:title, t('.title', theme: @theme.name))
-h3 = t('.title', theme: @theme.name)
-- if @theme.questions.empty?
-  h4 = t('.empty')
-- else
-  = paginate @questions
-  br
-  table
-    thead
-      tr
-        th = t('.question')
-        th
-        th
-        th
-    tbody
-      - @questions.each do |question|
-        tr
-          td = question.text
-          td = link_to t('links.answers'), question
-          td = link_to t('links.edit'), edit_question_path(question)
-          td = link_to t('links.delete'), question, data: {:confirm => t('are_you_sure')}, :method => :delete
-  = paginate @questions
-  br
-= link_to t('links.new'), new_theme_question_path(@theme)
-'|
-= link_to t('links.back_to'), @theme.subject
+.row
+  .small-12.columns
+    h3 = t('.title', theme: @theme.name)
+    - if @theme.questions.empty?
+      h4 = t('.empty')
+    - else
+      = paginate @questions
+      br
+      table
+        thead
+          tr
+            th = t('.question')
+            th
+            th
+            th
+        tbody
+          - @questions.each do |question|
+            tr
+              td = question.text
+              td = link_to t('links.answers'), question
+              td = link_to t('links.edit'), edit_question_path(question)
+              td = link_to t('links.delete'), question, data: {:confirm => t('are_you_sure')}, :method => :delete
+      = paginate @questions
+      br
+    = link_to t('links.new'), new_theme_question_path(@theme)
+    '|
+    = link_to t('links.back_to'), @theme.subject
