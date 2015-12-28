@@ -10,10 +10,6 @@ class Quiz < ActiveRecord::Base
     %w(level subject theme)
   end
 
-  cattr_accessor :question_steps do
-    %w(question)
-  end
-
   attr_accessor :form_step
 
   validates :level_id,   presence: true,  if: -> { required_for_step?(:level) }
@@ -41,5 +37,4 @@ class Quiz < ActiveRecord::Base
     correct_answers_id = Answer.correct(answer_ids)
     "#{correct_answers_id.size}/#{total_questions}"
   end
-
 end

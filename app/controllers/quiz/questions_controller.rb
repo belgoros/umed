@@ -19,7 +19,7 @@ class Quiz::QuestionsController < ApplicationController
   def update
     @quiz = Quiz.find(params[:quiz_id])
     @quiz.answer_ids.push(params[:quiz][:answer_ids]) if params[:quiz]
-    #No need to save teh quiz, render_wizzard saves it when passing in an object
+    #No need to save the quiz, render_wizzard saves it when passing in an object
     render_wizard @quiz
   end
 
