@@ -1,0 +1,12 @@
+= provide(:title, 'Select a level')
+.row
+  .small-12.columns
+    h1 Select a Level
+    = simple_form_for @quiz, method: :put, url: wizard_path do |f|
+      = f.error_notification
+
+      .form-inputs
+        = f.association :level, collection: Level.all.order(:name), prompt: "Select a level"
+
+      .form-actions
+        = f.button :submit, 'Next'

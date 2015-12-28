@@ -1,0 +1,29 @@
+= provide(:title, 'Your quizzes')
+.row
+  .small-12.columns
+    - if @quizzes.empty?
+      h1 No Quizzes found
+    - else
+      h1 Your quizzes
+
+      table
+        thead
+          tr
+            th Level
+            th Subject
+            th Theme
+            th Questions
+            th Answers
+            th Score
+
+
+        tbody
+          - @quizzes.each do |quiz|
+            tr
+              td = quiz.level.name
+              td = quiz.subject.name
+              td = quiz.theme.name
+              td = quiz.total_questions
+              td = quiz.total_answers
+              td = quiz.score
+              td = link_to 'Delete', quiz, data: {:confirm => t('are_you_sure')}, :method => :delete

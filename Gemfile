@@ -17,6 +17,8 @@ gem 'turbolinks'
 gem 'kaminari',         '~> 0.16.3'
 gem 'jbuilder',         '~> 2.0'
 gem 'sdoc',             '~> 0.4.0', group: :doc
+gem 'wicked'
+gem 'pg'
 
 group :development, :test do
   gem 'sqlite3'
@@ -46,7 +48,6 @@ group :test do
 end
 
 group :production do
-  gem 'pg'
   gem 'rails_12factor'
   gem 'puma'
 end
