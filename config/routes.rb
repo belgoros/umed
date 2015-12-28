@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'images/index'
 
   root 'home#index'
   devise_for :users
@@ -8,13 +7,19 @@ Rails.application.routes.draw do
     resources :themes, shallow: true, except: :index do
       resources :questions, shallow: true, except: :index do
         resources :answers, except: :index
+        resources :images, except: :index
       end
     end
   end
 
-    resources :themes,    only: :index
-    resources :questions, only: :index
-    resources :answers,   only: :index
-    resources :levels
-    resources :images, except: :show
+  resources :themes,    only: :index
+  resources :questions, only: :index
+  resources :answers,   only: :index
+  resources :levels
+
+  resources :quizzes, only: [:create, :index, :destroy] do
+    resources :steps, only: [:show, :update], controller: 'quiz/steps'
+    resources :questions, only: [:show, :update], controller: 'quiz/questions'
+  end
+
 end

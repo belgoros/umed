@@ -5,4 +5,5 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
    has_many :subscriptions, dependent: :destroy
+   has_many :quizzes, dependent: :destroy
 end

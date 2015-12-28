@@ -1,0 +1,12 @@
+= provide(:title, 'Select a theme')
+.row
+  .small-12.columns
+    h1 Select a Theme
+    = simple_form_for @quiz, method: :put, url: wizard_path  do |f|
+      = f.error_notification
+
+      .form-inputs
+        = f.association :theme, collection: Theme.all.order(:name), prompt: "Select a theme"
+
+      .form-actions
+        = f.button :submit, 'Next'
