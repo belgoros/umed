@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
-ruby '2.2.2'
+ruby '2.3.0'
 
-gem 'rails',            '4.2.4'
+gem 'rails',            '4.2.5'
 gem 'devise',           '3.5.2'
 
 gem 'foundation-rails', '~> 5.5.3.2'
@@ -19,6 +19,7 @@ gem 'jbuilder',         '~> 2.0'
 gem 'sdoc',             '~> 0.4.0', group: :doc
 gem 'wicked'
 gem 'pg'
+gem 'nokogiri', '~> 1.6.7.1'
 
 group :development, :test do
   gem 'sqlite3'
