@@ -16,6 +16,8 @@ class Quiz < ActiveRecord::Base
   validates :subject_id, presence: true,  if: -> { required_for_step?(:subject)}
   validates :theme_id,   presence: true,  if: -> { required_for_step?(:theme)}
 
+  QUESTIONS_TO_ANSWER = [10, 25, 50]
+
   def required_for_step?(step)
     # All fields are required if no form step is present
     return true if form_step.nil?
