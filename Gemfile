@@ -43,6 +43,7 @@ end
 
 group :test do
   gem 'factory_girl_rails'
+  gem 'shoulda-matchers', '~> 3.0'
   gem 'capybara',     '~> 2.5.0'
   gem 'database_cleaner'
   gem 'launchy', '~> 2.4.3'
