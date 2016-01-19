@@ -13,8 +13,8 @@ class Quiz::StepsController < ApplicationController
     @quiz.update(quiz_params(step))
 
     if step.to_s == 'theme'
-      @quiz.question_ids = Question.ids_for_quiz(@quiz.theme.id, 3)
-      @quiz.save!
+      @quiz.question_ids = Question.ids_for_quiz(@quiz.theme.id, params['questions_to_answser'])
+      @quiz.save(validate: false)
       redirect_to quiz_question_path(@quiz, id: @quiz.question_ids.first)
     else
       render_wizard @quiz

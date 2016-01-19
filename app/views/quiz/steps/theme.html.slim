@@ -6,7 +6,10 @@
       = f.error_notification
 
       .form-inputs
-        = f.association :theme, collection: Theme.all.order(:name), prompt: "Select a theme"
+        = f.association :theme, collection: Theme.all.order(:name), selected: Theme.first
+        - Quiz::QUESTIONS_TO_ANSWER.each do |option|
+          = radio_button_tag :questions_to_answser, option
+          = label_tag option
 
       .form-actions
         = f.button :submit, 'Next'
