@@ -60,9 +60,6 @@ ActiveRecord::Schema.define(version: 20151213100044) do
     t.integer  "theme_id"
     t.text     "question_ids"
     t.text     "answer_ids"
-    t.integer  "score"
-    t.integer  "total"
-    t.date     "date"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
