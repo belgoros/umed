@@ -12,44 +12,53 @@ end
 
 def make_admin
   User.create(email: 'admin@example.com', password: 'changeme', password_confirmation: 'changeme', admin: true)
+  puts "Created Admin user"
 end
 
 def make_levels
   2.times do
-    Level.create!(name: FFaker::Lorem.phrase)
+    level = Level.create(name: FFaker::Lorem.phrase)
   end
+  puts "Created #{Level.count} Levels"
 end
 
 def make_subjects
-  5.times do
-    Subject.create!(name: FFaker::Lorem.phrase, level: Level.first)
+  levels = Level.all
+  levels.each do |level|
+    3.times do
+      subject = level.subjects.create!(name: "#{FFaker::Lorem.phrase}")
+    end
   end
+  puts "Created #{Subject.count} Subjects"
 end
 
 def make_themes
-  subject_1 = Subject.first
-  subject_2 = Subject.last
-  5.times do
-    Theme.create!(name: FFaker::Lorem.phrase, subject: subject_1)
-    Theme.create!(name: FFaker::Lorem.phrase, subject: subject_2)
+  subjects = Subject.all
+  subjects.each do |subject|
+    3.times do
+      subject.themes.create!(name: FFaker::Lorem.phrase)
+    end
   end
+  puts "Created #{Theme.count} Themes"
 end
 
 def make_questions
   themes = Theme.all
   themes.each do |theme|
-    3.times do
-      Question.create!(text: FFaker::Lorem.phrase, theme: theme)
+    30.times do
+      theme.questions.create!(text: FFaker::Lorem.phrase)
     end
   end
+  puts "Created #{Question.count} Questions"
 end
 
 def make_answers
   questions = Question.all
   questions.each do |question|
     2.times do
-      Answer.create!(text: FFaker::Lorem.phrase, question: question, correct: false)
+      question.answers.create!(text: FFaker::Lorem.phrase, correct: false)
     end
-    Answer.create!(text: FFaker::Lorem.phrase, question: question, correct: true)
+    question.answers.create!(text: FFaker::Lorem.phrase, correct: true)
   end
+  puts "Created #{Answer.count} Answers"
 end
