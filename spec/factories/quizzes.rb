@@ -1,8 +1,10 @@
 FactoryGirl.define do
   factory :quiz do
-    user_id 1
-score 1
-date "2015-12-13"
+    user
+    level
+    subject
+    theme
+    question_ids Array.new(10) { rand(50)}
+    answer_ids Array.new(10) { rand(50)}
   end
-
 end

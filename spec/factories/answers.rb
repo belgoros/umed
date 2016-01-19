@@ -1,8 +1,7 @@
 FactoryGirl.define do
   factory :answer do
-    text "MyString"
-question_id 1
-correct false
+    text { Faker::Lorem.phrase }
+    question
+    correct false
   end
-
 end
