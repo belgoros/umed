@@ -1,6 +1,14 @@
 FactoryGirl.define do
   factory :user do
-    
-  end
+    email    { FFaker::Internet.email }
+    password { Devise.friendly_token.first(8) }
 
+    factory :admin do
+      admin true
+    end
+
+    factory :premium do
+      premium true
+    end
+  end
 end
