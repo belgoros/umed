@@ -1,0 +1,12 @@
+= provide(:title, t('.title'))
+.row
+  .small-12.columns
+    h1 = t('.title')
+    = simple_form_for @quiz, method: :put, url: wizard_path do |f|
+      = f.error_notification
+
+      p = @question.text
+      = f.collection_radio_buttons :answer_ids, @question.answers, :id, :text
+
+      .form-actions
+        = f.button :submit, t('links.next')

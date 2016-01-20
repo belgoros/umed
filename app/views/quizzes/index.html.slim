@@ -1,0 +1,29 @@
+= provide(:title, t('.title'))
+.row
+  .small-12.columns
+    - if @quizzes.empty?
+      h1 = t('.empty')
+    - else
+      h1 = t('.title')
+
+      table
+        thead
+          tr
+            th =t('.level')
+            th =t('.subject')
+            th =t('.theme')
+            th =t('.questions')
+            th =t('.answers')
+            th =t('.score')
+
+
+        tbody
+          - @quizzes.each do |quiz|
+            tr
+              td = quiz.level.try(:name)
+              td = quiz.subject.try(:name)
+              td = quiz.theme.try(:name)
+              td = quiz.total_questions
+              td = quiz.total_answers
+              td = quiz.score
+              td = link_to t('links.delete'), quiz, data: {:confirm => t('are_you_sure')}, :method => :delete

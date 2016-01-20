@@ -10,6 +10,8 @@
     section.top-bar-section
       ul.right
         - if user_signed_in?
+          li = link_to t('links.take_quiz'), quizzes_path, method: :post
+          li.divider
           li = link_to t('links.levels'), levels_path
           li.divider
           li = link_to t('links.subjects'), subjects_path
@@ -25,6 +27,7 @@
             ul.dropdown
               li
                 = link_to t('links.profile'), edit_user_registration_path
+                = link_to t('links.quizzes'), quizzes_path
               li
                 = link_to t('links.sign_out'), destroy_user_session_path, :method=>'delete'
         - else

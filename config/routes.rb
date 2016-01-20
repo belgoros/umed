@@ -10,8 +10,14 @@ Rails.application.routes.draw do
     end
   end
 
-    resources :themes,    only: :index
-    resources :questions, only: :index
-    resources :answers,   only: :index
-    resources :levels
+  resources :themes,    only: :index
+  resources :questions, only: :index
+  resources :answers,   only: :index
+  resources :levels
+
+  resources :quizzes, only: [:create, :index, :destroy] do
+    resources :steps, only: [:show, :update], controller: 'quiz/steps'
+    resources :questions, only: [:show, :update], controller: 'quiz/questions'
+  end
+
 end

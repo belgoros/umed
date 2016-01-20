@@ -1507,4 +1507,15 @@ $topbar-dropdown-bg: $topbar-bg-color;
 // $include-table-visibility-classes: true;
 // $include-legacy-visibility-classes: true;
 
+// activate hint with simple_form
+.hint {
+  margin: -14px 0 12px;
+  font-size: 12px;
+  color: gray;
+}
+
+.error + .hint {
+  margin: 0 0 12px;
+}
+
 @import 'foundation';

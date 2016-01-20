@@ -1,5 +1,10 @@
 require 'rails_helper'
 
-RSpec.describe Answer, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe Answer, type: :model do
+  it { should validate_presence_of(:text) }
+
+  context 'should always be in the context of a question' do
+    it { should belong_to(:question)}
+    it { should validate_presence_of(:question_id)}
+  end
 end
