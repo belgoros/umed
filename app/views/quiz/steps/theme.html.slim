@@ -1,15 +1,15 @@
-= provide(:title, 'Select a theme')
+= provide(:title, t('.title'))
 .row
   .small-12.columns
-    h1 Select a Theme
+    h1 = t('.title')
     = simple_form_for @quiz, method: :put, url: wizard_path  do |f|
       = f.error_notification
 
       .form-inputs
-        = f.association :theme, collection: Theme.all.order(:name), selected: Theme.first
+        = f.association :theme, collection: @themes, selected: Theme.first
         - Quiz::QUESTIONS_TO_ANSWER.each do |option|
           = radio_button_tag :questions_to_answser, option
           = label_tag option
 
       .form-actions
-        = f.button :submit, 'Next'
+        = f.button :submit, t('links.next')

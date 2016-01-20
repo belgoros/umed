@@ -11,6 +11,10 @@ fr:
         level: 'Niveau'
       theme:
         name: 'Nom'
+      quiz:
+        level: Niveau
+        subject: Matière
+        theme: Thème
 
     "yes": 'Oui'
     "no": 'Non'

@@ -6,7 +6,7 @@ class Quiz::QuestionsController < ApplicationController
 
   def show
     if step == Wicked::FINISH_STEP
-      redirect_to finish_wizard_path, notice: "Congratulations, you have finished your Quiz !"
+      redirect_to finish_wizard_path, notice: t(:quiz_finished_success, model: Quiz.model_name.human)
     else
       @quiz = Quiz.find(params[:quiz_id])
       @question = Question.find(step)
