@@ -117,6 +117,7 @@ fr:
         title: Sélectionnez une matière
       theme:
         title: Sélectionnez un thème
+        questions_to_answer: "Sélectionnez le nombre de questions du Quiz:"
     questions:
       question:
         title: Question du Quiz
