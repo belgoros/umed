@@ -4,6 +4,7 @@ fr:
   created_success: "%{model} créé(e) avec succès"
   updated_success: "%{model} modifié(e) avec succès"
   destroyed_success: "%{model} supprimé(e) avec succès"
+  quiz_finished_success: "Félicitations ! Vous avez terminé le %{model} ! "
   #kaminari pagination
   views:
     pagination:
@@ -18,6 +19,7 @@ fr:
     edit: 'Modifier'
     show: 'Détails'
     delete: 'Supprimer'
+    take_quiz: 'Commencer le Quiz'
     levels: 'Niveaux'
     subjects: 'Matières'
     themes: 'Thèmes'
@@ -25,6 +27,7 @@ fr:
     answers: 'Réponses'
     dashboard: 'Dashboard'
     profile: 'Profil'
+    quizzes: 'Mes quizzes'
     sign_in: "Se connecter"
     sign_up: "S'enregistrer"
     sign_out: "Se déconnecter"
@@ -32,6 +35,7 @@ fr:
     confirmation_instructions_not_received: "Pas reçu les instructions pour modifier le mot de passe ?"
     unlock_instructions_not_received: "Pas reçu les instructions pour débloquer le compte ?"
     back_to: "Retour"
+    next: 'Suivant'
   levels:
     index:
       title: 'Liste des niveaux de difficulté'
@@ -95,6 +99,27 @@ fr:
       title: 'Nouvelle réponse'
     edit:
       title: 'Modifier la réponse'
+  quizzes:
+    index:
+      title: Vos quizzes
+      empty: Vous n'avez aucun quiz passé
+      level: Niveau
+      subject: Matière
+      theme: Thème
+      questions: Questions
+      answers: Réponses
+      score: Résultat
+  quiz:
+    steps:
+      level:
+        title: Sélectionnez un niveau
+      subject:
+        title: Sélectionnez une matière
+      theme:
+        title: Sélectionnez un thème
+    questions:
+      question:
+        title: Question du Quiz
 
   date:
     formats:

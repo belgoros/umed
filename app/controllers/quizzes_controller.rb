@@ -14,7 +14,7 @@ class QuizzesController < ApplicationController
     @quiz = Quiz.find(params[:id])
     @quiz.destroy
     respond_to do |format|
-      format.html { redirect_to quizzes_url, notice: 'Quiz was successfully destroyed.' }
+      format.html { redirect_to quizzes_url, notice: t(:destroyed_success, model: Quiz.model_name.human) }
       format.json { head :no_content }
     end
   end

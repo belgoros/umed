@@ -5,13 +5,15 @@ class Quiz::StepsController < ApplicationController
 
   def show
     @quiz = Quiz.find(params[:quiz_id])
+    @levels = Level.all.order(:name)
+    load_subjects(@quiz) if @quiz.level
+    load_themes(@quiz) if @quiz.subject
     render_wizard
   end
 
   def update
     @quiz = Quiz.find(params[:quiz_id])
     @quiz.update(quiz_params(step))
-
     if step.to_s == 'theme'
       @quiz.question_ids = Question.ids_for_quiz(@quiz.theme.id, params['questions_to_answser'])
       @quiz.save(validate: false)
@@ -22,6 +24,17 @@ class Quiz::StepsController < ApplicationController
   end
 
   private
+
+  def load_subjects(quiz)
+    level = quiz.level
+    @subjects = level.subjects.order(:name)
+    @subjects
+  end
+
+  def load_themes(quiz)
+    @themes = quiz.subject.themes.order(:name)
+    @themes
+  end
 
   def quiz_params(step)
     permitted_attributes = case step
