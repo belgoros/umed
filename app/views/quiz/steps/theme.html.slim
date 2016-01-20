@@ -7,6 +7,7 @@
 
       .form-inputs
         = f.association :theme, collection: @themes, selected: Theme.first
+        = label_tag 'questions_to_answer', t('.questions_to_answer')
         - Quiz::QUESTIONS_TO_ANSWER.each do |option|
           = radio_button_tag :questions_to_answser, option
           = label_tag option
