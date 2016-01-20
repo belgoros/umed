@@ -6,8 +6,12 @@ class Quiz::StepsController < ApplicationController
   def show
     @quiz = Quiz.find(params[:quiz_id])
     @levels = Level.all.order(:name)
-    load_subjects(@quiz) if @quiz.level
-    load_themes(@quiz) if @quiz.subject
+    case step
+    when 'subject'
+      load_subjects(@quiz)
+    when "theme"
+      load_themes(@quiz)
+    end
     render_wizard
   end
 
