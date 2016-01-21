@@ -1486,6 +1486,7 @@ $topbar-dropdown-bg: $topbar-bg-color;
 // Using rem-calc for the below breakpoint causes issues with top bar
 // $topbar-breakpoint: #{lower-bound($medium-range)}; // Change to 9999px for always mobile layout
 // $topbar-media-query: "#{$screen} and (min-width:#{lower-bound($topbar-breakpoint)})";
+$topbar-breakpoint:900px;
 
 // Top-bar input styles
 // $topbar-input-height: rem-calc(28);
