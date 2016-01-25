@@ -36,6 +36,7 @@ fr:
     unlock_instructions_not_received: "Pas reçu les instructions pour débloquer le compte ?"
     back_to: "Retour"
     next: 'Suivant'
+    details: 'Détails'
   levels:
     index:
       title: 'Liste des niveaux de difficulté'
@@ -109,6 +110,8 @@ fr:
       questions: Questions
       answers: Réponses
       score: Résultat
+    details:
+      title: Détails du Quiz
   quiz:
     steps:
       level:
