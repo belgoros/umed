@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :theme do
-    name "MyString"
+    name { FFaker::Lorem.words(3) }
     subject
   end
 
