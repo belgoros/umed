@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   resources :levels
 
   resources :quizzes, only: [:create, :index, :destroy] do
+    get 'details', on: :member
     resources :steps, only: [:show, :update], controller: 'quiz/steps'
     resources :questions, only: [:show, :update], controller: 'quiz/questions'
   end

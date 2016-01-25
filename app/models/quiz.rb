@@ -1,4 +1,5 @@
 class Quiz < ActiveRecord::Base
+  belongs_to :user
   belongs_to :level
   belongs_to :subject
   belongs_to :theme

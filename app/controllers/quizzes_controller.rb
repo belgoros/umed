@@ -4,6 +4,10 @@ class QuizzesController < ApplicationController
     @quizzes = current_user.quizzes
   end
 
+  def details
+    @quiz = current_user.quizzes.find(params[:id])
+  end
+
   def create
     @quiz = current_user.quizzes.new
     @quiz.save(validate: false)
