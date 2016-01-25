@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Level, type: :model do
+describe Level, type: :model do
 
   context 'validations' do
     subject { build(:level)}
