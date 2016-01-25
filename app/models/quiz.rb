@@ -37,7 +37,7 @@ class Quiz < ActiveRecord::Base
   end
 
   def score
-    correct_answers_id = Answer.correct(answer_ids)
+    correct_answers_id = Answer.correct_ids(answer_ids)
     "#{correct_answers_id.size}/#{total_questions}"
   end
 end
