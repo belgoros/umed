@@ -24,7 +24,7 @@ describe Question, type: :model do
 
       it "returns default number of ids" do
         ids = Question.ids_for_quiz(@theme.id)
-        expect(ids.size).to eq(5)
+        expect(ids.size).to eq(Question::DEFAULT_QUESTIONS_NUMBER)
       end
 
       it "returns the specified number of ids" do
