@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :question do
-    text { FFaker::Lorem.phrase }
+    text { FFaker::Lorem.words(3) }
     theme
   end
 end
