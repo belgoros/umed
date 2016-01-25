@@ -29,27 +29,27 @@ class Quiz::StepsController < ApplicationController
 
   private
 
-  def load_subjects(quiz)
-    level = quiz.level
-    @subjects = level.subjects.order(:name)
-    @subjects
-  end
+    def load_subjects(quiz)
+      level = quiz.level
+      @subjects = level.subjects.order(:name)
+      @subjects
+    end
 
-  def load_themes(quiz)
-    @themes = quiz.subject.themes.order(:name)
-    @themes
-  end
+    def load_themes(quiz)
+      @themes = quiz.subject.themes.order(:name)
+      @themes
+    end
 
-  def quiz_params(step)
-    permitted_attributes = case step
-      when "level"
-        [:level_id]
-      when "subject"
-        [:subject_id]
-      when "theme"
-        [:theme_id]
-      end
+    def quiz_params(step)
+      permitted_attributes = case step
+        when "level"
+          [:level_id]
+        when "subject"
+          [:subject_id]
+        when "theme"
+          [:theme_id]
+        end
 
-    params.require(:quiz).permit(permitted_attributes).merge(form_step: step)
-  end
+      params.require(:quiz).permit(permitted_attributes).merge(form_step: step)
+    end
 end
