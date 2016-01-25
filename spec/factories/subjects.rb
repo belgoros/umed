@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :subject do
-    name { Faker::Lorem.phrase }
+    name { FFaker::Lorem.phrase }
     level
   end
 end
