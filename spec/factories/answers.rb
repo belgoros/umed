@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :answer do
-    text { Faker::Lorem.phrase }
+    text { FFaker::Lorem.phrase }
     question
     correct false
   end
