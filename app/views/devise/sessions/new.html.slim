@@ -1,6 +1,6 @@
 = provide(:title, t('.sign_in'))
 .row
-  .small-10.medium-8.large-6.small-centered.columns
+  .medium-8.large-6.small-centered.columns
     .panel.callout.radius
       h2 = t('.sign_in')
       = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
