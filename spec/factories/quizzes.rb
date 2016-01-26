@@ -4,7 +4,7 @@ FactoryGirl.define do
     level
     subject
     theme
-    question_ids Array.new(10) { rand(50)}
-    answer_ids Array.new(10) { rand(50)}
+    question_ids [1, 2, 3]
+    answer_ids [1, 2, 3]
   end
 end
