@@ -1,7 +1,26 @@
 = provide(:title, t('.title'))
 
 .row
-  h3 Quiz score:
-  p = @quiz.score
+  .small-12.columns
+    h3 #{t('.score')}: #{@quiz.score}
+    - if @answers.empty?
+      h1 = t('.empty')
+    - else
+      h3 = t('.selection')
+      = selection_for(@quiz)
+      table
+        thead
+          tr
+            th = t('.questions')
+            th = t('.answers')
 
-  = link_to t('links.back_to'), quizzes_path
+        tbody
+          - @answers.each do |answer|
+            tr
+              td = answer.question.text
+              - if answer.correct?
+                td.success = answer.text
+              - else
+                td.error = answer.text
+
+    = link_to t('links.back_to'), quizzes_path

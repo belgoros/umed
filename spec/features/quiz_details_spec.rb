@@ -2,9 +2,13 @@ require 'rails_helper'
 
 feature "Quiz Details", type: :feature do
   let(:user) { create(:user) }
-  let!(:quiz) { create(:quiz, user: user) }
 
-  before(:each) { signin_user(user.email, user.password)}
+  before(:each) do
+    question = create(:question)
+    answer_ids = question.answers.map(&:id)
+    @quiz = create(:quiz, user: user, question_ids: [question.id], answer_ids: answer_ids)
+    signin_user(user.email, user.password)
+  end
 
   scenario "User can see the details of a quiz" do
     visit quizzes_path

@@ -103,6 +103,7 @@ fr:
   quizzes:
     index:
       title: Vos quizzes
+      selection: Critères sélectionnés
       empty: Vous n'avez aucun quiz passé
       level: Niveau
       subject: Matière
@@ -112,6 +113,11 @@ fr:
       score: Résultat
     details:
       title: Détails du Quiz
+      score: Votre score
+      empty: Aucun quiz passé
+      selection: Critères sélectionnés
+      questions: Questions
+      answers: Réponses
   quiz:
     steps:
       level:

@@ -13,6 +13,7 @@ class Quiz < ActiveRecord::Base
 
   attr_accessor :form_step
 
+  validates :user_id, presence: true
   validates :level_id,   presence: true,  if: -> { required_for_step?(:level) }
   validates :subject_id, presence: true,  if: -> { required_for_step?(:subject)}
   validates :theme_id,   presence: true,  if: -> { required_for_step?(:theme)}
@@ -39,5 +40,17 @@ class Quiz < ActiveRecord::Base
   def score
     correct_answers_id = Answer.correct_ids(answer_ids)
     "#{correct_answers_id.size}/#{total_questions}"
+  end
+
+  def answers
+    if complete?
+      Answer.find(answer_ids)
+    else
+      []
+    end
+  end
+
+  def complete?
+    !!(level && subject && theme)
   end
 end
