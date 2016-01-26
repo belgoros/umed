@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :answer do
-    text { Faker::Lorem.phrase }
+    sequence(:text) { |n| "This is a answer nr.#{n}" }
     question
     correct false
   end

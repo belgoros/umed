@@ -18,7 +18,7 @@ class Quiz::QuestionsController < ApplicationController
 
   def update
     @quiz = Quiz.find(params[:quiz_id])
-    @quiz.answer_ids.push(params[:quiz][:answer_ids]) if params[:quiz]
+    @quiz.answer_ids.push(params[:quiz][:answer_ids].to_i) if params[:quiz] && !params[:quiz][:answer_ids].blank?
     #No need to save the quiz, render_wizzard saves it when passing in an object
     render_wizard @quiz
   end
@@ -29,13 +29,13 @@ class Quiz::QuestionsController < ApplicationController
 
   private
 
-  def set_steps
-    quiz = Quiz.find(params[:quiz_id])
-    question_ids = quiz.question_ids
-    self.steps = question_ids
-  end
+    def set_steps
+      quiz = Quiz.find(params[:quiz_id])
+      question_ids = quiz.question_ids
+      self.steps = question_ids.map(&:to_s)
+    end
 
-  def quiz_params()
-    params.require(:quiz).permit('level_id', 'subject_id', 'theme_id', 'question_ids', 'answer_ids')
-  end
+    def quiz_params()
+      params.require(:quiz).permit('level_id', 'subject_id', 'theme_id', 'question_ids', 'answer_ids')
+    end
 end

@@ -1,4 +1,5 @@
 class Quiz < ActiveRecord::Base
+  belongs_to :user
   belongs_to :level
   belongs_to :subject
   belongs_to :theme
@@ -36,7 +37,7 @@ class Quiz < ActiveRecord::Base
   end
 
   def score
-    correct_answers_id = Answer.correct(answer_ids)
+    correct_answers_id = Answer.correct_ids(answer_ids)
     "#{correct_answers_id.size}/#{total_questions}"
   end
 end

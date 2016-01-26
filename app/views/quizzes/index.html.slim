@@ -15,6 +15,8 @@
             th =t('.questions')
             th =t('.answers')
             th =t('.score')
+            th
+            th
 
 
         tbody
@@ -26,4 +28,5 @@
               td = quiz.total_questions
               td = quiz.total_answers
               td = quiz.score
+              td = link_to t('links.details'), details_quiz_path(quiz)
               td = link_to t('links.delete'), quiz, data: {:confirm => t('are_you_sure')}, :method => :delete

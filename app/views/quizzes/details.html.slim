@@ -1,0 +1,7 @@
+= provide(:title, t('.title'))
+
+.row
+  h3 Quiz score:
+  p = @quiz.score
+
+  = link_to t('links.back_to'), quizzes_path
