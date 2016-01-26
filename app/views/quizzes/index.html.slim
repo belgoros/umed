@@ -9,9 +9,7 @@
       table
         thead
           tr
-            th =t('.level')
-            th =t('.subject')
-            th =t('.theme')
+            th =t('.selection')
             th =t('.questions')
             th =t('.answers')
             th =t('.score')
@@ -22,9 +20,7 @@
         tbody
           - @quizzes.each do |quiz|
             tr
-              td = quiz.level.try(:name)
-              td = quiz.subject.try(:name)
-              td = quiz.theme.try(:name)
+              td = selection_for(quiz)
               td = quiz.total_questions
               td = quiz.total_answers
               td = quiz.score

@@ -4,7 +4,7 @@ FactoryGirl.define do
     level
     subject
     theme
-    question_ids [1, 2, 3]
-    answer_ids [1, 2, 3]
+    question_ids []
+    answer_ids []
   end
 end

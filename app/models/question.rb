@@ -8,4 +8,8 @@ class Question < ActiveRecord::Base
 
   validates :text, presence: true
   validates :theme_id, presence: true
+
+  def correct_answer
+    answers.where(correct: true)
+  end
 end
