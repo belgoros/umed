@@ -10,8 +10,6 @@
         thead
           tr
             th =t('.selection')
-            th =t('.questions')
-            th =t('.answers')
             th =t('.score')
             th
             th
@@ -21,8 +19,6 @@
           - @quizzes.each do |quiz|
             tr
               td = selection_for(quiz)
-              td = quiz.total_questions
-              td = quiz.total_answers
               td = quiz.score
               td = link_to t('links.details'), details_quiz_path(quiz)
               td = link_to t('links.delete'), quiz, data: {:confirm => t('are_you_sure')}, :method => :delete
