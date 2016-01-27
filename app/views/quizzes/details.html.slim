@@ -7,7 +7,19 @@
       h1 = t('.empty')
     - else
       h3 = t('.selection')
-      = selection_for(@quiz)
+      p
+        b
+          ' #{t('.level')}:
+        = @quiz.level.name
+
+      p
+        b
+          ' #{t('.subject')}:
+        = @quiz.subject.name
+      p
+        b
+          ' #{t('.theme')}:
+        = @quiz.theme.name
       table
         thead
           tr
