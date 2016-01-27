@@ -1,14 +1,14 @@
 footer.footer
   .row
     .small-12.columns
-      p.slogan UMed
+      p.slogan = t('base_title')
       hr /
       p.links
-        a href="#"  Accueil
-        a href="#"  Blog
-        a href="#"  Prix
-        a href="#"  A propos
-        a href="#"  Faq
-        a href="#"  Contact
+        = link_to t('links.home'), root_path
+        = link_to t('links.blog')
+        = link_to t('links.prices')
+        = link_to t('links.about')
+        = link_to t('links.faq')
+        = link_to t('links.contact')
       p.social-media
       p.copywrite Copywrite not copypwrite © 2015

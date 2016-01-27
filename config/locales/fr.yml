@@ -15,6 +15,12 @@ fr:
       truncate: "&hellip;"
 
   links:
+    home: Accueil
+    blog: Blog
+    prices: Prix
+    about: A propos
+    faq: FAQ
+    contact: Contact
     new: 'Ajouter'
     edit: 'Modifier'
     show: 'Détails'
@@ -115,6 +121,9 @@ fr:
       title: Détails du Quiz
       score: Votre score
       empty: Aucun quiz passé
+      level: Niveau
+      subject: Matière
+      theme: Thème
       selection: Critères sélectionnés
       questions: Questions
       answers: Réponses
