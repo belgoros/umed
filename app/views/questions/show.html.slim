@@ -2,6 +2,11 @@
 .row
   .small-12.columns
     h3 = t('.title', question: @question.text)
+<<<<<<< HEAD
+=======
+    - if @question.photo_file_name
+      = image_tag @question.photo.url(:thumb)
+>>>>>>> add_images_to_questions
 
     - if @question.answers.empty?
       h4 = t('.empty')

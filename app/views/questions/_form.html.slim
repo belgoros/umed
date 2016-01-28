@@ -1,8 +1,7 @@
 = simple_form_for([@theme, @question]) do |f|
   = f.error_notification
 
-  .form-inputs
-    = f.input :text
+  = f.input :text
+  = f.input :photo, as: :file
 
-  .form-actions
-    = f.button :submit
+  = f.button :submit
