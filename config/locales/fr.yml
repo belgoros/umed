@@ -88,6 +88,7 @@ fr:
       theme: Thème
     new:
       title: 'Nouvelle question'
+      text: 'Question'
     edit:
       title: 'Modifier la question'
     show:
@@ -350,6 +351,8 @@ fr:
       even: "doit être pair"
       taken: "n'est pas disponible"
       record_invalid: "La validation a échoué : %{errors}"
+      in_between: "doit être entre %{min} et %{max}"
+      spoofed_media_type: "ne correspond pas au contenu déclaré"
 
     template: &errors_template
       header:
@@ -362,25 +365,26 @@ fr:
       <<: *errors
   activerecord:
     models:
-      level: "Niveau"
-      subject: "Matière"
-      theme: "Thème"
-      question: "Question"
-      answer: "Réponse"
+      level: Niveau
+      subject: Matière
+      theme: Thème
+      question: Question
+      answer: Réponse
       user: Utilisateur
     attributes:
       level:
-        name: "Description"
+        name: Description
       subject:
-        name: "Nom"
-        level_id: "Niveau"
+        name: Nom
+        level_id: Niveau
       theme:
-        name: "Nom"
+        name: Nom
       question:
-        text: "Text"
+        text: Texte
+        photo: Image (optionnel)
       answer:
-        text: "Text"
-        correct: "Correct"
+        text: Texte
+        correct: Correct
       user:
         current_password: Mot de passe actuel
         email: Adresse e-mail
