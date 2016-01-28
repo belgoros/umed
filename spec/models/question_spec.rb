@@ -5,7 +5,6 @@ describe Question, type: :model do
   it { should validate_presence_of(:theme_id)}
 
   it { should have_many(:answers) }
-  it { should have_many(:images) }
   it { should belong_to(:theme)}
 
   context "ids array for quiz" do

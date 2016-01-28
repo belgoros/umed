@@ -8,7 +8,6 @@ Rails.application.routes.draw do
       resources :questions, shallow: true, except: :index do
         resources :images, except: :index
         resources :answers, except: :index
-        resources :images, except: :index
       end
     end
   end
