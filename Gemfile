@@ -20,6 +20,7 @@ gem 'sdoc',             '~> 0.4.0', group: :doc
 gem 'wicked'
 gem 'pg'
 gem 'nokogiri', '~> 1.6.7.1'
+gem 'foundation-icons-sass-rails'
 
 group :development, :test do
   gem 'quiet_assets', '~> 1.1.0'
