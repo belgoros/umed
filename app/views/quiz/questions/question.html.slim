@@ -6,7 +6,7 @@
       = f.error_notification
 
       p = @question.text
-      = f.collection_radio_buttons :answer_ids, @question.answers, :id, :text
+      .quiz-question
+        = f.collection_radio_buttons :answer_ids, @question.answers, :id, :text
 
-      .form-actions
-        = f.button :submit, t('links.next')
+      = f.button :submit, t('links.next')
