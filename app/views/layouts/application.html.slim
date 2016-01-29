@@ -13,5 +13,7 @@ html
   body
     == render 'layouts/navbar'
     == render 'layouts/messages'
-    == yield
+    .wrapper
+      == yield
+      .push
     == render 'layouts/footer'

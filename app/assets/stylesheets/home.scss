@@ -1,8 +1,3 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-
 .fullWidth {
   width: 100%;
   margin-left: auto;
@@ -10,47 +5,53 @@
   max-width: initial;
 }
 
-.footer {
-  background-color: #024772;
-  text-align: center;
-  font-size: 1.2rem;
-  padding: 4rem; }
-  .footer p.slogan {
-    color: white;
-    font-size: 2rem;
-    margin: 0 0 1rem; }
-  .footer p.copywrite {
-    color: #8f9296;
-    font-size: 0.875rem;
-    margin: 0; }
-  .footer .links a {
-    color: white;
-    }
-    .footer .links a::after {
-      content: "•";
-      padding: 0 0.4rem 0 0.8rem; }
-    .footer .links a:last-child::after {
-      content: "";
-      padding: 0 0.4rem 0 0.8rem; }
-
 img {
   display: block;
   margin:auto;
 }
 
-h4,h2
-{text-align:center;}
+h4, h2 {
+  text-align: center;
+}
+
+.footer li {
+  list-style: none;
+  float:left;
+  line-height:80px;
+  padding-right:10px;
+  padding-left:10px;
+}
+  .footer li a {
+    color:#012f4b;
+  }
+  .footer li a:hover {
+    color:#0387A5;
+  }
+
+.footer {
+  background-color:#024772;
+}
+
+html, body {
+  height: 100%;
+}
+.wrapper {
+  min-height: 100%;
+  margin: 0 auto -80px; /* the bottom margin is the negative value of the footer's height */
+}
+.footer, .push {
+  height: 80px; /* '.push' must be the same height as 'footer' */
+}
 
 .panel.callout.radius {
-  margin-top:20px;
+  margin-top: 20px;
 }
 
 .first-text {
-    padding-top:75px;
-    padding-bottom:75px;
+  padding-top: 75px;
+  padding-bottom: 75px;
 }
 
 .set-of-three {
-  padding-bottom:75px;
+  padding-bottom: 75px;
 }
-
