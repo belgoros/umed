@@ -36,10 +36,10 @@ html, body {
 
 .wrapper {
   min-height: 100%;
-  margin: 0 auto -155px; /* the bottom margin is the negative value of the footer's height */
+  margin: 0 auto -175px;
 }
 .footer, .push {
-  height: 155px; /* '.push' must be the same height as 'footer' */
+  height: 175px;
 }
 
 .panel.callout.radius {
