@@ -22,7 +22,6 @@ gem 'pg'
 gem 'nokogiri', '~> 1.6.7.1'
 
 group :development, :test do
-  gem 'sqlite3'
   gem 'quiet_assets', '~> 1.1.0'
   gem 'letter_opener'
   gem 'rspec-rails', '~> 3.3.3'
