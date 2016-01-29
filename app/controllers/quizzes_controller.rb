@@ -1,7 +1,7 @@
 class QuizzesController < ApplicationController
 
   def index
-    @quizzes = current_user.quizzes
+    @quizzes = current_user.quizzes.order(:created_at)
   end
 
   def details
