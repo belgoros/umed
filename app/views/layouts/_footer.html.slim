@@ -1,21 +1,20 @@
 .footer
   .row
-    .medium-8.columns
-      ul.inline-list.links-footer
-        li = link_to t('links.home'), root_path
-        li = link_to t('links.blog')
-        li = link_to t('links.prices')
-        li = link_to t('links.about')
-        li = link_to t('links.faq')
-        li = link_to t('links.contact')
-    .medium-4.columns
-      ul.inline-list.social-media
-        li
-          a
-            i.fi-social-facebook.size-48
-        li
-          a
-            i.fi-social-twitter.size-48
-        li
-          a
-            i.fi-social-google-plus.size-48
+    ul.links-footer
+      li = link_to t('links.home'), root_path
+      li = link_to t('links.blog')
+      li = link_to t('links.prices')
+      li = link_to t('links.about')
+      li = link_to t('links.faq')
+      li = link_to t('links.contact')
+  .row
+    ul.social-media
+      li
+        a
+          i.fi-social-facebook.size-48
+      li
+        a
+          i.fi-social-twitter.size-48
+      li
+        a
+          i.fi-social-google-plus.size-48

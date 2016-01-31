@@ -17,17 +17,26 @@ h4, h2 {
 .footer {
   background-color: #024772;
   margin-top: 50px;
-}
-  .footer ul li a:hover {
+  ul li a:hover {
     color: white;
   }
+  li {
+    display: inline-block;
+    list-style: none;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+}
 
 .social-media {
-  float: right;
+  text-align: center;
+  margin-bottom: 0px;
 }
 
 .links-footer {
-  padding-top: 3%;
+  text-align: center;
+  padding-top: 12px;
+  margin-bottom: 0px;
 }
 
 html, body {
@@ -36,10 +45,11 @@ html, body {
 
 .wrapper {
   min-height: 100%;
-  margin: 0 auto -175px;
+  margin: 0 auto -120px;
 }
+
 .footer, .push {
-  height: 175px;
+  height: 120px;
 }
 
 .panel.callout.radius {
@@ -47,12 +57,14 @@ html, body {
 }
 
 .first-text {
+  text-align: center;
   padding-top: 75px;
   padding-bottom: 75px;
 }
 
 .set-of-three {
   padding-bottom: 75px;
+  text-align: center;
 }
 
 .size-12 { font-size: 12px; }
