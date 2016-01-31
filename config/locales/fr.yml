@@ -1,5 +1,5 @@
 fr:
-  base_title: "U-Med"
+  base_title: "UMed"
   are_you_sure: "Êtes-vous sûr ?"
   created_success: "%{model} créé(e) avec succès"
   updated_success: "%{model} modifié(e) avec succès"
