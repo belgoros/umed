@@ -12,7 +12,7 @@ feature "Signup", type: :feature do
 
     open_email('newuser@example.com')
     expect(current_email.to).to eq ["newuser@example.com"]
-    expect(current_email.subject).to eq 'Welcome to Your UMed space'
-    expect(current_email).to have_content('Welcome to Umed !')
+    expect(current_email.subject).to eq I18n.t('.subject', scope: [:user_mailer, :welcome_email])
+    expect(current_email).to have_content(I18n.t('.body.title', scope: [:user_mailer, :welcome_email]))
   end
 end

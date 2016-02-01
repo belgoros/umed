@@ -14,6 +14,14 @@ fr:
       next: "Suivant &rsaquo;"
       truncate: "&hellip;"
 
+  user_mailer:
+    welcome_email:
+      subject: Bienvenu dans UMed
+      body:
+        title: Bienvenu dans votre espace UMed !
+        line1: Vous vous êtes isncrit(e) avec succès au service UMed.
+        line2: "Pour se connecter à votre compte UMed, cliquer sur le lien %{link}."
+        line3: "Merci beaucoup pour votre adhésion !"
   links:
     home: Accueil
     blog: Blog
