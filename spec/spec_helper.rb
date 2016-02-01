@@ -1,10 +1,3 @@
-ENV["RAILS_ENV"] ||= 'test'
-require File.expand_path("../../config/environment", __FILE__)
-require 'rspec/rails'
-require 'capybara/rspec'
-
-Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
-
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
@@ -28,7 +21,4 @@ RSpec.configure do |config|
     # `true` in RSpec 4.
     mocks.verify_partial_doubles = true
   end
-
-  # Include Factory Girl syntax to simplify calls to factories
-  config.include FactoryGirl::Syntax::Methods
 end
