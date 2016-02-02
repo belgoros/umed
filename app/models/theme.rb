@@ -3,4 +3,5 @@ class Theme < ActiveRecord::Base
   belongs_to :subject
 
   validates :name, presence: true, uniqueness: { case_sensitive: false }
+  validates :subject_id, presence: true
 end
