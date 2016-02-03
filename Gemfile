@@ -25,7 +25,7 @@ gem 'foundation-icons-sass-rails'
 group :development, :test do
   gem 'quiet_assets', '~> 1.1.0'
   gem 'letter_opener'
-  gem 'rspec-rails', '~> 3.3.3'
+  gem 'rspec-rails', '~> 3.4.0'
   gem 'pry'
   gem 'pry-nav'
   gem 'pry-rails',  '~> 0.3.2'
