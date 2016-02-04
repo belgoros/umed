@@ -21,9 +21,16 @@ describe Question, type: :model do
         end
       end
 
-      it "returns default number of ids" do
-        ids = Question.ids_for_quiz(@theme.id)
-        expect(ids.size).to eq(Question::DEFAULT_QUESTIONS_NUMBER)
+      context "returns default number of ids" do
+        specify "when no questions number specified" do
+          ids = Question.ids_for_quiz(@theme.id)
+          expect(ids.size).to eq(Question::DEFAULT_QUESTIONS_NUMBER)
+        end
+
+        specify "when questions number specified as nil" do
+          ids = Question.ids_for_quiz(@theme.id, nil)
+          expect(ids.size).to eq(Question::DEFAULT_QUESTIONS_NUMBER)
+        end
       end
 
       it "returns the specified number of ids" do
