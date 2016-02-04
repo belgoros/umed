@@ -7,7 +7,7 @@ FactoryGirl.define do
       admin true
     end
 
-    factory :premium do
+    factory :premium_user do
       premium true
     end
   end
