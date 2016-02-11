@@ -16,4 +16,8 @@ module ApplicationHelper
   def flash_by_name(name)
     "#{name.to_s == 'notice' ? 'success' : 'alert'}"
   end
+
+  def boolean_to_text(correct)
+    "#{correct ?  'Y' : 'N'}"
+  end
 end

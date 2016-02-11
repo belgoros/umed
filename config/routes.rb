@@ -15,6 +15,9 @@ Rails.application.routes.draw do
   resources :questions, only: :index
   resources :answers,   only: :index
   resources :levels
+  resources :subscriptions, except: [:update, :edit, :destroy] do
+    get 'express_checkout', on: :new
+  end
 
   resources :quizzes, only: [:create, :index, :destroy] do
     get 'details', on: :member

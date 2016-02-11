@@ -42,6 +42,7 @@ fr:
     dashboard: 'Dashboard'
     profile: 'Profil'
     quizzes: 'Mes quizzes'
+    subscriptions: 'Mes souscriptions'
     sign_in: "Se connecter"
     sign_up: "S'enregistrer"
     sign_out: "Se déconnecter"
@@ -148,6 +149,13 @@ fr:
     questions:
       question:
         title: Question du Quiz
+  subscriptions:
+    index:
+      empty: Vous n'avez aucune souscription
+      title: Mes souscriptions
+      start_date: Date de début
+      end_date: "Valable jusqu'au"
+      activated: Activée
 
   date:
     formats:
