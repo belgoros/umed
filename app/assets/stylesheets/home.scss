@@ -10,7 +10,7 @@ img {
   margin: auto;
 }
 
-h4, h2 {
+h4, h3, h2 {
   text-align: center;
 }
 
@@ -69,6 +69,42 @@ html, body {
   text-align: center;
 }
 
+@media only screen and (max-width: 640px) {
+  .multi-devices-text, .evolution-text {
+    margin-bottom: 75px;
+  }
+}
+
+.free-price-option {
+  background-color: #BFB6AE;
+  list-style-position: inside;
+}
+
+.month-price-option {
+  background-color: #0387A5;
+}
+
+.quarter-price-option {
+  background-color: #02658C;
+}
+
+.prices ul {
+  display: table;
+  margin: 0 auto;
+}
+
+.prices li {
+  margin-bottom: 10px;
+}
+
+.prices h3 {
+  margin-top:15px;
+}
+
+.prices h4 {
+  margin-bottom: 35px;
+}
+
 .size-12 { font-size: 12px; }
 .size-14 { font-size: 14px; }
 .size-16 { font-size: 16px; }
@@ -79,3 +115,4 @@ html, body {
 .size-48 { font-size: 48px; }
 .size-60 { font-size: 60px; }
 .size-72 { font-size: 72px; }
+.size-180 { font-size: 180px;}

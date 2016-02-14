@@ -1049,7 +1049,6 @@ $callout-panel-bg: scale-color(#A8A8A8, $lightness: 94%);
 // $price-money-size: rem-calc(32);
 // $price-money-font-family: $body-font-family;
 
-
 // We use these to control the description styles
 // $price-bg: $white;
 // $price-desc-color: $monsoon;
@@ -1067,6 +1066,7 @@ $callout-panel-bg: scale-color(#A8A8A8, $lightness: 94%);
 // $price-item-font-size: rem-calc(14);
 // $price-item-weight: $font-weight-normal;
 // $price-item-bottom-border: dotted 1px $gainsboro;
+$price-item-bottom-border: none;
 
 // We use these to control the CTA area styles
 // $price-cta-bg: $white;
