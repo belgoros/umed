@@ -69,23 +69,31 @@ html, body {
   text-align: center;
 }
 
-.prices button {
-
+@media only screen and (max-width: 640px) {
+  .multi-devices-text, .evolution-text {
+    margin-bottom: 75px;
+  }
 }
 
 .free-price-option {
-  background-color:#BFB6AE;
+  background-color: #BFB6AE;
+  list-style-position: inside;
 }
 
 .month-price-option {
-  background-color:#0387A5;
+  background-color: #0387A5;
 }
 
 .quarter-price-option {
-  background-color:#02658C;
+  background-color: #02658C;
 }
 
-.prices ul li {
+.prices ul {
+  display: table;
+  margin: 0 auto;
+}
+
+.prices li {
   margin-bottom: 10px;
 }
 
@@ -107,3 +115,4 @@ html, body {
 .size-48 { font-size: 48px; }
 .size-60 { font-size: 60px; }
 .size-72 { font-size: 72px; }
+.size-180 { font-size: 180px;}
