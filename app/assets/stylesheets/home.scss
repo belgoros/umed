@@ -10,7 +10,7 @@ img {
   margin: auto;
 }
 
-h4, h2 {
+h4, h3, h2 {
   text-align: center;
 }
 
@@ -67,6 +67,34 @@ html, body {
 .set-of-three {
   padding-bottom: 75px;
   text-align: center;
+}
+
+.prices button {
+
+}
+
+.free-price-option {
+  background-color:#BFB6AE;
+}
+
+.month-price-option {
+  background-color:#0387A5;
+}
+
+.quarter-price-option {
+  background-color:#02658C;
+}
+
+.prices ul li {
+  margin-bottom: 10px;
+}
+
+.prices h3 {
+  margin-top:15px;
+}
+
+.prices h4 {
+  margin-bottom: 35px;
 }
 
 .size-12 { font-size: 12px; }
