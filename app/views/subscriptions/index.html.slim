@@ -3,7 +3,6 @@
   .small-12.columns
     - if @subscriptions.empty?
       h1 = t('.empty')
-      = link_to image_tag("https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif"), express_checkout_new_subscription_path
 
     - else
       h1 = t('.title')
@@ -13,6 +12,7 @@
       table
         thead
           tr
+            th = t('.prix')
             th = t('.start_date')
             th = t('.end_date')
             th = t('.activated')
@@ -20,8 +20,14 @@
         tbody
           - @subscriptions.each do |subscription|
             tr
-              td = subscription.start_date
-              td = subscription.end_date
+              td = number_to_currency(subscription.plan.price)
+              td = localize(subscription.start_date)
+              td = localize(subscription.end_date)
               td = boolean_to_text(subscription.activated)
+              - if current_user.admin?
+                td = link_to t('links.delete'), subscription, data: {:confirm => t('are_you_sure')}, :method => :delete
 
       = paginate @subscriptions
+
+= link_to image_tag("https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif"), express_checkout_new_subscription_path
+

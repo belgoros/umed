@@ -6,6 +6,8 @@
       = f.error_notification
 
       p = @question.text
+      - if @question.photo_file_name
+        = image_tag @question.photo.url(:thumb)
       .quiz-question
         = f.collection_radio_buttons :answer_ids, @question.answers, :id, :text
 

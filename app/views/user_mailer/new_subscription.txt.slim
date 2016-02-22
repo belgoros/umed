@@ -1,0 +1,11 @@
+=t('.body.title')
+|===============================================
+
+= t('.body.line1', plan: @plan.description,
+                   price: number_to_currency(@plan.price),
+                   duration: @plan.duration,
+                   start_date: l(@subscription.start_date),
+                   end_date: l(@subscription.end_date))
+= t('.body.line2')
+= t('.body.line3')
+= t('.signature')

@@ -1,8 +1,8 @@
-img src="http://placehold.it/1980x850&amp;text=[%20img%201%20]" /
+= image_tag('books.jpg')
 
 .row.first-text
   .medium-9.small-centered.columns
-    h2 Testez vos connaisances en médecine
+    h2 Testez vos connaissances en médecine
     br /
     p Lorsque l'on est rentrés en première année de médecine, nous avons observé que le principal problème des étudiants est de n'avoir aucun moyen pour s'auto évaluer, fini les contrôles et les interrogations, l'université vous plonge dans un monde où vous devez tout gérer vous-même. C'est de là qu'est venue l'idée de créer UMed, une application web qui permetterait aux étudiants de tester leurs connaissances et de mieux se préparer au blocus ainsi qu'aux examens.
 
@@ -24,37 +24,4 @@ img src="http://placehold.it/1980x850&amp;text=[%20img%201%20]" /
     h4 Au coeur du problème.
     p Étant nous-mêmes sur le terrain à Mons, nous savons à quel point la première année est difficile. Surtout en médecine.
 
-.row.prices.fullWidth data-equalizer=""
-  .medium-4.columns.free-price-option
-    h3 Gratuit
-    h4 0€/mois
-    .row
-      .small-8.small-centered.columns
-        ul data-equalizer-watch=""
-          li Vous avez accès à 20 questions
-          li Passez Premium ultérieurement
-          li Commencez immédiatement
-    br /
-    button.expand.radius Commencer !
-  .medium-4.columns.month-price-option
-    h3 Premium
-    h4 3€/mois
-    .row
-      .small-8.small-centered.columns
-        ul.month-price-option data-equalizer-watch=""
-          li Vous avez accès à plus de 1000 questions
-          li Le prix d'un gros sandwich
-          li Commencez tout de suite
-    br /
-    button.expand.radius Commencer !
-  .medium-4.columns.quarter-price-option
-    h3 Premium
-    h4 7€/trimestre
-    .row
-      .small-8.small-centered.columns
-        ul data-equalizer-watch=""
-          li Vous avez accès à plus de 1000 questions
-          li Offre avantageuse
-          li Commencez tout de suite
-    br /
-    button.expand.radius Commencer !
+= render 'plans/prices'

@@ -1,0 +1,11 @@
+= simple_form_for(@subscription) do |f|
+  = f.error_notification
+  = f.input :express_token, as: :hidden
+  = f.input :express_payer_id, as: :hidden
+
+  = f.input :start_date, as: :string, input_html: { value: localize(@subscription.start_date.to_date) }
+  = f.input :end_date,   as: :string, input_html: { value: localize(@subscription.end_date.to_date) }
+  = f.association :plan, label_method: :description
+  h4 Price: #{@subscription.plan.price}
+
+  = f.button :submit, t('.confirm')
