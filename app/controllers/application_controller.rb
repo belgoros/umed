@@ -6,9 +6,9 @@ class ApplicationController < ActionController::Base
 
   private
 
-  def sign_in_admin
-    unless current_user.admin?
-      redirect_to root_path, alert: t('errors.messages.access_denied')
+    def sign_in_admin
+      unless current_user.admin?
+        redirect_to root_path, alert: t('errors.messages.access_denied')
+      end
     end
-  end
 end
