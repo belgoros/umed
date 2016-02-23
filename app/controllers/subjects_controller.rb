@@ -5,7 +5,7 @@ class SubjectsController < ApplicationController
   # GET /subjects
   # GET /subjects.json
   def index
-    @subjects = Subject.all.page params[:page]
+    @subjects = Subject.includes(:level, :themes).all.page params[:page]
   end
 
   # GET /subjects/1

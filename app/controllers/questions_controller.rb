@@ -6,7 +6,7 @@ class QuestionsController < ApplicationController
   # GET /questions
   # GET /questions.json
   def index
-    @questions = Question.all.page params[:page]
+    @questions = Question.includes(:theme).all.page params[:page]
   end
 
   # GET /questions/1
