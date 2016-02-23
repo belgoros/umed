@@ -28,6 +28,3 @@
                 td = link_to t('links.delete'), subscription, data: {:confirm => t('are_you_sure')}, :method => :delete
 
       = paginate @subscriptions
-
-= link_to image_tag("https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif"), express_checkout_new_subscription_path
-
