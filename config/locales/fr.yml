@@ -31,6 +31,14 @@ fr:
         line2: Nous sommes très heureux vous voir parmi les membres de Umed.
         line3: Nous vous souhaitons beaucoup de courage et du succès dans votre parcours !
         signature: Equipe Umed
+    expired_subscription_email:
+      subject: Votre abonnement expiré
+      body:
+        title: Cher (Chère) membre,
+        line1: "Vous aviez souscrit un abonnement %{plan} à %{price} pour une durée de %{duration} mois à partir de %{start_date}. Votre abonnement est expiré le %{end_date} et n'est plus valable."
+        line2: Vous pouvez le prolongez pour une durée souhaitée à tout moment et à votre convenance via notre site web.
+        line3: "Bien cordialement,"
+        signature: Equipe Umed
   links:
     home: Accueil
     blog: Blog
