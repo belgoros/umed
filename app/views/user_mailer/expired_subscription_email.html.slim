@@ -9,6 +9,6 @@ html
                          duration: @plan.duration,
                          start_date: l(@subscription.start_date),
                          end_date: l(@subscription.end_date))
-    p = t('.body.line2')
+    p = t('.body.line2', url: @url)
     p = t('.body.line3')
     p = t('.body.signature')
