@@ -33,7 +33,7 @@ class SubscriptionsController < ApplicationController
         UserMailer.new_subscription_email(@subscription).deliver_now
         redirect_to subscriptions_url, notice: t(:created_success, model: Subscription.model_name.human)
       else
-        render :failure
+        render :new, alert: t(:purchase_failure, model: Subscription.model_name.human)
       end
     else
       render :new
