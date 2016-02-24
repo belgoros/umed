@@ -1,6 +1,6 @@
 = provide(:title, t('.title'))
 .row
-  .small-12.columns
+  .small-centered.columns
     - if @subscriptions.empty?
       h1 = t('.empty')
 
@@ -16,6 +16,7 @@
             th = t('.start_date')
             th = t('.end_date')
             th = t('.activated')
+            th
 
         tbody
           - @subscriptions.each do |subscription|
@@ -28,3 +29,23 @@
                 td = link_to t('links.delete'), subscription, data: {:confirm => t('are_you_sure')}, :method => :delete
 
       = paginate @subscriptions
+
+.row
+  .medium-10.small-centered.columns
+    .row
+      .medium-6.columns
+        .panel.callout.radius
+          h3 Prolongez votre abonnement
+          h4 3€/mois
+          br /
+          br /
+          a
+            .button.radius.expand Prolonger !
+      .medium-6.columns
+        .panel.callout.radius
+          h3 Prolongez votre abonnement
+          h4 7€/trimestre
+          br /
+          br /
+          a
+            .button.radius.expand Prolonger !
