@@ -7,7 +7,7 @@
 
       .form-inputs
         = f.association :theme, collection: @themes, selected: Theme.first
-        - if current_user.premium?
+        - if current_user.premium?  || current_user.admin?
           = label_tag 'questions_to_answer', t('.questions_to_answer')
           - Quiz::QUESTIONS_TO_ANSWER.each do |option|
             = radio_button_tag :questions_to_answser, option

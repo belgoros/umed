@@ -26,4 +26,17 @@ feature "Subscriptions", type: :feature do
       expect(page).not_to have_content I18n.t('.questions_to_answer', scope: [:quiz, :steps, :theme])
     end
   end
+
+  describe 'admin users' do
+    before(:each) do
+      @user = create(:admin)
+      signin_user(@user.email, @user.password)
+    end
+
+    specify "they can select number of quiz questions" do
+      quiz = create(:quiz, user: @user)
+      visit(quiz_step_path(quiz, id: Quiz.form_steps.last))
+      expect(page).to have_content I18n.t('.questions_to_answer', scope: [:quiz, :steps, :theme])
+    end
+  end
 end
