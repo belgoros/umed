@@ -109,7 +109,7 @@ fr:
       question: Question
   questions:
     index:
-      title: 'Liste des questions'
+      title: "Liste des questions, total: %{total}"
       empty: 'Aucune question trouvée'
       question: Question
       theme: Thème

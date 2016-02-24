@@ -6,6 +6,7 @@ class QuestionsController < ApplicationController
   # GET /questions
   # GET /questions.json
   def index
+    @total = Question.count
     @questions = Question.includes(:theme).all.page params[:page]
   end
 
