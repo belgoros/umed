@@ -7,6 +7,20 @@ describe Question, type: :model do
   it { should have_many(:answers) }
   it { should belong_to(:theme)}
 
+  context "#correct_answer" do
+    before(:all) do
+      @question = create(:question)
+      2.times { create(:answer, question: @question)}
+      create(:answer, question: @question, correct: true)
+    end
+
+    it "should return one correct answer for question" do
+      answer = @question.correct_answer
+      expect(answer).not_to be_nil
+      expect(answer.correct?).to be true
+    end
+  end
+
   context "ids array for quiz" do
     it "should be empty array if no theme specified" do
       ids = Question.ids_for_quiz(nil)
