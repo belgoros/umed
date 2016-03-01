@@ -11,7 +11,7 @@ class Question < ActiveRecord::Base
   validates :theme_id, presence: true
 
   def correct_answer
-    answers.where(correct: true)
+    answers.where(correct: true).first
   end
 
   def self.ids_for_quiz(theme_id, limit = DEFAULT_QUESTIONS_NUMBER)
