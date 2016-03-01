@@ -44,7 +44,7 @@ class Quiz < ActiveRecord::Base
 
   def answers
     if complete?
-      Answer.find(answer_ids)
+      Answer.includes(:question).find(answer_ids)
     else
       []
     end
