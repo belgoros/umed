@@ -56,7 +56,7 @@ fr:
     themes: 'Thèmes'
     questions: 'Questions'
     answers: 'Réponses'
-    dashboard: 'Dashboard'
+    dashboard: 'Mon Dashboard'
     profile: 'Profil'
     quizzes: 'Mes quizzes'
     subscriptions: 'Mes abonnements'
@@ -155,6 +155,9 @@ fr:
       selection: Critères sélectionnés
       questions: Questions
       answers: Réponses
+      question: Question
+      your_answer: Votre réponse
+      correct_answer: Réponse correcte
   quiz:
     steps:
       level:
