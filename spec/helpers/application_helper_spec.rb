@@ -50,4 +50,16 @@ describe ApplicationHelper, :type => :helper do
       expect(boolean_to_text(true)).to eq('Y')
     end
   end
+
+  describe "#styled_answer" do
+    it "should return 'error' for wrong answer" do
+      answer =  create(:answer)
+      expect(styled_answer(answer)).to eq('error')
+    end
+
+    it "should return 'success' for correct answer" do
+      answer =  create(:answer, correct: true)
+      expect(styled_answer(answer)).to eq('success')
+    end
+  end
 end

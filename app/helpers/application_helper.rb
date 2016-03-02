@@ -20,4 +20,8 @@ module ApplicationHelper
   def boolean_to_text(correct)
     "#{correct ?  'Y' : 'N'}"
   end
+
+  def styled_answer(answer)
+     "#{answer.correct? ? 'success' : 'error'}"
+  end
 end

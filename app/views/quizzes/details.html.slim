@@ -24,19 +24,17 @@
       = paginate @answers
       br
       - @answers.each do |answer|
-        .row
-          .small-6.columns
-            = answer.question.text
-          .small-6.columns
-            - if answer.correct?
-              span.answer-success = answer.text
-            - else
-              ul.accordion data-accordion=''
-                li.accordion-navigation
-                  a href="#panel#{answer.id}"
-                    span.answer-error = answer.text
-                  div id="panel#{answer.id}" class='content'
-                    span.answer-success = answer.question.correct_answer.text
+        div class="panel callout #{styled_answer(answer)} text-center"
+          strong> #{t('.question')}:
+          = answer.question.text
+          br
+          strong> #{t('.your_answer')}:
+          = answer.text
+          br
+          br
+          - unless answer.correct?
+            strong> #{t('.correct_answer')}:
+            = answer.question.correct_answer.text
       br
       = paginate @answers
       br
