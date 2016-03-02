@@ -1,11 +1,3 @@
-td.error {
-  color: red;
-}
-
-td.success {
-  color: green;
-}
-
 .quiz-question {
   input[type=radio] + label {
     display: block;
@@ -28,3 +20,7 @@ td.success {
     background-color: #B3B3B3;
   }
 }
+
+.panel.callout.success {background-color: #baedcd;}
+.panel.callout.error   {background-color: #fce6e2;}
+

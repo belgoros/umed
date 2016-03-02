@@ -1,12 +1,12 @@
 class QuizzesController < ApplicationController
 
   def index
-    @quizzes = current_user.quizzes.order(id: :desc)
+    @quizzes = current_user.quizzes.order(id: :desc).page params[:page]
   end
 
   def details
     @quiz = current_user.quizzes.find(params[:id])
-    @answers = @quiz.answers
+    @answers = Kaminari.paginate_array(@quiz.answers).page(params[:page]).per(10)
   end
 
   def create

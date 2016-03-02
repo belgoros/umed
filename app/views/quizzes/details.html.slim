@@ -20,19 +20,23 @@
         b
           ' #{t('.theme')}:
         = @quiz.theme.name
-      table
-        thead
-          tr
-            th = t('.questions')
-            th = t('.answers')
 
-        tbody
-          - @answers.each do |answer|
-            tr
-              td = answer.question.text
-              - if answer.correct?
-                td.success = answer.text
-              - else
-                td.error = answer.text
+      = paginate @answers
+      br
+      - @answers.each do |answer|
+        div class="panel callout #{styled_answer(answer)} text-center"
+          strong> #{t('.question')}:
+          = answer.question.text
+          br
+          strong> #{t('.your_answer')}:
+          = answer.text
+          br
+          br
+          - unless answer.correct?
+            strong> #{t('.correct_answer')}:
+            = answer.question.correct_answer.text
+      br
+      = paginate @answers
+      br
 
     = link_to t('links.back_to'), quizzes_path

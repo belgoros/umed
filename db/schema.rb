@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160128100443) do
+ActiveRecord::Schema.define(version: 20160219123005) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,27 @@ ActiveRecord::Schema.define(version: 20160128100443) do
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "order_transactions", force: :cascade do |t|
+    t.integer  "subscription_id"
+    t.integer  "amount"
+    t.boolean  "success"
+    t.string   "authorization"
+    t.string   "message"
+    t.text     "params"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "plans", force: :cascade do |t|
+    t.string   "name"
+    t.string   "description"
+    t.decimal  "price",       precision: 5, scale: 2
+    t.integer  "duration"
+    t.integer  "questions"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
   end
 
   create_table "questions", force: :cascade do |t|
@@ -67,9 +88,12 @@ ActiveRecord::Schema.define(version: 20160128100443) do
     t.integer  "user_id"
     t.date     "start_date"
     t.date     "end_date"
-    t.boolean  "activated",  default: false
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.boolean  "activated",        default: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.string   "express_token"
+    t.string   "express_payer_id"
+    t.integer  "plan_id"
   end
 
   add_index "subscriptions", ["user_id"], name: "index_subscriptions_on_user_id", using: :btree

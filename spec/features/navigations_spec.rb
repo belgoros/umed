@@ -13,7 +13,7 @@ feature "Navigations", type: :feature do
     expect(page).to have_link(I18n.t('links.dashboard'))
   end
 
-  scenario "Not admin user should not admin links" do
+  scenario "Not admin user should not see admin links" do
     user = create(:user)
     signin_user(user.email, user.password)
     expect(page).to have_link(I18n.t('links.take_quiz'))

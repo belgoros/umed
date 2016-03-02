@@ -4,7 +4,7 @@
     - if @questions.empty?
       h1 = t('.empty')
     - else
-      h1 = t('.title')
+      h1 = t('.title', total: @total)
       = paginate @questions
       br
       table
@@ -12,6 +12,7 @@
           tr
             th = t('.question')
             th = t('.theme')
+            th = t('.image')
             th
             th
             th
@@ -21,6 +22,7 @@
             tr
               td = question.text
               td = question.theme.name
+              td = boolean_to_text(question.photo_file_name)
               td = link_to t('links.answers'), question
               td = link_to t('links.edit'), edit_question_path(question)
               td = link_to t('links.delete'), question, data: {:confirm => t('are_you_sure')}, :method => :delete

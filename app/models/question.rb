@@ -4,14 +4,14 @@ class Question < ActiveRecord::Base
   has_attached_file :photo, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
   validates_attachment :photo,
                         content_type: { content_type: ["image/jpeg", "image/gif", "image/png"] },
-                        size: { in: 0..300.kilobytes }
+                        size: { in: 0..1.megabytes }
   belongs_to :theme
 
   validates :text, presence: true
   validates :theme_id, presence: true
 
   def correct_answer
-    answers.where(correct: true)
+    answers.where(correct: true).first
   end
 
   def self.ids_for_quiz(theme_id, limit = DEFAULT_QUESTIONS_NUMBER)

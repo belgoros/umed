@@ -16,12 +16,29 @@ fr:
 
   user_mailer:
     welcome_email:
-      subject: Bienvenu dans UMed
+      subject: Bienvenu sur UMed
       body:
         title: Bienvenu dans votre espace UMed !
         line1: Vous vous êtes isncrit(e) avec succès au service UMed.
         line2: "Pour se connecter à votre compte UMed, cliquer sur le lien %{link}."
         line3: "Merci beaucoup pour votre adhésion !"
+        signature: Equipe Umed
+    new_subscription_email:
+      subject: Confirmation de paiement
+      body:
+        title: Cher (Chère) membre,
+        line1: "Félicitations ! Vous avez souscrit un abonnement %{plan} à %{price} pour une durée de %{duration} mois à partir de %{start_date}. Votre abonnement prendra fin le %{end_date}."
+        line2: Nous sommes très heureux vous voir parmi les membres de Umed.
+        line3: Nous vous souhaitons beaucoup de courage et du succès dans votre parcours !
+        signature: Equipe Umed
+    expired_subscription_email:
+      subject: Votre abonnement expiré
+      body:
+        title: Cher (Chère) membre,
+        line1: "Vous aviez souscrit un abonnement %{plan} à %{price} pour une durée de %{duration} mois à partir de %{start_date}. Votre abonnement est expiré le %{end_date} et n'est plus valable."
+        line2: "Vous pouvez le prolongez pour une durée souhaitée à tout moment et à votre convenance via notre site web %{url}."
+        line3: "Bien cordialement,"
+        signature: Equipe Umed
   links:
     home: Accueil
     blog: Blog
@@ -39,11 +56,12 @@ fr:
     themes: 'Thèmes'
     questions: 'Questions'
     answers: 'Réponses'
-    dashboard: 'Dashboard'
+    dashboard: 'Mon Dashboard'
     profile: 'Profil'
     quizzes: 'Mes quizzes'
+    subscriptions: 'Mes abonnements'
     sign_in: "Se connecter"
-    sign_up: "S'enregistrer"
+    sign_up: "S'inscrire"
     sign_out: "Se déconnecter"
     forgot_password: "Mot de passe oublié ?"
     confirmation_instructions_not_received: "Pas reçu les instructions pour modifier le mot de passe ?"
@@ -51,6 +69,7 @@ fr:
     back_to: "Retour"
     next: 'Suivant'
     details: 'Détails'
+    plans: "Prix"
   levels:
     index:
       title: 'Liste des niveaux de difficulté'
@@ -90,7 +109,7 @@ fr:
       question: Question
   questions:
     index:
-      title: 'Liste des questions'
+      title: "Liste des questions, total: %{total}"
       empty: 'Aucune question trouvée'
       question: Question
       theme: Thème
@@ -136,6 +155,9 @@ fr:
       selection: Critères sélectionnés
       questions: Questions
       answers: Réponses
+      question: Question
+      your_answer: Votre réponse
+      correct_answer: Réponse correcte
   quiz:
     steps:
       level:
@@ -148,7 +170,49 @@ fr:
     questions:
       question:
         title: Question du Quiz
-
+  plans:
+    prices:
+      button: Commencer !
+      price: "%{price}/mois"
+      questions: "Vous avez accès à %{number} questions"
+      free:
+        plan_title: Gratuit
+        line2: Passez Premium ultérieurement
+        line3: Commencez immédiatement
+      premium:
+        line2: "Le prix d'un gros sandwich"
+        line3: Commencez tout de suite
+      premiumplus:
+        price: "%{price}/trimestre"
+        line2: Offre avantageuse
+        line3: Commencez tout de suite
+    index:
+      empty: "Aucun tarif disponible"
+      title: Liste des prix
+      name: Libellé
+      description: Description
+      price: Prix
+      duration: Durée
+      questions: Nombre de questions
+    new:
+      title: Nouveau plan tarifaire
+    edit:
+      title: Modification de plan tarifaire
+  subscriptions:
+    index:
+      empty: Vous n'avez aucun abonnement
+      title: Mes abonnements
+      start_date: Date de début
+      end_date: Date de fin
+      activated: Activé
+      price: Prix
+    form:
+      start_date: Date de début
+      end_date: Date de fin
+      price: Prix
+      confirm: Confirmer
+    new:
+      title: Nouvel abonnement
   date:
     formats:
       default: "%d/%m/%Y"
@@ -322,11 +386,11 @@ fr:
     page_entries_info:
       one_page:
         display_entries:
-          zero: "No %{entry_name} found"
-          one: "Displaying <b>1</b> %{entry_name}"
-          other: "Displaying <b>all %{count}</b> %{entry_name}"
+          zero: "Aucun %{entry_name} trouvé"
+          one: "Voir <b>1</b> %{entry_name}"
+          other: "Voir <b>tous %{count}</b> %{entry_name}"
       more_pages:
-        display_entries: "Displaying %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b> of <b>%{total}</b> in total"
+        display_entries: "Voir %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b> de <b>%{total}</b> en total"
 
   errors: &errors
     format: "%{attribute} %{message}"
@@ -379,6 +443,8 @@ fr:
       question: Question
       answer: Réponse
       user: Utilisateur
+      subscription: Abonnement
+      plan: Tarif
     attributes:
       level:
         name: Description
@@ -399,5 +465,16 @@ fr:
         password: Mot de passe
         password_confirmation: Confirmation du mot de passe
         remember_me: Se souvenir de moi
+        premium: Premium
+      subscription:
+        start_date: Date de début
+        end_date: Date de fin
+        activated: Activé
+      plan:
+        name: Libellé
+        description: Description
+        price: Prix
+        duration: Durée
+        questions: Nombre de questions
     errors:
       <<: *errors

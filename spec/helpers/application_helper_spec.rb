@@ -36,4 +36,30 @@ describe ApplicationHelper, :type => :helper do
       expect(flash_by_name('some other than notice')).to eq('alert')
     end
   end
+
+  describe "boolean_to_text" do
+    it "should convert false value" do
+      expect(boolean_to_text(false)).to eq('N')
+    end
+
+    it "should convert nil value" do
+      expect(boolean_to_text(nil)).to eq('N')
+    end
+
+    it "should convert true value" do
+      expect(boolean_to_text(true)).to eq('Y')
+    end
+  end
+
+  describe "#styled_answer" do
+    it "should return 'error' for wrong answer" do
+      answer =  create(:answer)
+      expect(styled_answer(answer)).to eq('error')
+    end
+
+    it "should return 'success' for correct answer" do
+      answer =  create(:answer, correct: true)
+      expect(styled_answer(answer)).to eq('success')
+    end
+  end
 end

@@ -1,0 +1,9 @@
+= provide(:title, t('.title'))
+.row
+  .medium-8.large-6.small-centered.columns
+    .panel.callout.radius
+      h1 = t('.title')
+
+      == render 'form'
+
+      = link_to t('links.back_to'), subscriptions_path

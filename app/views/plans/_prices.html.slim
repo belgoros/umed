@@ -1,0 +1,40 @@
+.row.prices.fullWidth data-equalizer=""
+  - @plans.each do |plan|
+    - if plan.price.zero?
+      .medium-4.columns.free-price-option
+        h3 = plan.description
+        h4 = t('plans.prices.price', price: number_to_currency(plan.price, precision: 0))
+        .row
+          .small-8.small-centered.columns data-equalizer-watch=""
+            ul
+              li = t('plans.prices.questions', number: plan.questions)
+              li = t('plans.prices.free.line2')
+              li = t('plans.prices.free.line3')
+            br /
+        = link_to t('plans.prices.button'), new_user_registration_path, class: "button expand radius"
+
+    - elsif plan.duration == 1
+      .medium-4.columns.month-price-option
+        h3 = plan.description
+        h4 = t('plans.prices.price', price: number_to_currency(plan.price, precision: 0))
+        .row
+          .small-8.small-centered.columns data-equalizer-watch=""
+            ul
+              li = t('plans.prices.questions', number: plan.questions)
+              li = t('plans.prices.premium.line2')
+              li = t('plans.prices.premium.line3')
+            br /
+        = link_to t('plans.prices.button'), express_checkout_new_subscription_path(plan_id: plan.id), class: "button expand radius"
+
+    - elsif plan.duration == 3
+      .medium-4.columns.quarter-price-option
+        h3 = plan.description
+        h4 = t('plans.prices.price', price: number_to_currency(plan.price, precision: 0))
+        .row
+          .small-8.small-centered.columns data-equalizer-watch=""
+            ul
+              li = t('plans.prices.questions', number: plan.questions)
+              li = t('plans.prices.premiumplus.line2')
+              li = t('plans.prices.premiumplus.line3')
+            br /
+        = link_to t('plans.prices.button'), express_checkout_new_subscription_path(plan_id: plan.id), class: "button expand radius"
