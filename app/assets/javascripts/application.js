@@ -14,7 +14,7 @@
 //= require jquery_ujs
 //= require foundation
 //= require turbolinks
-//= require equalizer
+//= require prices_equalizer
 //= require_tree .
 
 $(document).on('ready page:load', function () {
