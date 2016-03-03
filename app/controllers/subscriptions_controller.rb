@@ -12,7 +12,7 @@ class SubscriptionsController < ApplicationController
         cancel_return_url: subscriptions_url,
         currency: "EUR",
         allow_guest_checkout: true,
-        locale: 'FR',
+        locale: 'BE',
         items: [{name: I18n.t('subscriptions.new.title'),
                 description: @plan.description,
                 quantity: "1",
