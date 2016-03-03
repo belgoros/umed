@@ -6,4 +6,12 @@ class User < ActiveRecord::Base
 
    has_many :subscriptions, dependent: :destroy
    has_many :quizzes, dependent: :destroy
+
+   after_create :send_welcome_email
+
+
+   private
+   def send_welcome_email
+     UserMailer.welcome_email(self).deliver_now
+   end
 end
