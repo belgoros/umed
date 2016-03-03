@@ -1,5 +1,5 @@
 class LevelsController < ApplicationController
-  before_action :sign_in_admin, except: [:index, :show]
+  before_action :sign_in_admin
 
   before_action :set_level, only: [:show, :edit, :update, :destroy]
 

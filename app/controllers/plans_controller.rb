@@ -1,6 +1,6 @@
 class PlansController < ApplicationController
 
-  before_action :sign_in_admin, except: :index
+  before_action :sign_in_admin
 
   before_action :set_plan, only: [:show, :edit, :update, :destroy]
 

@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
-  before_action :sign_in_admin, except: [:index, :show]
+  before_action :sign_in_admin
   before_action :find_theme, only: [:new, :create]
   before_action :set_question, only: [:show, :edit, :update, :destroy]
 

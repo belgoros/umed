@@ -1,5 +1,5 @@
 class SubjectsController < ApplicationController
-  before_action :sign_in_admin, except: [:index, :show]
+  before_action :sign_in_admin
   before_action :set_subject, only: [:show, :edit, :update, :destroy]
 
   # GET /subjects
