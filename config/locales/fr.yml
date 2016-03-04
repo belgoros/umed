@@ -5,6 +5,7 @@ fr:
   updated_success: "%{model} modifié(e) avec succès"
   destroyed_success: "%{model} supprimé(e) avec succès"
   quiz_finished_success: "Félicitations ! Vous avez terminé le %{model} ! "
+  contact_message_sent: "Merci, votre message a été envoyé avec succès"
   #kaminari pagination
   views:
     pagination:
@@ -39,6 +40,8 @@ fr:
         line2: "Vous pouvez le prolongez pour une durée souhaitée à tout moment et à votre convenance via notre site web %{url}."
         line3: "Bien cordialement,"
         signature: Equipe Umed
+  contact_mailer:
+    subject: "Demande d'infos via formulaire de contact"
   links:
     home: Accueil
     blog: Blog
@@ -213,6 +216,9 @@ fr:
       confirm: Confirmer
     new:
       title: Nouvel abonnement
+  contacts:
+    new:
+      title: Contacter UMed
   date:
     formats:
       default: "%d/%m/%Y"
@@ -379,6 +385,8 @@ fr:
     select:
       prompt: "Veuillez sélectionner"
     submit:
+      contact:
+        create: Envoyer
       create: "Créer %{model}"
       update: "Modifier %{model}"
       submit: "Enregistrer %{model}"

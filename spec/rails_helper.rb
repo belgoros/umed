@@ -43,6 +43,9 @@ RSpec.configure do |config|
   # instead of true.
   config.use_transactional_fixtures = true
 
+  # include ApplicationHelper
+  config.include ApplicationHelper, type: :feature
+
   #Including devise helpers
   config.include Devise::TestHelpers, type: :controller
   config.include Devise::TestHelpers, type: :view

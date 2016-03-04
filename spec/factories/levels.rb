@@ -1,5 +1,7 @@
 FactoryGirl.define do
   factory :level do
-    name { FFaker::Skill.specialties }
+    sequence :name do |n|
+    "#{FFaker::Skill.specialties }-#{n}"
+    end
   end
 end
