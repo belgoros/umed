@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'contacts/new'
+
+  get 'contacts/create'
+
   root 'home#index'
   devise_for :users
 
@@ -25,4 +29,6 @@ Rails.application.routes.draw do
     resources :steps, only: [:show, :update], controller: 'quiz/steps'
     resources :questions, only: [:show, :update], controller: 'quiz/questions'
   end
+
+  resource :contact, only: [:new, :create]
 end

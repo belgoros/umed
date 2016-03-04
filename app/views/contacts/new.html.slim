@@ -1,0 +1,17 @@
+= provide(:title, t('.title'))
+.row
+  .medium-6.small-centered.columns
+      .panel.callout.radius
+        h2 = t('.title')
+        = simple_form_for(@contact, url: contact_path) do |f|
+          = f.error_notification
+          .form-inputs
+            = f.input :name
+          .form-inputs
+            = f.input :email
+          .form-inputs
+            = f.input :message, as: :text
+          .form-actions
+            = f.button :submit
+
+        = link_to t('links.back_to'), root_path

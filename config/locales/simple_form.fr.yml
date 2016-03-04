@@ -15,6 +15,10 @@ fr:
         level: Niveau
         subject: Matière
         theme: Thème
+      contact:
+        email: Adresse email
+        name: Votre nom
+        message: Message
 
     "yes": 'Oui'
     "no": 'Non'
