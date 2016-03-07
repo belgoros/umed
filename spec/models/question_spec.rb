@@ -22,33 +22,33 @@ describe Question, type: :model do
   end
 
   context "ids array for quiz" do
+    before(:all) {@user = create(:premium_user)}
+
     it "should be empty array if no theme specified" do
-      ids = Question.ids_for_quiz(nil)
+      ids = Question.ids_for_quiz(@user, nil, nil)
       expect(ids).to be_empty
     end
 
     context "should have the size of specified limit" do
       before(:all) do
         @theme = create(:theme)
-        6.times do |text|
-          create(:question, theme: @theme, text: "question-#{text}")
-        end
+        create_list(:question, 6, theme: @theme)
       end
 
-      context "returns default number of ids" do
+      describe "returns default number of ids" do
         specify "when no questions number specified" do
-          ids = Question.ids_for_quiz(@theme.id)
+          ids = Question.ids_for_quiz(@user, @theme.id)
           expect(ids.size).to eq(Question::DEFAULT_QUESTIONS_NUMBER)
         end
 
         specify "when questions number specified as nil" do
-          ids = Question.ids_for_quiz(@theme.id, nil)
+          ids = Question.ids_for_quiz(@user, @theme.id, nil)
           expect(ids.size).to eq(Question::DEFAULT_QUESTIONS_NUMBER)
         end
       end
 
       it "returns the specified number of ids" do
-        ids = Question.ids_for_quiz(@theme.id, 6)
+        ids = Question.ids_for_quiz(@user, @theme.id, 6)
         expect(ids.size).to eq(6)
       end
     end

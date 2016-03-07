@@ -14,8 +14,12 @@ class Question < ActiveRecord::Base
     answers.where(correct: true).first
   end
 
-  def self.ids_for_quiz(theme_id, limit = DEFAULT_QUESTIONS_NUMBER)
-    #postgresql specific query using RANDOM() function
-    where(theme_id: theme_id).limit(limit.nil? ? DEFAULT_QUESTIONS_NUMBER : limit).order("RANDOM()").pluck(:id)
+  def self.ids_for_quiz(user, theme_id, limit = DEFAULT_QUESTIONS_NUMBER)
+    if user.premium?
+      #postgresql specific query using RANDOM() function
+      where(theme_id: theme_id).limit(limit.nil? ? DEFAULT_QUESTIONS_NUMBER : limit).order("RANDOM()").pluck(:id)
+    else
+      where(theme_id: theme_id).pluck(:id).first(DEFAULT_QUESTIONS_NUMBER)
+    end
   end
 end

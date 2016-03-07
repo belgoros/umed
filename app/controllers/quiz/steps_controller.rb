@@ -19,7 +19,7 @@ class Quiz::StepsController < ApplicationController
     @quiz = Quiz.find(params[:quiz_id])
     @quiz.update(quiz_params(step))
     if step.to_s == 'theme'
-      @quiz.question_ids = Question.ids_for_quiz(@quiz.theme.id, params['questions_to_answser'])
+      @quiz.question_ids = Question.ids_for_quiz(current_user, @quiz.theme.id, params['questions_to_answser'])
       @quiz.save(validate: false)
       redirect_to quiz_question_path(@quiz, id: @quiz.question_ids.first)
     else
