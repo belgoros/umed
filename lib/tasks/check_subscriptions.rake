@@ -8,11 +8,11 @@ namespace :subscriptions do
     expired_subscriptions.each do |subscription|
       user = subscription.user
       subscription.update_attribute(:activated, false)
-      if has_active_subscription(user)
+      unless has_active_subscription(user)
         user.update_attribute(:premium, false)
         UserMailer.expired_subscription_email(subscription).deliver_now
       end
-      logger.info "Disable subscription id: #{subscription.id}: User #{subscription.user.email}: #{subscription.plan.name}, expired #{I18n.l(subscription.end_date)}."
+      logger.info "Disable subscription id: #{subscription.id}: User #{user.email}: #{subscription.plan.name}, expired #{I18n.l(subscription.end_date)}."
     end
   end
 end
