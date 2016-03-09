@@ -87,7 +87,8 @@ Rails.application.configure do
     domain:         ENV['domain'],
     user_name:      ENV['username'],
     password:       ENV['password'],
-    authentication: :plain
+    authentication: :plain,
+    enable_starttls_auto: true
   }
 
   # ActiveMerchant settings
