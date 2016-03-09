@@ -3,6 +3,8 @@ class SubscriptionsController < ApplicationController
 
   def index
     @subscriptions = current_user.subscriptions.order(start_date: :desc).page params[:page]
+    @plans = Plan.priced
+    empty_session_plan
   end
 
   def express_checkout
@@ -30,6 +32,7 @@ class SubscriptionsController < ApplicationController
     @subscription = current_user.subscriptions.new(subscription_params)
     if @subscription.save
       if @subscription.purchase
+        empty_session_plan
         UserMailer.new_subscription_email(@subscription).deliver_now
         redirect_to subscriptions_url, notice: t(:created_success, model: Subscription.model_name.human)
       else
@@ -59,6 +62,10 @@ class SubscriptionsController < ApplicationController
         @plan = Plan.find(params[:plan_id])
         session[:plan_id] = @plan.id
       end
+    end
+
+    def empty_session_plan
+      session[:plan_id] = nil
     end
 
     def subscription_params
