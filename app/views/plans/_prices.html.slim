@@ -29,7 +29,7 @@
     - elsif plan.duration == 3
       .medium-4.columns.quarter-price-option
         h3 = plan.description
-        h4 = t('plans.prices.price', price: number_to_currency(plan.price, precision: 0))
+        h4 = t('plans.prices.premiumplus.price', price: number_to_currency(plan.price, precision: 0))
         .row
           .small-8.small-centered.columns data-equalizer-watch=""
             ul
