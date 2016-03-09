@@ -5,6 +5,8 @@ class Plan < ActiveRecord::Base
   validates :duration, :questions, numericality: { only_integer: true }
   validates :price, numericality: true
 
+  scope :priced, -> { where.not(price: 0) }
+
   def total_in_cents
     (price * 100).round
   end

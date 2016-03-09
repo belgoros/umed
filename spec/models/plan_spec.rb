@@ -17,4 +17,29 @@ describe Plan, type: :model do
   context "associations" do
     it { should have_many(:subscriptions)}
   end
+
+  describe "#total_in_cents return rounded price in cents" do
+    it "should return zero" do
+      plan = create(:free_plan)
+      expect(plan.total_in_cents).to eq 0
+    end
+    it "should return priced plan price" do
+      plan = create(:premium_plan)
+      expect(plan.total_in_cents).to eq 300
+    end
+  end
+
+  context "::priced scope" do
+    it "should return priced plans" do
+      create(:premium_plan)
+      create(:premium_plus_plan)
+      create(:free_plan)
+      expect(Plan.priced.size).to eq 2
+    end
+
+    it "should return no priced plans" do
+      plan = create(:free_plan)
+      expect(Plan.priced.size).to eq 0
+    end
+  end
 end

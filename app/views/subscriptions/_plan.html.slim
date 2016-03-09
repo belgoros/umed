@@ -1,0 +1,10 @@
+.medium-6.columns
+  .panel.callout.radius
+    h3 = t('plans.extend')
+    - if plan.duration == 1
+      h4 = t('plans.prices.price', price: number_to_currency(plan.price, precision: 0))
+    - elsif plan.duration == 3
+      h4 = t('plans.prices.premiumplus.price', price: number_to_currency(plan.price, precision: 0))
+    br /
+    br /
+    = link_to t('plans.extend_button'), express_checkout_new_subscription_path(plan_id: plan.id), class: "button expand radius"
