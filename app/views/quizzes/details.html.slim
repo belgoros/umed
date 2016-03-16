@@ -5,8 +5,9 @@
     - if @answers.empty?
       h1 = t('.empty')
     - else
-      = pie_chart({t('.chart.correct') => @quiz.correct_answers,
-                  t('.chart.unanswered') => @quiz.total_questions - @quiz.correct_answers})
+      .text-center
+        = pie_chart({t('.chart.correct') => @quiz.correct_answers,
+                    t('.chart.unanswered') => @quiz.total_questions - @quiz.correct_answers})
       h3 = t('.selection')
       p
         b
