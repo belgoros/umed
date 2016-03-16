@@ -51,12 +51,55 @@ describe Quiz, type: :model do
     end
   end
 
+  describe "#total_questions" do
+    let(:quiz) { create(:quiz) }
+
+    it "should return correct number of quiz questions" do
+      expect(quiz.total_questions).to eq 5
+    end
+
+    it "should return zero quiz questions" do
+      quiz.update_attribute(:question_ids, [])
+      expect(quiz.total_questions).to eq 0
+    end
+  end
+
+  describe "#total_answers" do
+    let(:quiz) { create(:quiz) }
+
+    it "should return correct number of quiz answers" do
+      expect(quiz.total_answers).to eq 5
+    end
+
+    it "should return zero quiz answers" do
+      quiz.update_attribute(:answer_ids, [])
+      expect(quiz.total_answers).to eq 0
+    end
+  end
+
+  describe "#correct_answers" do
+    it "should return the number of correct answers" do
+      quiz = create(:quiz, answer_ids: [])
+      answer = create(:answer, correct: true)
+      quiz.answer_ids << answer.id
+      expect(quiz.correct_answers).to eq 1
+    end
+  end
+
+  describe "#score" do
+    it "return the text presentation of the quiz score" do
+      quiz = create(:quiz, answer_ids:[], question_ids: [])
+      setup_quiz_answers(quiz)
+      expect(quiz.score).to eq "#{quiz.correct_answers}/#{quiz.total_questions}"
+    end
+  end
+
   def setup_quiz_answers(quiz)
     questions = create_list(:question, 3)
     answers = []
     questions.each do |question|
       answers << create(:answer, question: question)
     end
-    @quiz.update_attributes(question_ids: questions.map(&:id), answer_ids: answers.map(&:id))
+    quiz.update_attributes(question_ids: questions.map(&:id), answer_ids: answers.map(&:id))
   end
 end

@@ -24,5 +24,4 @@ describe Answer, type: :model do
       expect(@ids).to include(@a1.id, @a2.id)
     end
   end
-
 end

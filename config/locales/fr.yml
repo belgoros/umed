@@ -149,6 +149,9 @@ fr:
       answers: Réponses
       score: Résultat
     details:
+      chart:
+        correct: Réponses correctes
+        unanswered: Sans réponse ou incorrectes
       title: Détails du Quiz
       score: Votre score
       empty: Aucun quiz passé
