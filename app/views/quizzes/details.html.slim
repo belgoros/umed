@@ -15,13 +15,14 @@
         .quiz-chart
       br
       - @answers.each do |answer|
-        div class="panel callout #{styled_answer(answer)} text-center"
+        div class="panel callout radius #{styled_answer(answer)} text-center"
           strong> #{t('.question')}:
           = answer.question.text
           br
           strong> #{t('.your_answer')}:
           = answer.text
           - unless answer.correct?
+            br
             br
             strong> #{t('.correct_answer')}:
             = answer.question.correct_answer.text
