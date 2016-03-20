@@ -15,7 +15,7 @@
 //= require foundation
 //= require turbolinks
 //= require prices_equalizer
-//= require chartkick
+//= require chartist.min
 //= require_tree .
 
 $(document).on('ready page:load', function () {
