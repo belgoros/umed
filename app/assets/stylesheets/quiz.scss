@@ -21,6 +21,28 @@
   }
 }
 
-.panel.callout.success {background-color: #baedcd;}
-.panel.callout.error   {background-color: #fce6e2;}
+.panel.callout.success {
+  background-color:#008CBA ;
+}
+
+.panel.callout.error {
+  background-color:#e7e7e7;
+}
+
+.ct-series-a .ct-slice-donut {
+  stroke: #008CBA !important;
+  stroke-width: 80px !important;
+}
+
+.ct-series-b .ct-slice-donut {
+  stroke: #e7e7e7 !important;
+  stroke-width: 80px !important;
+}
+
+.no-list {
+  list-style: none;
+  margin-top: 50px;
+  margin-bottom: -30px;
+}
+
 
