@@ -55,3 +55,18 @@ javascript:
       data.element.animate(animationDefinition, false);
     }
   });
+
+  // Prevent chart re-draw when scrolling down on a mobile screen,
+  // see https://github.com/gionkunz/chartist-js/issues/410
+  chart.on('created', function(){
+    chart.detach(); // it will detach resize and media query listeners
+  });
+
+  //then update the chart only when window.width() changes
+  var width = $(window).width();
+  $(window).resize(function() {
+    if($(window).width() != width) {
+      width = $(window).width(); // update the width width
+      chart.update();
+    }
+  });
