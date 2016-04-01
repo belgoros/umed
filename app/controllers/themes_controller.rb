@@ -45,7 +45,7 @@ class ThemesController < ApplicationController
   def update
     respond_to do |format|
       if @theme.update(theme_params)
-        format.html { redirect_to @theme.subject, t(:updated_success, model: Theme.model_name.human) }
+        format.html { redirect_to @theme.subject, notice: t(:updated_success, model: Theme.model_name.human) }
         format.json { render :show, status: :ok, location: @theme }
       else
         format.html { render :edit }
