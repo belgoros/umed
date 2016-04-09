@@ -1,6 +1,9 @@
 class Question < ActiveRecord::Base
   DEFAULT_QUESTIONS_NUMBER = 5
-  has_many :answers, dependent: :destroy
+  # Ordering question answers randomly to avoid guessing when passing a quiz and
+  # make it easier to create answers and not forget to have the correct one
+  # (starting from from the correct one, for example, then adding the wrong ones)
+  has_many :answers, -> { order "RANDOM()"}, dependent: :destroy
   has_attached_file :photo, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
   validates_attachment :photo,
                         content_type: { content_type: ["image/jpeg", "image/gif", "image/png"] },
