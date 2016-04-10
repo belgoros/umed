@@ -1,4 +1,5 @@
 namespace :questions do
+  desc "Checks if there is a question with no correct answer"
   task check_answers: :environment do
     questions = Question.includes(:answers)
     invalid_questions = []
