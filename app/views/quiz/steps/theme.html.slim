@@ -6,7 +6,7 @@
       = f.error_notification
 
       .form-inputs
-        = f.association :theme, collection: @themes, selected: Theme.first
+        = f.collection_radio_buttons :theme_id, @themes, :id, :name, { checked: @themes.first.id, item_wrapper_class: 'quiz-steps'}
         - if current_user.premium?  || current_user.admin?
           = label_tag 'questions_to_answer', t('.questions_to_answer')
           - Quiz::QUESTIONS_TO_ANSWER.each do |option|

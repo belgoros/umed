@@ -1,4 +1,5 @@
-= image_tag('applebw.jpg')
+.applebw
+  = image_tag('umed.jpg')
 
 .row.first-text
   .medium-9.small-centered.columns
@@ -18,17 +19,18 @@
     br /
     h4 En continuelle évolution
     p De nouvelles questions sont ajoutées chaque jour. Si vous pensez être incollable dans tous les thèmes, réessayez demain.
-  .medium-4.columns
+  .medium-4.columns.mons-text
     = image_tag('icons/university.svg')
     br /
     h4 Au coeur du problème
     p Étant nous-mêmes sur le terrain à Mons, nous savons à quel point la première année est difficile. Surtout en médecine.
 
+
 .row
   .small-12.columns.how-it-works
     h1.text-center Comment ça marche ?
 
-.row
+.row.how-it-works-panels
   .small-12.columns
     ul.small-block-grid-1.medium-block-grid-2.large-block-grid-4 data-equalizer=""
       li
@@ -44,7 +46,7 @@
           br /
           h3 Go Premium
           br /
-          p.text-center Un compte gratuit vous donne accès à 20 questions et vous permet d'avoir un aperçu d'UMed. Avec un compte Premium, vous disposez de plus de 1000 questions pour tester vos connaissances.
+          p.text-center Vous pouvez soit garder votre compte gratuit qui vous donne accès à 5 questions par thème et commencer un quiz ou opter pour un plan premium qui vous garantit un accès illimité à toutes les questions disponibles.
       li
         .panel.callout data-equalizer-watch=""
           = image_tag('icons/three.svg')
@@ -58,6 +60,7 @@
           br /
           h3 Enjoy
           br /
-          p.text-center Ta-Da ! Vous voilà enfin prêt pour vous exercer à l'aide de plus de 1000 questions différentes réparties en 7 thèmes différents.
+          p.text-center Ta-Da ! Vous voilà enfin prêt pour vous exercer à l'aide de plus de 1000 questions différentes ! Pour commencer un quiz, cliquez #{link_to 'ici', quizzes_path, method: :post} !
 
 = render 'plans/prices'
+= render 'layouts/footer'

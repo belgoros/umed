@@ -5,11 +5,11 @@ feature "Subscriptions", type: :feature do
     before(:each) do
       @premium_user = create(:premium_user)
       signin_user(@premium_user.email, @premium_user.password)
+      @quiz = create_quiz(@premium_user)
     end
 
-    specify "they can select number of quiz questions" do
-      quiz = create(:quiz, user: @premium_user)
-      visit(quiz_step_path(quiz, id: Quiz.form_steps.last))
+    specify "can select number of quiz questions" do
+      visit(quiz_step_path(@quiz, id: Quiz.form_steps.last))
       expect(page).to have_content I18n.t('.questions_to_answer', scope: [:quiz, :steps, :theme])
     end
   end
@@ -18,11 +18,11 @@ feature "Subscriptions", type: :feature do
     before(:each) do
       @user = create(:user)
       signin_user(@user.email, @user.password)
+      @quiz = create_quiz(@user)
     end
 
-    specify "they can select number of quiz questions" do
-      quiz = create(:quiz, user: @user)
-      visit(quiz_step_path(quiz, id: Quiz.form_steps.last))
+    specify "can select number of quiz questions" do
+      visit(quiz_step_path(@quiz, id: Quiz.form_steps.last))
       expect(page).not_to have_content I18n.t('.questions_to_answer', scope: [:quiz, :steps, :theme])
     end
   end
@@ -31,11 +31,11 @@ feature "Subscriptions", type: :feature do
     before(:each) do
       @user = create(:admin)
       signin_user(@user.email, @user.password)
+      @quiz = create_quiz(@user)
     end
 
-    specify "they can select number of quiz questions" do
-      quiz = create(:quiz, user: @user)
-      visit(quiz_step_path(quiz, id: Quiz.form_steps.last))
+    specify "can select number of quiz questions" do
+      visit(quiz_step_path(@quiz, id: Quiz.form_steps.last))
       expect(page).to have_content I18n.t('.questions_to_answer', scope: [:quiz, :steps, :theme])
     end
   end

@@ -5,8 +5,8 @@
     = simple_form_for @quiz, method: :put, url: wizard_path do |f|
       = f.error_notification
 
-      .form-inputs
-        = f.association :level, collection: @levels, prompt: true
+      .form-inputs.quiz-steps
+        = f.collection_radio_buttons :level_id, @levels, :id, :name, { checked: @levels.first.id }
 
       .form-actions
         = f.button :submit, t('links.next')

@@ -1,12 +1,13 @@
 = provide(:title, t('.title'))
 .row
   .medium-9.small-centered.columns
+    h1 =
     h1 =t('.title')
     = simple_form_for @quiz, method: :put, url: wizard_path  do |f|
       = f.error_notification
 
-      .form-inputs
-        = f.association :subject, collection: @subjects, prompt: true
+      .form-inputs.quiz-steps
+        = f.collection_radio_buttons :subject_id, @subjects, :id, :name, { checked: @subjects.first.id }
 
       .form-actions
         = f.button :submit, t('links.next')

@@ -6,11 +6,11 @@
     - if @answers.empty?
       h1 = t('.empty')
     - else
-      ul.no-list
+      ul.labels-chart
         li
-          span.label class=("round")  = t('.chart.correct')
+          span.label class=("label-chart-sucess")  = t('.chart.correct')
         li
-          span.label class=("secondary round") = t('.chart.unanswered')
+          span.label class=("label-chart-failed") = t('.chart.unanswered')
       .text-center
         .quiz-chart
       br

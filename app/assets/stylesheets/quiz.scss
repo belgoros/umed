@@ -1,3 +1,26 @@
+.quiz-steps {
+  input[type=radio] + label {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 15px;
+    width: 100%;
+    background-color: #E8E8E8;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  input[type=radio] {
+    display: none;
+  }
+
+  input[type=radio]:checked + label{
+    background-color: #B3B3B3;
+  }
+}
+
 .quiz-question {
   input[type=radio] + label {
     display: block;
@@ -22,27 +45,41 @@
 }
 
 .panel.callout.success {
-  background-color:#008CBA ;
+  background-color:#baedcd;
+  border-radius: 20px;
 }
 
 .panel.callout.error {
-  background-color:#e7e7e7;
+  background-color:#fce6e2;
+  border-radius: 20px;
 }
 
 .ct-series-a .ct-slice-donut {
-  stroke: #008CBA !important;
-  stroke-width: 80px !important;
+  stroke: #baedcd !important;
+  stroke-width: 70px !important;
 }
 
 .ct-series-b .ct-slice-donut {
-  stroke: #e7e7e7 !important;
-  stroke-width: 80px !important;
+  stroke: #fce6e2 !important;
+  stroke-width: 7 0px !important;
 }
 
-.no-list {
+.labels-chart {
   list-style: none;
   margin-top: 50px;
   margin-bottom: -30px;
+}
+
+.label-chart-sucess {
+  background-color:#baedcd;
+  border-radius:1000px;
+  color:black;
+}
+
+.label-chart-failed {
+  background-color:#fce6e2;
+  border-radius:1000px;
+  color:black;
 }
 
 

@@ -60,7 +60,7 @@ fr:
     questions: 'Questions'
     answers: 'Réponses'
     dashboard: 'Mon Dashboard'
-    profile: 'Profil'
+    profile: 'Mon profil'
     quizzes: 'Mes quizzes'
     subscriptions: 'Mes abonnements'
     sign_in: "Se connecter"
