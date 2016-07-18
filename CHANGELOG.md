@@ -1,3 +1,11 @@
+## 1.0.1/18-07-2016
+
+#### Fix scroll issues on iOS in Safari and update home page image
+
+* modify CSS
+* make registrations page form CSS larger
+* change the home page image and CSS
+
 ## 1.0.0/16-07-2016
 
 #### Implement canvas and replace Quiz steps drop-down lists with radio buttons
