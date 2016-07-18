@@ -1,3 +1,10 @@
+## 1.0.2/18-07-2016
+
+#### Fix navigation links for non-admin users
+
+* Fix navigation_spec examples
+* add new examples to test navigation links
+
 ## 1.0.1/18-07-2016
 
 #### Fix scroll issues on iOS in Safari and update home page image

@@ -24,4 +24,29 @@ feature "Navigations", type: :feature do
     expect(page).not_to have_link(I18n.t('links.answers'))
     expect(page).to have_link(I18n.t('links.dashboard'))
   end
+
+  scenario "Not signed in user should not see sign out link" do
+    visit root_path
+    expect(page).not_to have_link(I18n.t('links.sign_out'))
+  end
+
+  scenario "Not signed in user should see sign in and sign up links" do
+    visit root_path
+    expect(page).to have_link(I18n.t('links.sign_in'))
+    expect(page).to have_link(I18n.t('links.sign_up'))
+  end
+
+  scenario "Signed in user should see sign in and sign out links" do
+    user = create(:user)
+    signin_user(user.email, user.password)
+    visit root_path
+    expect(page).to have_link(I18n.t('links.sign_out'))
+  end
+
+  scenario "Signed in user should not see sign in link" do
+    user = create(:user)
+    signin_user(user.email, user.password)
+    visit root_path
+    expect(page).to have_link(I18n.t('links.sign_out'))
+  end
 end
