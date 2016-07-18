@@ -5,6 +5,19 @@
   max-width: initial;
 }
 
+.label-dashboard {
+  padding: .3rem rem-calc(15);
+  color: #999999;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: #444444;
+  border-top: 1px solid scale-color(#444444, $lightness: 14%);
+  border-bottom: none;
+  margin:0;
+  padding-left:5px;
+}
+
 .umed-tabbar a {
   color:white;
 }
@@ -15,7 +28,8 @@
 
 .off-canvas-wrap {
   height: 100%;
-  overflow-y: auto;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 img {
@@ -41,10 +55,6 @@ h4, h3, h2 {
   }
 }
 
-em {
-  color:#008CBA;
-}
-
 .social-media {
   text-align: center;
   margin-bottom: 0px;
@@ -58,40 +68,32 @@ em {
   margin-left: 0px;
 }
 
-html, body {
-  font-size: 16px;
-}
-
-.wrapper {
-  min-height: 100%;
-  margin: 0 auto -120px;
-}
-
-.footer, .push {
+.footer {
   height: 120px;
+}
+
+html, body {
+  font-size: 17px;
 }
 
 .panel.callout.radius {
   margin-top: 20px;
 }
 
-.applebw {
-  margin-bottom: 120px;
-}
-
-.first-text {
-  text-align: center;
-  margin-bottom: 120px;
-}
-
-.set-of-three {
-  text-align: center;
-  margin-bottom: 120px;
+@media only screen and (min-width: 685px) {
+  .image-umed-header, .first-text, .set-of-three {
+    margin-bottom: 120px;
+    text-align: center;
+  }
 }
 
 @media only screen and (max-width: 685px) {
   .multi-devices-text, .evolution-text {
     margin-bottom: 75px;
+  }
+  .image-umed-header, .first-text, .set-of-three {
+    margin-bottom: 60px;
+    text-align: center;
   }
 }
 
@@ -114,19 +116,16 @@ html, body {
 
 .prices {
   margin-top: 75px;
-}
-
-.prices li {
-  margin-bottom: 10px;
-  font-style: italic;
-}
-
-.prices h3 {
-  margin-top: 15px;
-}
-
-.prices h4 {
-  margin-bottom: 35px;
+  li {
+    margin-bottom: 10px;
+    font-style: italic;
+  }
+  h3 {
+    margin-top: 15px;
+  }
+  h4 {
+    margin-bottom: 35px;
+  }
 }
 
 .how-it-works {
