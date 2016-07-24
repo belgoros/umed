@@ -27,4 +27,5 @@ Rails.application.routes.draw do
   end
 
   resource :contact, only: [:new, :create]
+  get 'faq', to: 'home#faq'
 end

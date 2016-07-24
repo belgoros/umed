@@ -45,8 +45,8 @@ fr:
   links:
     home: Accueil
     blog: Blog
-    prices: Prix
-    about: A propos
+    credits: Crédits
+    about: À propos
     faq: FAQ
     contact: Contact
     new: 'Ajouter'
@@ -73,6 +73,7 @@ fr:
     next: 'Suivant'
     details: 'Détails'
     plans: "Prix"
+    faq: 'FAQ'
   levels:
     index:
       title: 'Liste des niveaux de difficulté'
@@ -185,13 +186,16 @@ fr:
       questions: "Vous avez accès à %{number} questions"
       free:
         plan_title: Gratuit
-        line2: Passez Premium ultérieurement
-        line3: Commencez immédiatement
+        line1: Vous avez accès à 5 questions par thème
+        line2: Gratuit à vie
+        line3: Commencez tout de suite
       premium:
+        line1: Vous avez accès à toutes les questions disponibles
         line2: "Le prix d'un gros sandwich"
         line3: Commencez tout de suite
       premiumplus:
         price: "%{price}/trimestre"
+        line1: Vous avez accès à toutes les questions disponibles
         line2: Offre avantageuse
         line3: Commencez tout de suite
     index:
@@ -224,6 +228,9 @@ fr:
   contacts:
     new:
       title: Contacter UMed
+  home:
+    faq:
+      title: FAQ
   date:
     formats:
       default: "%d/%m/%Y"

@@ -1,0 +1,46 @@
+= provide(:title, t('.title'))
+.row
+  h2 = t('.title')
+
+br
+
+.row
+  .medium-10.small-centered.columns
+
+    h3 Paiement
+    br
+
+    ul.accordion data-accordion=""
+      li.accordion-navigation
+        a href="#panel1a"  Comment s'effectue le paiement ?
+        #panel1a.content
+          | Si vous décidez d'opter pour un compte Premium, vous serez d'abord redirigé vers le site PayPal. Ensuite, on vous demandera une confirmation sur le site Umed.be. Ce n'est qu'après cette confirmation qu'un solde sera effectivemet débité de votre compte. Vous ne paierez donc rien tant que vous n'avez pas fait cette confirmation.
+      li.accordion-navigation
+        a href="#panel2a" Comment payer ?
+        #panel2a.content
+          | Pour l'instant, le seul mode de paiement que nous proposons est celui par PayPal. C'est un service en ligne parfaitement sécurisé et rapide qui permet de simplifier les transactions entre particuliers.
+    br
+    br
+    h3 Abonnement
+    br
+
+    ul.accordion data-accordion=""
+      li.accordion-navigation
+        a href="#panel4a"
+          | Puis-je prolonger mon abonnement alors que j'ai déjà un abonnement activé ?
+        #panel4a.content
+          | Tout à fait. Le nouvel abonnement est alors en attente et sera activé le jour d'expiration de l'ancien abonnement.
+      li.accordion-navigation
+        a href="#panel5a"  Suis-je obilgé de souscrire à un abonnement payant ?
+        #panel5a.content
+          | Non. Vous pouvez très bien garder votre compte gratuit mais vous n'aurez alors accès qu'à 5 questions par thème contrairement au compte Premium où là, vous pouvez vous tester sur la totalité des questions disponibles.
+      li.accordion-navigation
+        a href="#panel6a"  J'ai effectué le paiement. Quand mon abonnement va t-il être activé ?
+        #panel6a.content
+          | Vous recevrez un mail vous en informant et cela prend en général quelques minutes.
+      li.accordion-navigation
+        a href="#panel7a"  Comment savoir si mon abonnement est expiré ?
+        #panel7a.content
+          | Vous recevrez un mail vous en informant. Vous pouvez également vérifier l'état de vos abonnements dans 'Mon Dashboard' -> 'Mes abonnements'.
+    br
+    br
