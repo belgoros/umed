@@ -24,6 +24,7 @@ gem 'foundation-icons-sass-rails'
 gem 'activemerchant', '~> 1.57.0'
 gem 'chartkick'
 gem 'premailer-rails',  '~> 1.9.4'
+gem 'hpricot'
 
 group :development, :test do
   gem 'quiet_assets', '~> 1.1.0'
