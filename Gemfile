@@ -23,8 +23,7 @@ gem 'nokogiri', '~> 1.6.7.1'
 gem 'foundation-icons-sass-rails'
 gem 'activemerchant', '~> 1.57.0'
 gem 'chartkick'
-gem 'premailer-rails',  '~> 1.9.4'
-gem 'hpricot'
+gem 'roadie-rails', '~> 1.0'
 
 group :development, :test do
   gem 'quiet_assets', '~> 1.1.0'

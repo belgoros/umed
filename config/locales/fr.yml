@@ -17,11 +17,11 @@ fr:
 
   user_mailer:
     welcome_email:
-      subject: Bienvenu sur UMed
+      subject: Votre compte a bien été créé
       body:
-        title: Bienvenu dans votre espace UMed !
+        title: Bienvenue sur UMed !
         line1: Vous vous êtes inscrit(e) avec succès au service UMed.
-        line2: "Pour se connecter à votre compte UMed, cliquer sur le lien %{link}."
+        line2: "Vous pouvez vous connecter à votre compte en cliquant sur le lien %{link}."
         line3: "Merci beaucoup pour votre adhésion !"
         signature: Equipe Umed
     new_subscription_email:
