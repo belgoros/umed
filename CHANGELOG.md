@@ -1,3 +1,15 @@
+## 1.0.3/30-07-2016
+
+### CSSfy user mailer HTML templates
+
+ * add roadie-rails gem
+ * include roadie-rails module into user_mailer
+ * create mailer layout
+ * create user_mailer.scss
+ * add user_mailer.scss to precompile in assets.rb initializer
+ * extract layout common HTML from email templates
+ * modify email translations
+
 ## 1.0.2/18-07-2016
 
 #### Fix navigation links for non-admin users
