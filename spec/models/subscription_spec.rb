@@ -34,7 +34,7 @@ describe Subscription, type: :model do
       new_subscription.enroll_for_plan(premium_plan)
 
       expect(new_subscription.start_date).to eq @end_date.advance(days: 1)
-      expect(new_subscription.end_date).to eq @end_date.advance(days: 1, months: 1)
+      expect(new_subscription.end_date).to eq @end_date.advance(months: 1)
     end
   end
 end

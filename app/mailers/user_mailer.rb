@@ -1,4 +1,7 @@
 class UserMailer < ApplicationMailer
+  include Roadie::Rails::Automatic
+  layout 'mailer'
+
   def welcome_email(user)
       @user = user
       @url  = ENV['app_host']
