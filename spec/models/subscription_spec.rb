@@ -21,6 +21,7 @@ describe Subscription, type: :model do
 
     it "should enroll for premium plan with start date of today" do
       subscription = build(:subscription, plan: premium_plan)
+      subscription.save(validate: false)
       subscription.enroll_for_plan(premium_plan)
       expect(subscription.start_date).to eq Date.today
     end
@@ -31,16 +32,16 @@ describe Subscription, type: :model do
       subscription.save(validate: false)
 
       new_subscription = build(:subscription, plan: premium_plan, user: subscription.user)
+      new_subscription.save(validate: false)
       new_subscription.enroll_for_plan(premium_plan)
 
       expect(new_subscription.start_date).to eq @end_date.advance(days: 1)
-      expect(new_subscription.end_date).to eq @end_date.advance(months: 1)
+      expect(new_subscription.end_date).to eq @end_date.advance(days: 1, months: 1)
     end
   end
 end
 
 def setup_dates
-  today = Date.today
-  @start_date = today
+  @start_date = Date.today
   @end_date = @start_date.advance(months: 1)
 end

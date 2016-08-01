@@ -24,13 +24,13 @@ class Subscription < ActiveRecord::Base
   end
 
   def enroll_for_plan(plan)
-    latest_subscription = latest_active_subscription
-    start_date = Date.today
+    latest_subscription = find_latest_active_subscription
+    new_start_date = Date.today
     if latest_subscription
-      start_date = latest_subscription.end_date.advance(days: 1)
+      new_start_date = latest_subscription.end_date.advance(days: 1)
     end
-    self.start_date = start_date
-    self.end_date = start_date.advance(months: plan.duration)
+    self.start_date = new_start_date
+    self.end_date = new_start_date.advance(months: plan.duration)
     self.plan = plan
   end
 
@@ -49,7 +49,7 @@ class Subscription < ActiveRecord::Base
       user.update_attribute(:premium, true)
     end
 
-    def latest_active_subscription
+    def find_latest_active_subscription
       user.subscriptions.where("end_date > :end_date and activated = :activated", { end_date: Date.today, activated: true}).last
     end
 end
