@@ -23,23 +23,23 @@ fr:
         line1: Vous vous êtes inscrit(e) avec succès au service UMed.
         line2: "Vous pouvez vous connecter à votre compte en cliquant sur le lien %{link}."
         line3: "Merci beaucoup pour votre adhésion !"
-        signature: Equipe Umed
+        signature: L'équipe Umed
     new_subscription_email:
       subject: Confirmation de paiement
       body:
         title: Cher (Chère) membre,
-        line1: "Félicitations ! Vous avez souscrit un abonnement %{plan} à %{price} pour une durée de %{duration} mois à partir de %{start_date}. Votre abonnement prendra fin le %{end_date}."
+        line1: "Félicitations ! Vous avez souscrit à un abonnement %{plan} à %{price} pour une durée de %{duration} mois à partir de %{start_date}. Votre abonnement prendra fin le %{end_date}."
         line2: Nous sommes très heureux vous voir parmi les membres de Umed.
         line3: Nous vous souhaitons beaucoup de courage et du succès dans votre parcours !
-        signature: Equipe Umed
+        signature: L'équipe Umed
     expired_subscription_email:
-      subject: Votre abonnement expiré
+      subject: Votre abonnement est expiré
       body:
         title: Cher (Chère) membre,
-        line1: "Vous aviez souscrit un abonnement %{plan} à %{price} pour une durée de %{duration} mois à partir de %{start_date}. Votre abonnement est expiré le %{end_date} et n'est plus valable."
-        line2: "Vous pouvez le prolongez pour une durée souhaitée à tout moment et à votre convenance via notre site web %{url}."
-        line3: "Bien cordialement,"
-        signature: Equipe Umed
+        line1: "Vous aviez souscrit à un abonnement %{plan} à %{price} pour une durée de %{duration} mois à partir de %{start_date}. Votre abonnement a expiré le %{end_date} et n'est donc plus valable."
+        line2: "Vous pouvez le prolongez à tout moment via votre compte Umed."
+        line3: "Cordialement,"
+        signature: L'équipe Umed
   contact_mailer:
     subject: "Demande d'infos via formulaire de contact"
   links:
@@ -191,7 +191,7 @@ fr:
         line3: Commencez tout de suite
       premium:
         line1: Vous avez accès à toutes les questions disponibles
-        line2: "Le prix d'un gros sandwich"
+        line2: "Le prix d'un sandwich"
         line3: Commencez tout de suite
       premiumplus:
         price: "%{price}/trimestre"

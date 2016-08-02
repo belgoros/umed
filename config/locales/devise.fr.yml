@@ -23,10 +23,10 @@ fr:
     failure:
       already_authenticated: "Vous êtes déjà connecté"
       inactive: "Votre compte n'est pas encore activé."
-      invalid: "%{authentication_keys} ou mot de passe incorrect."
+      invalid: "Email ou mot de passe incorrect."
       locked: "Votre compte est verrouillé."
-      last_attempt: "Vous avez droit à une tentative avant que votre compte ne soit verrouillé."
-      not_found_in_database: "%{authentication_keys} ou mot de passe incorrect."
+      last_attempt: "Vous avez droit à une dernière tentative avant que votre compte ne soit verrouillé."
+      not_found_in_database: "Email ou mot de passe incorrect."
       timeout: "Votre session est expirée. Veuillez vous reconnecter pour continuer."
       unauthenticated: "Vous devez vous connecter ou vous inscrire pour continuer."
       unconfirmed: "Vous devez confirmer votre compte pour continuer."
@@ -36,16 +36,17 @@ fr:
         greeting: Bienvenue !
         instruction: 'Vous pouvez confirmer votre courriel grâce au lien ci-dessous:'
       reset_password_instructions:
+        subject: Modification de votre mot de passe
         action: Changer mon mot de passe
         greeting: Bonjour !
-        instruction: "Quelqu'un a demandé un lien pour changer votre mot de passe, le voici :"
-        instruction_2: "Si vous n'avez pas émis cette demande, merci d'ignorer ce courriel."
+        instruction: "Un lien a été généré afin de réinitialiser votre mot de passe:"
+        instruction_2: "Si vous n'avez pas émis cette demande, merci d'ignorer ce mail."
         instruction_3: "Votre mot de passe ne changera pas tant que vous n'aurez pas cliqué sur ce lien et renseigné un nouveau mot de passe."
       unlock_instructions:
         action: Débloquer mon compte
         greeting: Bonjour !
         instruction: 'Suivez ce lien pour débloquer votre compte:'
-        message: Votre compte a été bloqué suite à un nombre d'essais de connexions manquées trop important
+        message: Votre compte a été bloqué suite à un trop grand nombre de tentavies échouées de connexion
     omniauth_callbacks:
       failure: "Nous n'avons pas pu vous authentifier via %{kind} : '%{reason}'."
       success: 'Authentifié avec succès via %{kind}.'
