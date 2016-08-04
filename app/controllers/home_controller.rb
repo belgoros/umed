@@ -11,6 +11,9 @@ class HomeController < ApplicationController
   def about
   end
 
+  def credits
+  end
+
   private
 
   def load_subscription_plans

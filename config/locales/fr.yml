@@ -73,7 +73,6 @@ fr:
     next: 'Suivant'
     details: 'Détails'
     plans: "Prix"
-    faq: 'FAQ'
   levels:
     index:
       title: 'Liste des niveaux de difficulté'
@@ -233,6 +232,8 @@ fr:
       title: FAQ
     about:
       title: "À propos d\'UMed"
+    credits:
+      title: Crédits
   date:
     formats:
       default: "%d/%m/%Y"
