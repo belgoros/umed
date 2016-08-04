@@ -231,6 +231,8 @@ fr:
   home:
     faq:
       title: FAQ
+    about:
+      title: A propos de nous
   date:
     formats:
       default: "%d/%m/%Y"

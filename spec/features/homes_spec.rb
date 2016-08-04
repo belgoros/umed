@@ -18,4 +18,11 @@ feature "Home page", type: :feature do
     expect(page).to have_link(I18n.t('links.faq'))
     expect(page).to have_link(I18n.t('links.contact'))
   end
+
+  scenario "display About page" do
+    click_link I18n.t('links.about')
+
+    expect(page).to have_current_path(about_path)
+    expect(page).to have_title(full_title(I18n.t('.title', scope: [:home, :about])))
+  end
 end
