@@ -8,6 +8,9 @@ class HomeController < ApplicationController
   def faq
   end
 
+  def about
+  end
+
   private
 
   def load_subscription_plans

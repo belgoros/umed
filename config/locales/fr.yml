@@ -231,6 +231,8 @@ fr:
   home:
     faq:
       title: FAQ
+    about:
+      title: "À propos d\'UMed"
   date:
     formats:
       default: "%d/%m/%Y"
