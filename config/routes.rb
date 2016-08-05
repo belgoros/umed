@@ -29,4 +29,5 @@ Rails.application.routes.draw do
   resource :contact, only: [:new, :create]
   get 'faq', to: 'home#faq'
   get 'about', to: 'home#about'
+  get 'credits', to: 'home#credits'
 end
