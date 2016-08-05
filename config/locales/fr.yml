@@ -232,7 +232,7 @@ fr:
     faq:
       title: FAQ
     about:
-      title: A propos de nous
+      title: "À propos d\'UMed"
   date:
     formats:
       default: "%d/%m/%Y"
