@@ -10,4 +10,5 @@
         = f.collection_radio_buttons :subject_id, @subjects, :id, :name, { checked: @subjects.first.id }
 
       .form-actions
-        = f.button :submit, t('links.next')
+        = f.button :submit, t('links.next'), class: 'expand show-for-small-only'
+        = f.button :submit, t('links.next'), class: 'hide-for-small-only'

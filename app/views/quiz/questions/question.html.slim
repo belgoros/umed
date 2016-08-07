@@ -11,4 +11,5 @@
       .quiz-question
         = f.collection_radio_buttons :answer_ids, @question.answers, :id, :text
 
-      = f.button :submit, t('links.next')
+      = f.button :submit, t('links.next'), class: 'expand show-for-small-only'
+      = f.button :submit, t('links.next'), class: 'hide-for-small-only'

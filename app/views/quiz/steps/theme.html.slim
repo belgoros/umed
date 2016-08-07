@@ -14,4 +14,5 @@
             = label_tag option
 
       .form-actions
-        = f.button :submit, t('links.next')
+        = f.button :submit, t('links.next'), class: 'expand show-for-small-only'
+        = f.button :submit, t('links.next'), class: 'hide-for-small-only'
