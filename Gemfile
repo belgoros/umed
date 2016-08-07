@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.3.0'
 
-gem 'rails',            '4.2.5'
+gem 'rails',            '4.2.7'
 gem 'devise',           '3.5.2'
 
 gem 'foundation-rails', '~> 5.5.3.2'
@@ -43,6 +43,7 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'capybara-email', '~> 2.4.0'
+  gem 'brakeman', :require => false
 end
 
 group :test do
