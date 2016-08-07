@@ -1,7 +1,7 @@
 class QuizzesController < ApplicationController
 
   def index
-    @quizzes = current_user.quizzes.order(id: :desc).page params[:page]
+    @quizzes = current_user.quizzes.includes(:level, :subject, :theme).order(id: :desc).page params[:page]
   end
 
   def details
