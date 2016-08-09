@@ -1,9 +1,10 @@
 h1 = t('.body.title')
-p = t('.body.line1', plan: @plan.description,
-                     price: number_to_currency(@plan.price),
-                     duration: @plan.duration,
-                     start_date: l(@subscription.start_date),
-                     end_date: l(@subscription.end_date))
-p = t('.body.line2', url: @url)
-p = t('.body.line3')
-p = t('.body.signature')
+.mailer
+  p = t('.body.line1', plan: @plan.description,
+                       price: number_to_currency(@plan.price),
+                       duration: @plan.duration,
+                       start_date: l(@subscription.start_date),
+                       end_date: l(@subscription.end_date))
+  p = t('.body.line2', url: @url)
+  p = t('.body.line3')
+  p = t('.body.signature')
