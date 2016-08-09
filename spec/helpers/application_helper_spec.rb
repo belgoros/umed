@@ -62,4 +62,20 @@ describe ApplicationHelper, :type => :helper do
       expect(styled_answer(answer)).to eq('success')
     end
   end
+
+  describe "#meta_description" do
+    it "should generate meta tag description content" do
+      content = "this is Umed meta content"
+      meta_tag = meta_description(content)
+      expect(meta_tag).to eq "<meta name=\"description\" content=\"#{content}\" />"
+    end
+  end
+
+  describe "#meta_key_words" do
+    it "should generate meta tag key words content" do
+      content = "test, quiz, medecine"
+      meta_tag = meta_key_words(content)
+      expect(meta_tag).to eq "<meta name=\"keywords\" content=\"#{content}\" />"
+    end
+  end
 end

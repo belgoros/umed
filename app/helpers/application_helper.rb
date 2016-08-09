@@ -24,4 +24,12 @@ module ApplicationHelper
   def styled_answer(answer)
      "#{answer.correct? ? 'success' : 'error'}"
   end
+
+  def meta_description(text)
+    tag('meta', name: 'description', content: text)
+  end
+
+  def meta_key_words(words)
+    tag('meta', name: 'keywords', content: words)
+  end
 end

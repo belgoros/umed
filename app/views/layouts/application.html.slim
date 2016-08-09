@@ -2,6 +2,8 @@ doctype html
 html
   head
     title ==full_title(yield(:title))
+    == meta_description(yield(:meta_description))
+    == meta_key_words(yield(:meta_key_words))
     meta charset="utf-8"
     meta content="IE=edge" http-equiv="X-UA-Compatible"
     meta content="width=device-width, initial-scale=1" name="viewport" /
