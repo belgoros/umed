@@ -59,7 +59,7 @@ fr:
         hint: "%{length} caractères minimum"
       new:
         forgot_your_password: Mot de passe oublié ?
-        send_me_reset_password_instructions: Envoyez-moi des instructions pour réinitialiser mon mot de passe
+        send_me_reset_password_instructions: Réinitialiser mon mot de passe
       no_token: "Vous ne pouvez accéder à cette page sans passer par un e-mail de réinitialisation de mot de passe. Si vous êtes passé par un e-mail de ce type, assurez-vous d'utiliser l'URL complète."
       send_instructions: 'Vous allez recevoir les instructions de réinitialisation du mot de passe dans quelques instants'
       send_paranoid_instructions: "Si votre e-mail existe dans notre base de données, vous allez recevoir un lien de réinitialisation par e-mail"
