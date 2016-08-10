@@ -65,17 +65,19 @@ describe ApplicationHelper, :type => :helper do
 
   describe "#meta_description" do
     it "should generate meta tag description content" do
+      base_description = I18n.t(:meta_description)
       content = "this is Umed meta content"
       meta_tag = meta_description(content)
-      expect(meta_tag).to eq "<meta name=\"description\" content=\"#{content}\" />"
+      expect(meta_tag).to eq "<meta name=\"description\" content=\"#{base_description}, #{content}\" />"
     end
   end
 
   describe "#meta_key_words" do
     it "should generate meta tag key words content" do
       content = "test, quiz, medecine"
+      base_words = I18n.t(:meta_key_words)
       meta_tag = meta_key_words(content)
-      expect(meta_tag).to eq "<meta name=\"keywords\" content=\"#{content}\" />"
+      expect(meta_tag).to eq "<meta name=\"keywords\" content=\"#{base_words}, #{content}\" />"
     end
   end
 end

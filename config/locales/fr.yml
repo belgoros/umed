@@ -6,6 +6,8 @@ fr:
   destroyed_success: "%{model} supprimé(e) avec succès"
   quiz_finished_success: "Félicitations ! Vous avez terminé le %{model} ! "
   contact_message_sent: "Merci, votre message a été envoyé avec succès"
+  meta_description: "1er site francophone pour vérifier vos connaissances en matieres médicales. Testez vos connaissances en medecine avec des quiz en histologie, anatomie, de biologie cellulaire..."
+  meta_key_words: "Umed, médecine, quiz"
   #kaminari pagination
   views:
     pagination:
@@ -230,10 +232,16 @@ fr:
   home:
     faq:
       title: FAQ
+      meta_description: "foire aux questions Umed"
+      meta_key_words: "faq, foire aux questions, tout savoir sur Umed"
     about:
       title: "À propos d\'UMed"
+      meta_description: "à propos d\'Umed, about Umed"
+      meta_key_words: "qui sommes nous, qui est derrière Umed"
     credits:
       title: Crédits
+      meta_description: "nos remerciements pour icônes, our thanks for icons, flaticon.com"
+      meta_key_words: "merci, icônes, remerciements, thanks for icons, flaticon.com"
   date:
     formats:
       default: "%d/%m/%Y"
