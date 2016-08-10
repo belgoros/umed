@@ -3,10 +3,10 @@ html
   head
     meta content=("text/html; charset=UTF-8") http-equiv="Content-Type" /
     = stylesheet_link_tag "user_mailer"
-    link href="https://fonts.googleapis.com/css?family=Open+Sans:bold" rel="stylesheet"
-    link href="https://fonts.googleapis.com/css?family=Open+Sans:light" rel="stylesheet"
+    link href="https://fonts.googleapis.com/css?family=Open+Sans:bold" rel="stylesheet" type="text/css" /
+    link href="https://fonts.googleapis.com/css?family=Open+Sans:light" rel="stylesheet" type="text/css" /
+
   body
     .header = t('base_title')
     .title
     == yield
-
