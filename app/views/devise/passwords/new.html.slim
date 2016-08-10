@@ -8,5 +8,5 @@
         .form-inputs
           = f.input :email, required: true, autofocus: true
         .form-actions
-          = f.button :submit, value: t('.send_me_reset_password_instructions')
+          = f.button :submit, value: t('.send_me_reset_password_instructions'), class:'expand radius'
       = render "devise/shared/links"

@@ -10,5 +10,5 @@
           = f.input :password, required: true, hint: (t('.hint', length: @minimum_password_length) if @minimum_password_length)
           = f.input :password_confirmation, required: true
         .form-actions
-          = f.button :submit, t('.sign_up'), class: 'expand'
+          = f.button :submit, t('.sign_up'), class: 'expand radius'
       = render "devise/shared/links"
