@@ -12,14 +12,14 @@
     li.divider
     li = link_to t('links.answers'), answers_path
   li.divider
-  li.hide-for-large-only
+  li.hide-for-large-up
     ul.off-canvas-list
       li.label-dashboard = t('links.dashboard')
       li = link_to t('links.profile'), edit_user_registration_path
       li = link_to t('links.quizzes'), quizzes_path
       li = link_to t('links.subscriptions'), subscriptions_path
       li = link_to t('links.sign_out'), destroy_user_session_path, :method=>'delete'
-  li.has-dropdown.show-for-large-only
+  li.has-dropdown.show-for-large-up
     a href=""  = t('links.dashboard')
     ul.dropdown
       li = link_to t('links.profile'), edit_user_registration_path

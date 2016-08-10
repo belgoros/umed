@@ -1,6 +1,6 @@
 .off-canvas-wrap data-offcanvas=""
   .inner-wrap
-      nav.top-bar.show-for-large-only data-topbar=""
+      nav.top-bar.show-for-large-up data-topbar=""
         ul.title-area
           li.name
             h1 = link_to t('base_title'), root_path
@@ -11,7 +11,7 @@
           /! Right Nav Section
           ul.right
             = render 'layouts/menu'
-      nav.tab-bar.hide-for-large
+      nav.tab-bar.hide-for-large-up
         section.right-small
           a.right-off-canvas-toggle.menu-icon href="#"
             span
