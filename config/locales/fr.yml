@@ -229,6 +229,8 @@ fr:
   contacts:
     new:
       title: Contacter UMed
+      meta_description: Contacter UMed
+      meta_key_words: Contacter UMed
   home:
     faq:
       title: FAQ
