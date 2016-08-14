@@ -1,3 +1,21 @@
+## 1.0.4/14-08-2016
+
+ * override Devise mailer templates to have Umed HTML title and fonts
+ * load plans only for home#index page
+ * add `About` page
+ * add `Credits` page
+ * update Rails to the latest `4.2.7` version
+ * eager load quiz belongs_to associations in index action
+ * expand button on small and hide for big screens
+ * remove CustomDeviseMailer and set up devise mailer via `devise.rb` settings
+ * modify and apply mailer template CSS class
+ * fix canvas hide/show effects on large screens
+ * change reset password instructions translation
+ * add `radius` css class to buttons
+ * add a new home page image adapted for large screens
+ * modify cleanup_quizzes task (extract to a separate method, remove and keep 25 last only)
+ * implement SEO features (modify robots.txt, add meta tags, key words)
+
 ## 1.0.3/30-07-2016
 
 ### CSSfy user mailer HTML templates
