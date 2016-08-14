@@ -24,4 +24,22 @@ module ApplicationHelper
   def styled_answer(answer)
      "#{answer.correct? ? 'success' : 'error'}"
   end
+
+  def meta_description(text)
+    base_description = I18n.t(:meta_description)
+    if text.blank?
+      tag('meta', name: 'description', content: base_description)
+    else
+      tag('meta', name: 'description', content: "#{base_description}, #{text}")
+    end
+  end
+
+  def meta_key_words(words)
+    base_words = I18n.t(:meta_key_words)
+    if words.blank?
+      tag('meta', name: 'keywords', content: base_words)
+    else
+      tag('meta', name: 'keywords', content: "#{base_words}, #{words}")
+    end
+  end
 end
