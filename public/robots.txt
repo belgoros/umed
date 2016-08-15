@@ -1,2 +1,10 @@
 User-agent: *
-Disallow:
+Disallow: /users/*
+Disallow: /answers/*
+Disallow: /levels/*
+Disallow: /plans/*
+Disallow: /questions/*
+Disallow: /quizzes/*
+Disallow: /subjects/*
+Disallow: /subscriptions/*
+Disallow: /themes/*
