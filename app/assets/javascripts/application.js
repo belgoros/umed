@@ -16,8 +16,11 @@
 //= require turbolinks
 //= require prices_equalizer
 //= require chartist.min
+//= require jquery.basictable.min
 //= require_tree .
 
 $(document).on('ready page:load', function () {
   $(document).foundation();
 });
+
+ $('table').basictable();

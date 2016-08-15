@@ -9,7 +9,7 @@
       = paginate @subscriptions
       br
 
-      table.responsive
+      table
         thead
           tr
             th = t('.prix')
@@ -33,3 +33,6 @@
   .medium-10.small-centered.columns
     .row
       = render partial: "plan", collection: @plans
+
+javascript:
+  $('table').basictable('start');

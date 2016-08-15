@@ -8,7 +8,7 @@
       = paginate @answers
       br
 
-      table.responsive
+      table
         thead
           tr
             th = t('.text')
@@ -26,3 +26,6 @@
               td = link_to t('links.edit'), edit_answer_path(answer)
               td = link_to t('links.delete'), answer, data: {:confirm => t('are_you_sure')}, :method => :delete
       = paginate @answers
+
+javascript:
+  $('table').basictable('start');

@@ -142,14 +142,14 @@ fr:
   quizzes:
     index:
       title: Vos quizzes
-      selection: Critères sélectionnés
+      selection: Critères
       empty: Vous n'avez aucun quiz passé
       level: Niveau
       subject: Matière
       theme: Thème
       questions: Questions
       answers: Réponses
-      score: Résultat
+      score: Score
     details:
       chart:
         correct: Réponses correctes
