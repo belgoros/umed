@@ -6,8 +6,8 @@ fr:
   destroyed_success: "%{model} supprimé(e) avec succès"
   quiz_finished_success: "Félicitations ! Vous avez terminé le %{model} ! "
   contact_message_sent: "Merci, votre message a été envoyé avec succès"
-  meta_description: "1er site francophone pour vérifier vos connaissances en matieres médicales. Testez vos connaissances en medecine avec des quiz en histologie, anatomie, de biologie cellulaire..."
-  meta_key_words: "Umed, médecine, quiz"
+  meta_description: "1er site francophone pour vérifier vos connaissances en matières médicales. Testez vos connaissances en médecine avec des quiz en histologie, anatomie, de biologie cellulaire..."
+  meta_key_words: "Umed, quiz en médecine, quiz pour étudiants"
   #kaminari pagination
   views:
     pagination:
