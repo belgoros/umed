@@ -12,5 +12,5 @@ fr:
       updated: "Votre nouveau mot de passe a été enregistré avec succès"
       change_required: "Votre mot de passe est expiré. Veuillez le renouveler."
     failure:
-      session_limited: 'Vos identifiants ont été utilisés dans un autre navigateur. Veuillez vous-connecter à nouveau pour continuer.'
+      session_limited: 'Votre compte a déjà été utilisé pour se connecter sur un autre appareil. '
       expired: 'Votre compte est suspendu suite à son inactivité. Veuillez contacter le service de support.'
