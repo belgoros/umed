@@ -1,0 +1,16 @@
+fr:
+  errors:
+    messages:
+      taken_in_past: "a été utilisé auparavant"
+      equal_to_current_password: "doit être différent de mot de passe précédent."
+      password_format: "doit contenir majuscules, miniscules et chiffres"
+  devise:
+    invalid_captcha: "Captcha entré n\'est pas valide "
+    paranoid_verify:
+      code_required: "Veuillez introduire le code fourni pas notre équipe de support"
+    password_expired:
+      updated: "Votre nouveau mot de passe a été enregistré avec succès"
+      change_required: "Votre mot de passe est expiré. Veuillez le renouveler."
+    failure:
+      session_limited: 'Vos identifiants ont été utilisés dans un autre navigateur. Veuillez vous-connecter à nouveau pour continuer.'
+      expired: 'Votre compte est suspendu suite à son inactivité. Veuillez contacter le service de support.'
