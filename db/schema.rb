@@ -26,6 +26,18 @@ ActiveRecord::Schema.define(version: 20160219123005) do
 
   add_index "answers", ["question_id"], name: "index_answers_on_question_id", using: :btree
 
+  create_table "images", force: :cascade do |t|
+    t.string   "question_id"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+  end
+
+  add_index "images", ["question_id"], name: "index_images_on_question_id", using: :btree
+
   create_table "levels", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
@@ -108,20 +120,21 @@ ActiveRecord::Schema.define(version: 20160219123005) do
   add_index "themes", ["subject_id"], name: "index_themes_on_subject_id", using: :btree
 
   create_table "users", force: :cascade do |t|
-    t.string   "email",                  default: "",    null: false
-    t.string   "encrypted_password",     default: "",    null: false
+    t.string   "email",                             default: "",    null: false
+    t.string   "encrypted_password",                default: "",    null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,     null: false
+    t.integer  "sign_in_count",                     default: 0,     null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at",                             null: false
-    t.datetime "updated_at",                             null: false
-    t.boolean  "premium",                default: false
-    t.boolean  "admin",                  default: false
+    t.string   "unique_session_id",      limit: 20
+    t.datetime "created_at",                                        null: false
+    t.datetime "updated_at",                                        null: false
+    t.boolean  "premium",                           default: false
+    t.boolean  "admin",                             default: false
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

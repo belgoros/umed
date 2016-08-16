@@ -24,6 +24,7 @@ gem 'foundation-icons-sass-rails'
 gem 'activemerchant', '~> 1.57.0'
 gem 'chartkick'
 gem 'roadie-rails', '~> 1.0'
+gem 'devise_security_extension'
 
 group :development, :test do
   gem 'quiet_assets', '~> 1.1.0'
