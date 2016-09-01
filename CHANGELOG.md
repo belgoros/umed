@@ -1,3 +1,16 @@
+## 1.0.5/01-09-2016
+
+* implement devise_security_extension (block multiple logins)
+* change quiz questions to answer constants to 10, 15, 25
+* add a custom sender prefix to mailer
+* remove center text align in mail templates
+* make tables responsive with basictable JS
+* change reset password instructions translation
+* fix image interchange for medium screens, remove unneeded scss
+* implement data-interchange to load images for large and small screens
+* add a link to Facebook page
+* optimize robots.txt for SEO
+
 ## 1.0.4/14-08-2016
 
  * override Devise mailer templates to have Umed HTML title and fonts
