@@ -7,6 +7,7 @@ namespace :db do
     make_themes
     make_questions
     make_answers
+    make_plans
   end
 end
 
@@ -61,4 +62,10 @@ def make_answers
     question.answers.create!(text: FFaker::Lorem.phrase, correct: true)
   end
   puts "Created #{Answer.count} Answers"
+end
+
+def make_plans
+  Plan.create!(name: 'free', description: 'Gratuit', price: 0.0, duration: 9999, questions: 20)
+  Plan.create!(name: 'premium', description: 'Premium', price: 3.0, duration: 1, questions: 1000)
+  Plan.create!(name: 'premium+', description: 'Premium Plus', price: 7.0, duration: 3, questions: 1000)
 end
