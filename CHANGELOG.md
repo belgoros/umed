@@ -65,7 +65,7 @@
   - replace `f.association` with `f.collection_radio_buttons`
   - modify features/subscriptions_spec after replacing drop-downs lists
   - add Quiz module to support/helpers to create a Quiz
-* add canvas feauture to the navbar:
+* add canvas feature to the navbar:
   - move messages and yield sections to the navbar partial (needed to make it works)
   - add CSS classes used by canvas feature
 * move footer partial to `home#index`
