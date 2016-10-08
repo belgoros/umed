@@ -11,11 +11,11 @@ def delete_incomplete_quzzes
   stale_quizzes.map(&:destroy)
 end
 
-# Delete all the quizzes and the last only (25 by default)
+# Delete all the previous quizzes and keep the last only (25 by default)
 def clean_and_keep_recent(to_keep = 25)
   users = User.includes(:quizzes)
   users.each do |user|
-    ids = user.quizzes.order('created_at DESC').limit(to_keep).pluck(:id)
+    ids = user.quizzes.order(created_at: :desc).offset(to_keep).pluck(:id)
     Quiz.where(id: ids).delete_all
   end
 end
