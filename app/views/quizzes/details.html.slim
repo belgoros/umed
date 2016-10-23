@@ -17,7 +17,7 @@
       - @answers.each do |answer|
         div class="panel callout radius #{styled_answer(answer)} text-center"
           strong> #{t('.question')}:
-          = answer.question.text
+          = sanitize answer.question.text, tags: %w(sub sup)
           br
           strong> #{t('.your_answer')}:
           = answer.text

@@ -5,7 +5,7 @@
     = simple_form_for @quiz, method: :put, url: wizard_path do |f|
       = f.error_notification
 
-      p = @question.text
+      p = sanitize @question.text, tags: %w(sub sup)
       - if @question.photo_file_name
         = image_tag @question.photo.url(:thumb)
       .quiz-question
