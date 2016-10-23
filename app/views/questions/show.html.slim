@@ -1,7 +1,7 @@
 = provide(:title, truncate(t('.title', question: @question.text)))
 .row
   .small-12.columns
-    h3 = t('.title', question: @question.text)
+    h3 == t('.title', question: sanitize(@question.text, tags: %w(sub sup)))
     - if @question.photo_file_name
       = image_tag @question.photo.url(:thumb)
 
