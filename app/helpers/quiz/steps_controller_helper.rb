@@ -1,2 +1,0 @@
-module Quiz::StepsControllerHelper
-end
