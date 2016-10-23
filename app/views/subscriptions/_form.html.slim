@@ -6,7 +6,6 @@
   = f.input :start_date, as: :string, input_html: { value: localize(@subscription.start_date.to_date) }
   = f.input :end_date,   as: :string, input_html: { value: localize(@subscription.end_date.to_date) }
   = f.association :plan, label_method: :description
-  h4 =t('.price')
-    = @subscription.plan.price
-
+  h4 #{t('.price')}: #{number_to_currency(@subscription.plan.price, precision: 0)}
+  br
   = f.button :submit, t('.confirm'), class:'expand radius'
