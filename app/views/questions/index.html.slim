@@ -20,7 +20,7 @@
         tbody
           - @questions.each do |question|
             tr
-              td = question.text
+              td = sanitize question.text, tags: %w(sub sup)
               td = question.theme.name
               td = boolean_to_text(question.photo_file_name)
               td = link_to t('links.answers'), question
