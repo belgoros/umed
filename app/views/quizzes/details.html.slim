@@ -19,6 +19,10 @@
           strong> #{t('.question')}:
           = sanitize answer.question.text, tags: %w(sub sup)
           br
+          br
+          - if answer.question.photo_file_name
+            = image_tag answer.question.photo.url(:thumb)
+          br
           strong> #{t('.your_answer')}:
           = sanitize answer.text, tags: %w(sub sup)
           - unless answer.correct?
