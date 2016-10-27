@@ -20,12 +20,12 @@
           = sanitize answer.question.text, tags: %w(sub sup)
           br
           strong> #{t('.your_answer')}:
-          = answer.text
+          = sanitize answer.text, tags: %w(sub sup)
           - unless answer.correct?
             br
             br
             strong> #{t('.correct_answer')}:
-            = answer.question.correct_answer.text
+            = sanitize answer.question.correct_answer.text, tags: %w(sub sup)
       br
       = paginate @answers
 
