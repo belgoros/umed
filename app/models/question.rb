@@ -4,7 +4,9 @@ class Question < ActiveRecord::Base
   # make it easier to create answers and not forget to have the correct one
   # (starting from from the correct one, for example, then adding the wrong ones)
   has_many :answers, -> { order "RANDOM()"}, dependent: :destroy
-  has_attached_file :photo, styles: { medium: "100x100>", thumb: "150x150>" }, default_url: "/images/:style/missing.png"
+  has_attached_file :photo,
+                    storage: :s3,
+                    styles: { medium: "100x100>", thumb: "150x150>" }, default_url: "/images/:style/missing.png"
   validates_attachment :photo,
                         content_type: { content_type: ["image/jpeg", "image/gif", "image/png"] },
                         size: { in: 0..5.megabytes }
