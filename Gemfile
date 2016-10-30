@@ -26,6 +26,7 @@ gem 'chartkick'
 gem 'roadie-rails', '~> 1.0'
 gem 'devise_security_extension'
 gem 'aws-sdk', '~> 2.6'
+gem 'figaro',     '~> 1.1.1'
 
 group :development, :test do
   gem 'quiet_assets', '~> 1.1.0'
@@ -34,7 +35,6 @@ group :development, :test do
   gem 'pry'
   gem 'pry-nav'
   gem 'pry-rails',  '~> 0.3.2'
-  gem 'figaro',     '~> 1.1.1'
   gem 'ffaker',     '~> 2.1.0'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
