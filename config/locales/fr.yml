@@ -156,7 +156,7 @@ fr:
         unanswered: Sans réponse ou incorrectes
       title: Détails du Quiz
       score: Votre score
-      empty: Aucun quiz passé
+      empty: Oups, vous n'avez répondu à aucune question du quiz
       level: Niveau
       subject: Matière
       theme: Thème
@@ -191,12 +191,12 @@ fr:
         line2: Gratuit à vie
         line3: Commencez tout de suite
       premium:
-        line1: Vous avez accès à toutes les questions disponibles
+        line1: Vous avez accès à plus de 1500 questions
         line2: "Le prix d'un sandwich"
         line3: Commencez tout de suite
       premiumplus:
         price: "%{price}/trimestre"
-        line1: Vous avez accès à toutes les questions disponibles
+        line1: Vous avez accès à plus de 1500 questions
         line2: Offre avantageuse
         line3: Commencez tout de suite
     index:
