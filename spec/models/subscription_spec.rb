@@ -31,12 +31,10 @@ describe Subscription, type: :model do
       subscription = build(:subscription, plan: premium_plan, start_date: @start_date, end_date: @end_date)
       subscription.save(validate: false)
 
-      new_subscription = build(:subscription, plan: premium_plan, user: subscription.user)
-      new_subscription.save(validate: false)
-      new_subscription.enroll_for_plan(premium_plan)
+      subscription.enroll_for_plan(premium_plan)
+      expect(subscription.start_date).to eq @end_date.advance(days: 1)
+      expect(subscription.end_date).to eq subscription.start_date.advance(months: 1)
 
-      expect(new_subscription.start_date).to eq @end_date.advance(days: 1)
-      expect(new_subscription.end_date).to eq @end_date.advance(days: 1, months: 1)
     end
   end
 end
