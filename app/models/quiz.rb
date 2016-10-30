@@ -6,6 +6,13 @@ class Quiz < ActiveRecord::Base
   serialize :question_ids, Array
   serialize :answer_ids, Array
 
+  scope :finished, ->(user) { includes(:level, :subject, :theme)
+                              .order(id: :desc)
+                              .where(user: user)
+                              .where.not(level: nil)
+                              .where.not(subject: nil)
+                              .where.not(theme: nil)
+                            }
 
   cattr_accessor :form_steps do
     %w(level subject theme)

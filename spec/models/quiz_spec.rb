@@ -35,6 +35,7 @@ describe Quiz, type: :model do
     it "should be complete" do
       expect(quiz.complete?).to be true
     end
+
     it "should not be complete without level" do
       quiz.level = nil
       expect(quiz.complete?).to be false
@@ -48,6 +49,19 @@ describe Quiz, type: :model do
     it "should not be complete without theme" do
       quiz.theme = nil
       expect(quiz.complete?).to be false
+    end
+  end
+
+  describe "#finished scope" do
+    it "should return 1 finished quiz" do
+      quiz = create(:quiz)
+      expect(Quiz.finished(quiz.user)).not_to be_empty
+    end
+
+    it "should return no finished quizzes" do
+      quiz = build(:quiz, level: nil, subject: nil, theme: nil)
+      quiz.save(validate: false)
+      expect(Quiz.finished(quiz.user)).to be_empty
     end
   end
 
