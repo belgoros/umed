@@ -5,7 +5,6 @@ class Question < ActiveRecord::Base
   # (starting from from the correct one, for example, then adding the wrong ones)
   has_many :answers, -> { order "RANDOM()"}, dependent: :destroy
   has_attached_file :photo,
-                    storage: :s3,
                     styles: { medium: "100x100>", thumb: "150x150>" }, default_url: "/images/:style/missing.png"
   validates_attachment :photo,
                         content_type: { content_type: ["image/jpeg", "image/gif", "image/png"] },
