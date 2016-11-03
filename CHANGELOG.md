@@ -1,3 +1,19 @@
+## 1.1.0/02-11-2016
+
+* STARTUP UMEd via Facebook and Twitter
+* change default quizzes to keep to 5
+* fix subscription #enroll\_for\_plan method
+* change available questions number to 1500 (bravo AC !)
+* do not display quiz without level, subject, theme
+* move figaro gem outside dev, test group
+* implement AWS S3 storage for images
+* update paperclip to 5.1.0 version
+* improve static text on the home page
+* remove Google+ social icon from the footer
+* change attached image options (size, thumb, etc.)
+* sanitize question and answer text
+* fix price display onsubscription confirmation page
+
 ## 1.0.5/01-09-2016
 
 * implement devise_security_extension (block multiple logins)
