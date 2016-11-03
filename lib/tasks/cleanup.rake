@@ -1,7 +1,7 @@
 namespace :cleanup do
   desc "removes stale and incomplete quizzes from the database"
   task quizzes: :environment do
-    clean_and_keep_recent(25)
+    clean_and_keep_recent
   end
 end
 
@@ -12,7 +12,7 @@ def delete_incomplete_quzzes
 end
 
 # Delete all the previous quizzes and keep the last only (25 by default)
-def clean_and_keep_recent(to_keep = 25)
+def clean_and_keep_recent(to_keep = 5)
   users = User.includes(:quizzes)
   users.each do |user|
     ids = user.quizzes.order(created_at: :desc).offset(to_keep).pluck(:id)
