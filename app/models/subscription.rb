@@ -34,6 +34,18 @@ class Subscription < ActiveRecord::Base
     self.plan = plan
   end
 
+  def enroll_for_days(plan, offered_days)
+    latest_subscription = find_latest_active_subscription
+    new_start_date = Date.today
+    if latest_subscription
+      new_start_date = latest_subscription.end_date.advance(days: 1)
+    end
+    self.start_date = new_start_date
+    self.end_date = new_start_date.advance(days: offered_days)
+    self.plan = plan
+    activate_subscription
+  end
+
   private
 
     def express_purchase_options
