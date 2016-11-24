@@ -46,7 +46,7 @@ end
 def make_questions
   themes = Theme.all
   themes.each do |theme|
-    30.times do
+    3.times do
       theme.questions.create!(text: FFaker::Lorem.phrase)
     end
   end
