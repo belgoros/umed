@@ -15,16 +15,21 @@ A student can run wizard as many times as he or she needs.
 
 * Ruby 2.3.0
 * Rails 4.2.5
+* Slim
 * Devise
 * Paperclip
 * RSpec
+* Capybara
+* roadie-rails to help you generate HTML emails
 * Simple Form
 * Foundation 5
 * Figaro
+* Kaminari
+* Amason S3 to store images
+* Chartist JS to display quiz results in responsive charts
+* PosgreSQL
 
 
 ## Accepted payment modes
 
 * PayPal
-* Credit cards will come later
-* Bank transfer will come later
