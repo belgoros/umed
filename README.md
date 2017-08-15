@@ -13,8 +13,8 @@ A student can run wizard as many times as he or she needs.
 
 ## Used technologies
 
-* Ruby 2.3.0
-* Rails 4.2.5
+* Ruby 2.4.0
+* Rails 4.2.7
 * Slim
 * Devise
 * Paperclip
