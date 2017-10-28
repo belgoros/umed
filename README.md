@@ -27,7 +27,7 @@ A student can run the wizard as many times as he or she needs.
 * Kaminari
 * Amason S3 to store images
 * Chartist JS to display quiz results in responsive charts
-* PosgreSQL
+* PostgreSQL
 
 
 ## Accepted payment modes
