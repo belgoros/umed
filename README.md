@@ -9,7 +9,7 @@ A student can choose a subject, a theme and a number of questions from available
 After selecting the available options, a student will have to go through a wizard and to reply the asked questions.
 In the end of the wizard the total score of correct replied answers will be displayed to get an idea of a student's level.
 
-A student can run wizard as many times as he or she needs.
+A student can run the wizard as many times as he or she needs.
 
 ## Used technologies
 
@@ -33,3 +33,5 @@ A student can run wizard as many times as he or she needs.
 ## Accepted payment modes
 
 * PayPal
+
+You can see the application in action [here](www.umed.be).
