@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :subject do
     name { FFaker::Lorem.words(2) }
     level

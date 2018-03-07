@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :theme do
     name { FFaker::Lorem.words(3) }
     subject
