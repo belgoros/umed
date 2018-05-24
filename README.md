@@ -34,4 +34,4 @@ A student can run the wizard as many times as he or she needs.
 
 * PayPal
 
-You can see the application in action [here](http://www.umed.be) deployed at [Heroku](https://www.heroku.com).
+You can see the application in action [here](https://umed.herokuapp.com/) deployed at [Heroku](https://www.heroku.com).
