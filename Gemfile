@@ -4,7 +4,7 @@ ruby '2.6.3'
 
 gem 'activemerchant', '~> 1.98'
 gem 'aws-sdk', '~> 3.0', '>= 3.0.1'
-gem 'bootsnap', '~> 1.3', '>= 1.3.2', require: false
+gem 'bootsnap', '~> 1.4', '>= 1.4.5', require: false
 gem 'chartkick'
 gem 'coffee-rails', '~> 5.0'
 gem 'devise',           '~> 4.7', '>= 4.7.1'
