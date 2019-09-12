@@ -27,12 +27,12 @@ gem 'roadie-rails', '~> 1.0'
 gem 'devise_security_extension'
 gem 'aws-sdk', '~> 2.6'
 gem 'figaro',     '~> 1.1.1'
+gem 'puma',       '~> 4.1', '>= 4.1.1'
 
 # Access an IRB console on exception pages or by using <%= console %> in views
 gem 'web-console', '~> 2.0', group: :development
 
 group :development, :test do
-  gem 'quiet_assets', '~> 1.1.0'
   gem 'letter_opener'
   gem 'rspec-rails', '~> 3.7.2'
   gem 'pry'
@@ -59,5 +59,4 @@ end
 
 group :production do
   gem 'rails_12factor'
-  gem 'puma'
 end
