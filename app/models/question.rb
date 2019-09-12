@@ -1,4 +1,4 @@
-class Question < ActiveRecord::Base
+class Question < ApplicationRecord
   DEFAULT_QUESTIONS_NUMBER = 5
   # Ordering question answers randomly to avoid guessing when passing a quiz and
   # make it easier to create answers and not forget to have the correct one
