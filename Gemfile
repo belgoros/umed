@@ -19,7 +19,7 @@ gem 'jbuilder',         '~> 2.0'
 gem 'sdoc',             '~> 0.4.0', group: :doc
 gem 'wicked'
 gem 'pg',               '~> 0.21.0' # does not work for 1.0.0 with Rails < 5.1.5RC
-gem 'nokogiri',         '~> 1.8.2'
+gem 'nokogiri',         '~> 1.10', '>= 1.10.4'
 gem 'foundation-icons-sass-rails'
 gem 'activemerchant', '~> 1.57.0'
 gem 'chartkick'
@@ -61,4 +61,3 @@ group :production do
   gem 'rails_12factor'
   gem 'puma'
 end
-
