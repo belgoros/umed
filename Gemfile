@@ -37,6 +37,7 @@ group :development, :test do
   gem 'capybara-email', '~> 3.0', '>= 3.0.1'
   gem 'ffaker', '~> 2.12'
   gem 'letter_opener', '~> 1.7'
+  gem 'listen', '~> 3.1', '>= 3.1.5'
   gem 'pry', '~> 0.12.2'
   gem 'pry-nav', '~> 0.3.0'
   gem 'pry-rails', '~> 0.3.9'
