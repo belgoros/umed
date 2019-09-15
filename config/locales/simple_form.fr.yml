@@ -1,10 +1,10 @@
 fr:
   simple_form:
     error_notification:
-      default_message: Veuillez corriger les erreurs ci-dessous:
+      default_message: Veuillez corriger les erreurs ci-dessous
     required:
       text: obligatoire
-      mark: *
+      mark: "*"
     labels:
       subject:
         name: Nom

@@ -1,20 +1,20 @@
 fr:
-  base_title: "UMed"
-  are_you_sure: "Êtes-vous sûr ?"
+  base_title: UMed
+  are_you_sure: Êtes-vous sûr ?
   created_success: "%{model} créé(e) avec succès"
   updated_success: "%{model} modifié(e) avec succès"
   destroyed_success: "%{model} supprimé(e) avec succès"
-  quiz_finished_success: "Félicitations ! Vous avez terminé le %{model} ! "
-  contact_message_sent: "Merci, votre message a été envoyé avec succès"
-  meta_description: "1er site francophone pour vérifier vos connaissances en matières médicales. Testez vos connaissances en médecine avec des quiz en histologie, anatomie, de biologie cellulaire..."
-  meta_key_words: "UMed, quiz en médecine, quiz pour étudiants, testez vos connaissances en médecine"
+  quiz_finished_success: Félicitations ! Vous avez terminé le %{model} !
+  contact_message_sent: Merci, votre message a été envoyé avec succès
+  meta_description: 1er site francophone pour vérifier vos connaissances en matières médicales. Testez vos connaissances en médecine avec des quiz en histologie, anatomie, de biologie cellulaire...
+  meta_key_words: UMed, quiz en médecine, quiz pour étudiants, testez vos connaissances en médecine
   #kaminari pagination
   views:
     pagination:
       first: "&laquo; Première"
-      last: "Dernière &raquo;"
+      last: Dernière &raquo;
       previous: "&lsaquo; Précédent"
-      next: "Suivant &rsaquo;"
+      next: Suivant &rsaquo;
       truncate: "&hellip;"
 
   user_mailer:
@@ -23,14 +23,14 @@ fr:
       body:
         title: Bienvenue sur UMed !
         line1: Vous vous êtes inscrit(e) avec succès au service UMed.
-        line2: "Vous pouvez vous connecter à votre compte en cliquant sur le lien %{link}."
-        line3: "Merci beaucoup pour votre adhésion !"
+        line2: Vous pouvez vous connecter à votre compte en cliquant sur le lien %{link}.
+        line3: Merci beaucoup pour votre adhésion !
         signature: L'équipe Umed
     new_subscription_email:
       subject: Confirmation de paiement
       body:
         title: Cher (Chère) membre,
-        line1: "Félicitations ! Vous avez souscrit à un abonnement %{plan} à %{price} pour une durée de %{duration} mois à partir de %{start_date}. Votre abonnement prendra fin le %{end_date}."
+        line1: Félicitations ! Vous avez souscrit à un abonnement %{plan} à %{price} pour une durée de %{duration} mois à partir de %{start_date}. Votre abonnement prendra fin le %{end_date}.
         line2: Nous sommes très heureux vous voir parmi les membres de Umed.
         line3: Nous vous souhaitons beaucoup de courage et du succès dans votre parcours !
         signature: L'équipe Umed
@@ -38,12 +38,12 @@ fr:
       subject: Votre abonnement est expiré
       body:
         title: Cher (Chère) membre,
-        line1: "Vous aviez souscrit à un abonnement %{plan} à %{price} pour une durée de %{duration} mois à partir de %{start_date}. Votre abonnement a expiré le %{end_date} et n'est donc plus valable."
-        line2: "Vous pouvez le prolongez à tout moment via votre compte Umed."
-        line3: "Cordialement,"
+        line1: Vous aviez souscrit à un abonnement %{plan} à %{price} pour une durée de %{duration} mois à partir de %{start_date}. Votre abonnement a expiré le %{end_date} et n'est donc plus valable.
+        line2: Vous pouvez le prolongez à tout moment via votre compte Umed.
+        line3: Cordialement,
         signature: L'équipe Umed
   contact_mailer:
-    subject: "Demande d'infos via formulaire de contact"
+    subject: Demande d'infos via formulaire de contact
   links:
     home: Accueil
     blog: Blog
@@ -51,78 +51,78 @@ fr:
     about: À propos
     faq: FAQ
     contact: Contact
-    new: 'Ajouter'
-    edit: 'Modifier'
-    show: 'Détails'
-    delete: 'Supprimer'
-    take_quiz: 'Commencer le Quiz'
-    levels: 'Niveaux'
-    subjects: 'Matières'
-    themes: 'Thèmes'
-    questions: 'Questions'
-    answers: 'Réponses'
-    dashboard: 'Mon Dashboard'
-    profile: 'Mon profil'
-    quizzes: 'Mes quizzes'
-    subscriptions: 'Mes abonnements'
-    sign_in: "Se connecter"
-    sign_up: "S'inscrire"
-    sign_out: "Se déconnecter"
-    forgot_password: "Mot de passe oublié ?"
-    confirmation_instructions_not_received: "Pas reçu les instructions pour modifier le mot de passe ?"
-    unlock_instructions_not_received: "Pas reçu les instructions pour débloquer le compte ?"
-    back_to: "Retour"
-    next: 'Suivant'
-    details: 'Détails'
-    plans: "Prix"
+    new: Ajouter
+    edit: Modifier
+    show: Détails
+    delete: Supprimer
+    take_quiz: Commencer le Quiz
+    levels: Niveaux
+    subjects: Matières
+    themes: Thèmes
+    questions: Questions
+    answers: Réponses
+    dashboard: Mon Dashboard
+    profile: Mon profil
+    quizzes: Mes quizzes
+    subscriptions: Mes abonnements
+    sign_in: Se connecter
+    sign_up: S'inscrire
+    sign_out: Se déconnecter
+    forgot_password: Mot de passe oublié ?
+    confirmation_instructions_not_received: Pas reçu les instructions pour modifier le mot de passe ?
+    unlock_instructions_not_received: Pas reçu les instructions pour débloquer le compte ?
+    back_to: Retour
+    next: Suivant
+    details: Détails
+    plans: Prix
   levels:
     index:
-      title: 'Liste des niveaux de difficulté'
-      empty: 'Aucun niveau de difficulté trouvé'
-      name: 'Description'
+      title: Liste des niveaux de difficulté
+      empty: Aucun niveau de difficulté trouvé
+      name: Description
     new:
-      title: 'Ajouter un niveau de difficulté'
+      title: Ajouter un niveau de difficulté
     edit:
-      title: 'Modifier le niveau de difficulté'
+      title: Modifier le niveau de difficulté
   subjects:
     index:
-      title: 'Liste des matières'
-      empty: 'Aucune matière trouvée'
-      name: 'Matière'
-      level: 'Niveau'
+      title: Liste des matières
+      empty: Aucune matière trouvée
+      name: Matière
+      level: Niveau
     show:
       title: "%{subject}: thèmes disponibles"
-      empty: 'Aucun thème disponible'
-      theme: 'Thème'
+      empty: Aucun thème disponible
+      theme: Thème
     edit:
-      title: 'Modifier la matière'
+      title: Modifier la matière
     new:
-      title: "Nouvelle Matière"
+      title: Nouvelle Matière
   themes:
     index:
-      title: 'Liste des thèmes'
-      empty: 'Aucun thème trouvé'
+      title: Liste des thèmes
+      empty: Aucun thème trouvé
       theme: Thème
       subject: Matière
     new:
-      title: "Nouveau thème"
+      title: Nouveau thème
     edit:
-      title: 'Modifier le thème'
+      title: Modifier le thème
     show:
       title: "%{theme}: questions disponibles"
       empty: Aucune question disponible
       question: Question
   questions:
     index:
-      title: "Liste des questions, total: %{total}"
-      empty: 'Aucune question trouvée'
+      title: Liste des questions, total %{total}
+      empty: Aucune question trouvée
       question: Question
       theme: Thème
     new:
-      title: 'Nouvelle question'
-      text: 'Question'
+      title: Nouvelle question
+      text: Question
     edit:
-      title: 'Modifier la question'
+      title: Modifier la question
     show:
       title: "%{question}: réponses disponibles"
       empty: Aucune réponse trouvée
@@ -130,15 +130,15 @@ fr:
       correct: Correct/Non
   answers:
     index:
-      title: 'Liste des réponses'
-      empty: 'Aucune réponse trouvée'
-      text: 'Réponse'
-      question: 'Question'
-      correct: 'Correcte ou Non'
+      title: Liste des réponses
+      empty: Aucune réponse trouvée
+      text: Réponse
+      question: Question
+      correct: Correcte ou Non
     new:
-      title: 'Nouvelle réponse'
+      title: Nouvelle réponse
     edit:
-      title: 'Modifier la réponse'
+      title: Modifier la réponse
   quizzes:
     index:
       title: Vos quizzes
@@ -174,7 +174,7 @@ fr:
         title: Sélectionnez une matière
       theme:
         title: Sélectionnez un thème
-        questions_to_answer: "Sélectionnez le nombre de questions du Quiz:"
+        questions_to_answer: Sélectionnez le nombre de questions du Quiz
     questions:
       question:
         title: Question du Quiz
@@ -184,7 +184,7 @@ fr:
     prices:
       button: Commencer !
       price: "%{price}/mois"
-      questions: "Vous avez accès à %{number} questions"
+      questions: Vous avez accès à %{number} questions
       free:
         plan_title: Gratuit
         line1: Vous avez accès à 5 questions par thème
@@ -192,7 +192,7 @@ fr:
         line3: Commencez tout de suite
       premium:
         line1: Vous avez accès à plus de 1500 questions
-        line2: "Le prix d'un sandwich"
+        line2: Le prix d'un sandwich
         line3: Commencez tout de suite
       premiumplus:
         price: "%{price}/trimestre"
@@ -200,7 +200,7 @@ fr:
         line2: Offre avantageuse
         line3: Commencez tout de suite
     index:
-      empty: "Aucun tarif disponible"
+      empty: Aucun tarif disponible
       title: Liste des prix
       name: Libellé
       description: Description
@@ -237,8 +237,8 @@ fr:
       meta_description: foire aux questions Umed
       meta_key_words: faq, foire aux questions, tout savoir sur Umed
     about:
-      title: À propos d\'UMed
-      meta_description: à propos d\'Umed, about Umed
+      title: À propos d'UMed
+      meta_description: à propos d'Umed, about Umed
       meta_key_words: qui sommes nous, qui est derrière Umed
     credits:
       title: Crédits
@@ -303,80 +303,80 @@ fr:
       default: "%d %B %Y %H:%M:%S"
       short: "%d %b %H:%M"
       long: "%A %d %B %Y %H:%M"
-    am: 'am'
-    pm: 'pm'
+    am: am
+    pm: pm
 
   datetime:
     distance_in_words:
-      half_a_minute: "une demi-minute"
+      half_a_minute: une demi-minute
       less_than_x_seconds:
-        zero:  "moins d'une seconde"
-        one:   "moins d'une seconde"
-        other: "moins de %{count} secondes"
+        zero:  moins d'une seconde
+        one:   moins d'une seconde
+        other: moins de %{count} secondes
       x_seconds:
-        one:   "1 seconde"
+        one:   1 seconde
         other: "%{count} secondes"
       less_than_x_minutes:
-        zero:  "moins d'une minute"
-        one:   "moins d'une minute"
-        other: "moins de %{count} minutes"
+        zero:  moins d'une minute
+        one:   moins d'une minute
+        other: moins de %{count} minutes
       x_minutes:
-        one:   "1 minute"
+        one:   1 minute
         other: "%{count} minutes"
       about_x_hours:
-        one:   "environ une heure"
-        other: "environ %{count} heures"
+        one:   environ une heure
+        other: environ %{count} heures
       x_days:
-        one:   "1 jour"
+        one:   1 jour
         other: "%{count} jours"
       about_x_months:
-        one:   "environ un mois"
-        other: "environ %{count} mois"
+        one:   environ un mois
+        other: environ %{count} mois
       x_months:
-        one:   "1 mois"
+        one:   1 mois
         other: "%{count} mois"
       about_x_years:
-        one:   "environ un an"
-        other: "environ %{count} ans"
+        one:   environ un an
+        other: environ %{count} ans
       over_x_years:
-        one:   "plus d'un an"
-        other: "plus de %{count} ans"
+        one:   plus d'un an
+        other: plus de %{count} ans
       almost_x_years:
-        one:   "presqu'un an"
-        other: "presque %{count} ans"
+        one:   presqu'un an
+        other: presque %{count} ans
     prompts:
-      year:   "Année"
-      month:  "Mois"
-      day:    "Jour"
-      hour:   "Heure"
-      minute: "Minute"
-      second: "Seconde"
+      year:   Année
+      month:  Mois
+      day:    Jour
+      hour:   Heure
+      minute: Minute
+      second: Seconde
 
   number:
     format:
       separator: ","
-      delimiter: " "
+      delimiter:
       precision: 3
       significant: false
       strip_insignificant_zeros: false
     currency:
       format:
         format: "%n %u"
-        unit: "€"
+        unit: €
         separator: ","
-        delimiter: " "
+        delimiter:
         precision: 2
         significant: false
         strip_insignificant_zeros: false
     percentage:
       format:
-        delimiter: ""
+        delimiter:
     precision:
       format:
-        delimiter: ""
+        delimiter:
     human:
       format:
-        delimiter: ""
+        delimiter:
         precision: 2
         significant: true
         strip_insignificant_zeros: true
@@ -384,86 +384,86 @@ fr:
         format: "%n %u"
         units:
           byte:
-            one:   "octet"
-            other: "octets"
-          kb: "ko"
-          mb: "Mo"
-          gb: "Go"
-          tb: "To"
+            one:   octet
+            other: octets
+          kb: ko
+          mb: Mo
+          gb: Go
+          tb: To
       decimal_units:
         format: "%n %u"
         units:
-          unit: ""
-          thousand: "millier"
-          million: "million"
-          billion: "milliard"
-          trillion: "billion"
-          quadrillion: "million de milliards"
+          unit:
+          thousand: millier
+          million: million
+          billion: milliard
+          trillion: billion
+          quadrillion: million de milliards
 
   support:
     array:
-      words_connector: ", "
-      two_words_connector: " et "
-      last_word_connector: " et "
+      words_connector: ","
+      two_words_connector:  et
+      last_word_connector:  et
 
   helpers:
     select:
-      prompt: "Veuillez sélectionner"
+      prompt: Veuillez sélectionner
     submit:
       contact:
         create: Envoyer
-      create: "Créer %{model}"
-      update: "Modifier %{model}"
-      submit: "Enregistrer %{model}"
+      create: Créer %{model}
+      update: Modifier %{model}
+      submit: Enregistrer %{model}
     #kaminari
     page_entries_info:
       one_page:
         display_entries:
-          zero: "Aucun %{entry_name} trouvé"
-          one: "Voir <b>1</b> %{entry_name}"
-          other: "Voir <b>tous %{count}</b> %{entry_name}"
+          zero: Aucun %{entry_name} trouvé
+          one: Voir <b>1</b> %{entry_name}
+          other: Voir <b>tous %{count}</b> %{entry_name}
       more_pages:
-        display_entries: "Voir %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b> de <b>%{total}</b> en total"
+        display_entries: Voir %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b> de <b>%{total}</b> en total
 
   errors: &errors
     format: "%{attribute} %{message}"
     messages: &errors_messages
-      access_denied: "Oups, vous n'avez pas le droit d'accéder à cette page."
-      inclusion: "n'est pas inclus(e) dans la liste"
-      exclusion: "n'est pas disponible"
-      invalid: "n'est pas valide"
-      confirmation: "ne concorde pas avec la confirmation"
-      accepted: "doit être accepté(e)"
-      empty: "doit être rempli(e)"
-      blank: "doit être rempli(e)"
+      access_denied: Oups, vous n'avez pas le droit d'accéder à cette page.
+      inclusion: n'est pas inclus(e) dans la liste
+      exclusion: n'est pas disponible
+      invalid: n'est pas valide
+      confirmation: ne concorde pas avec la confirmation
+      accepted: doit être accepté(e)
+      empty: doit être rempli(e)
+      blank: doit être rempli(e)
       too_long:
-        one: "est trop long (pas plus d'un caractère)"
-        other: "est trop long (pas plus de %{count} caractères)"
+        one: est trop long (pas plus d'un caractère)
+        other: est trop long (pas plus de %{count} caractères)
       too_short:
-        one: "est trop court (au moins un caractère)"
-        other: "est trop court (au moins %{count} caractères)"
+        one: est trop court (au moins un caractère)
+        other: est trop court (au moins %{count} caractères)
       wrong_length:
-        one: "ne fait pas la bonne longueur (doit comporter un seul caractère)"
-        other: "ne fait pas la bonne longueur (doit comporter %{count} caractères)"
-      not_a_number: "n'est pas un nombre"
-      not_an_integer: "doit être un nombre entier"
-      greater_than: "doit être supérieur à %{count}"
-      greater_than_or_equal_to: "doit être supérieur ou égal à %{count}"
-      equal_to: "doit être égal à %{count}"
-      less_than: "doit être inférieur à %{count}"
-      less_than_or_equal_to: "doit être inférieur ou égal à %{count}"
-      odd: "doit être impair"
-      even: "doit être pair"
-      taken: "n'est pas disponible"
+        one: ne fait pas la bonne longueur (doit comporter un seul caractère)
+        other: ne fait pas la bonne longueur (doit comporter %{count} caractères)
+      not_a_number: n'est pas un nombre
+      not_an_integer: doit être un nombre entier
+      greater_than: doit être supérieur à %{count}
+      greater_than_or_equal_to: doit être supérieur ou égal à %{count}
+      equal_to: doit être égal à %{count}
+      less_than: doit être inférieur à %{count}
+      less_than_or_equal_to: doit être inférieur ou égal à %{count}
+      odd: doit être impair
+      even: doit être pair
+      taken: n'est pas disponible
       record_invalid: "La validation a échoué : %{errors}"
-      in_between: "doit être entre %{min} et %{max}"
-      spoofed_media_type: "ne correspond pas au contenu déclaré"
+      in_between: doit être entre %{min} et %{max}
+      spoofed_media_type: ne correspond pas au contenu déclaré
 
     template: &errors_template
       header:
         one:   "Impossible d'enregistrer ce(tte) %{model} : 1 erreur"
         other: "Impossible d'enregistrer ce(tte) %{model} : %{count} erreurs"
-      body: "Veuillez vérifier les champs suivants : "
+      body: "Veuillez vérifier les champs suivants:"
 
   activemodel:
     errors:

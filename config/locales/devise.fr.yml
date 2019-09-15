@@ -34,21 +34,21 @@ fr:
       confirmation_instructions:
         action: Confirmer mon courriel
         greeting: Bienvenue !
-        instruction: Vous pouvez confirmer votre courriel grâce au lien ci-dessous:
+        instruction: Vous pouvez confirmer votre courriel grâce au lien ci-dessous
       reset_password_instructions:
         subject: Modification de votre mot de passe
         action: Changer mon mot de passe
         greeting: Bonjour !
-        instruction: Un lien a été généré afin de réinitialiser votre mot de passe:
+        instruction: Un lien a été généré afin de réinitialiser votre mot de passe
         instruction_2: Si vous n'avez pas émis cette demande, merci d'ignorer ce mail.
         instruction_3: Votre mot de passe ne changera pas tant que vous n'aurez pas cliqué sur ce lien et renseigné un nouveau mot de passe.
       unlock_instructions:
         action: Débloquer mon compte
         greeting: Bonjour !
-        instruction: Suivez ce lien pour débloquer votre compte:
+        instruction: Suivez ce lien pour débloquer votre compte
         message: Votre compte a été bloqué suite à un trop grand nombre de tentavies échouées de connexion
     omniauth_callbacks:
-      failure: Nous n'avons pas pu vous authentifier via %{kind} : %{reason}.
+      failure: "Nous n'avons pas pu vous authentifier via %{kind}: %{reason}."
       success: Authentifié avec succès via %{kind}.
     passwords:
       edit:
@@ -56,7 +56,7 @@ fr:
         change_your_password: Changer votre mot de passe
         confirm_new_password: Confirmez votre nouveau mot de passe
         new_password: Nouveau mot de passe
-        hint: %{length} caractères minimum
+        hint: "%{length} caractères minimum"
       new:
         forgot_your_password: Mot de passe oublié ?
         send_me_reset_password_instructions: Réinitialiser
@@ -70,7 +70,7 @@ fr:
         back: Retour
         are_you_sure: Êtes-vous sûr ?
         cancel_my_account: Supprimer mon compte
-        currently_waiting_confirmation_for_email: Confirmation en attente pour: %{email}
+        currently_waiting_confirmation_for_email: Confirmation en attente pour %{email}
         leave_blank_if_you_don_t_want_to_change_it: laissez ce champ vide pour le laisser inchangé
         title: Modifier %{resource}
         unhappy: Pas content ?
@@ -78,7 +78,7 @@ fr:
         we_need_your_current_password_to_confirm_your_changes: nous avons besoin de votre mot de passe actuel pour valider ces modifications
       new:
         sign_up: Inscription
-        hint: %{length} caractères minimum
+        hint: "%{length} caractères minimum"
       destroyed: Votre compte a été supprimé avec succès. Nous espérons vous revoir bientôt.
       signed_up: Votre compte a bien été créé et vous êtes désormais connecté(e)
       signed_up_but_inactive: Vous êtes bien enregistré. Vous ne pouvez cependant pas vous connecter car votre compte n'est pas encore activé.
@@ -106,5 +106,5 @@ fr:
       not_found: n'a pas été trouvé(e)
       not_locked: n'était pas verrouillé(e)
       not_saved:
-        one: 1 erreur a empêché ce(tte) %{resource} d'être sauvegardé(e) :
-        other: %{count} erreurs ont empêché ce(tte) %{resource} d'être sauvegardé(e) :
+        one: 1 erreur a empêché ce(tte) %{resource} d'être sauvegardé(e)
+        other: "%{count} erreurs ont empêché ce(tte) %{resource} d'être sauvegardé(e)"
