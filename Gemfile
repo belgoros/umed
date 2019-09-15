@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 ruby '2.6.3'
 
 gem 'activemerchant',              '~> 1.98'
+gem 'autoprefixer-rails',          '~> 9.6', '>= 9.6.1.1'
 gem 'aws-sdk',                     '~> 3.0', '>= 3.0.1'
 gem 'bootsnap',                    '~> 1.4', '>= 1.4.5', require: false
 gem 'chartkick',                   '~> 3.2', '>= 3.2.1'

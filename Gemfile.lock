@@ -50,6 +50,8 @@ GEM
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
     arel (9.0.0)
+    autoprefixer-rails (9.6.1.1)
+      execjs
     aws-eventstream (1.0.3)
     aws-partitions (1.211.0)
     aws-sdk (3.0.1)
@@ -1097,6 +1099,7 @@ PLATFORMS
 
 DEPENDENCIES
   activemerchant (~> 1.98)
+  autoprefixer-rails (~> 9.6, >= 9.6.1.1)
   aws-sdk (~> 3.0, >= 3.0.1)
   bootsnap (~> 1.4, >= 1.4.5)
   brakeman (~> 4.6, >= 4.6.1)
