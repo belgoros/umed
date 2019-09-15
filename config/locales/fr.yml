@@ -234,16 +234,16 @@ fr:
   home:
     faq:
       title: FAQ
-      meta_description: "foire aux questions Umed"
-      meta_key_words: "faq, foire aux questions, tout savoir sur Umed"
+      meta_description: foire aux questions Umed
+      meta_key_words: faq, foire aux questions, tout savoir sur Umed
     about:
-      title: "À propos d\'UMed"
-      meta_description: "à propos d\'Umed, about Umed"
-      meta_key_words: "qui sommes nous, qui est derrière Umed"
+      title: À propos d\'UMed
+      meta_description: à propos d\'Umed, about Umed
+      meta_key_words: qui sommes nous, qui est derrière Umed
     credits:
       title: Crédits
-      meta_description: "nos remerciements pour icônes, our thanks for icons, flaticon.com"
-      meta_key_words: "merci, icônes, remerciements, thanks for icons, flaticon.com"
+      meta_description: nos remerciements pour icônes, our thanks for icons, flaticon.com
+      meta_key_words: merci, icônes, remerciements, thanks for icons, flaticon.com
   date:
     formats:
       default: "%d/%m/%Y"
