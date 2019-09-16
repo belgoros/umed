@@ -106,6 +106,7 @@ Rails.application.configure do
                       signature: ENV['paypal_api_signature']
                      }
     ::EXPRESS_GATEWAY = ActiveMerchant::Billing::PaypalExpressGateway.new(paypal_options)
+  end
 
   if ENV["RAILS_LOG_TO_STDOUT"].present?
     logger           = ActiveSupport::Logger.new(STDOUT)
