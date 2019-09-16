@@ -1,16 +1,16 @@
 fr:
   simple_form:
     error_notification:
-      default_message: "Veuillez corriger les erreurs ci-dessous:"
+      default_message: Veuillez corriger les erreurs ci-dessous
     required:
-      text: 'obligatoire'
-      mark: '*'
+      text: obligatoire
+      mark: "*"
     labels:
       subject:
-        name: 'Nom'
-        level: 'Niveau'
+        name: Nom
+        level: Niveau
       theme:
-        name: 'Nom'
+        name: Nom
       quiz:
         level: Niveau
         subject: Matière
@@ -20,5 +20,5 @@ fr:
         name: Votre nom
         message: Message
 
-    "yes": 'Oui'
-    "no": 'Non'
+    "yes": Oui
+    "no": Non

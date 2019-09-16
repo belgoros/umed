@@ -1,4 +1,4 @@
-class OrderTransaction < ActiveRecord::Base
+class OrderTransaction < ApplicationRecord
   belongs_to :subscription
   serialize :params
 

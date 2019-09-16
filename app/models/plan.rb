@@ -1,4 +1,4 @@
-class Plan < ActiveRecord::Base
+class Plan < ApplicationRecord
   has_many :subscriptions, dependent: :destroy
   validates :description, :duration, :price, :questions, presence: true
   validates :name, presence: true, uniqueness: { case_sensitive: false }

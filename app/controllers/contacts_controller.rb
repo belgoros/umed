@@ -1,5 +1,5 @@
 class ContactsController < ApplicationController
-  skip_before_filter :authenticate_user!
+  skip_before_action :authenticate_user!
 
   def new
     @contact = Contact.new
@@ -19,6 +19,7 @@ class ContactsController < ApplicationController
   end
 
   private
+
   def contact_params
     params.require(:contact).permit(:name, :email, :message)
   end

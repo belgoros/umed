@@ -5,11 +5,11 @@ FactoryBot.define do
     unique_session_id { Devise.friendly_token.first(12)}
 
     factory :admin do
-      admin true
+      admin {true}
     end
 
     factory :premium_user do
-      premium true
+      premium {true}
     end
   end
 end

@@ -1,5 +1,5 @@
 class SubscriptionsController < ApplicationController
-  before_filter :setup_plan, only: [:express_checkout, :new]
+  before_action :setup_plan, only: [:express_checkout, :new]
 
   def index
     @subscriptions = current_user.subscriptions.order(start_date: :desc).page params[:page]

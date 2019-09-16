@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
-  skip_before_filter :authenticate_user!
-  before_filter :load_subscription_plans, only: :index
+  skip_before_action :authenticate_user!
+  before_action :load_subscription_plans, only: :index
 
   def index
   end

@@ -1,6 +1,5 @@
 class LevelsController < ApplicationController
   before_action :sign_in_admin
-
   before_action :set_level, only: [:show, :edit, :update, :destroy]
 
   # GET /levels

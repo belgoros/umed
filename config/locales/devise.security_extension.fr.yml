@@ -1,16 +1,29 @@
 fr:
   errors:
     messages:
-      taken_in_past: "a été utilisé auparavant"
-      equal_to_current_password: "doit être différent de mot de passe précédent."
-      password_format: "doit contenir majuscules, miniscules et chiffres"
+      taken_in_past: a été utilisé trop récemment. Veuillez en choisir un autre
+      equal_to_current_password: doit être différent de l'actuel
+      password_complexity:
+        digit:
+          one: doit contenir au moins un chiffre
+          other: doit contenir au moins %{count} chiffres
+        lower:
+          one: doit contenir au moins une lettre miniscule
+          other: doit contenir au moins %{count} lettres miniscules
+        symbol:
+          one: doit contenir au moins un signe de ponctuation
+          other: doit contenir au moins %{count} signes de ponctuation
+        upper:
+          one: doit contenir au moins une lettre majuscule
+          other: doit contenir au moins %{count} lettres majuscules
   devise:
-    invalid_captcha: "Captcha entré n\'est pas valide "
+    invalid_captcha: Le captcha n'est pas valide
+    invalid_security_question: La réponse à la question de sécurité est invalide
     paranoid_verify:
-      code_required: "Veuillez introduire le code fourni pas notre équipe de support"
+      code_required: Veuillez entrer le code fourni par notre équipe de support
     password_expired:
-      updated: "Votre nouveau mot de passe a été enregistré avec succès"
-      change_required: "Votre mot de passe est expiré. Veuillez le renouveler."
+      updated: Votre nouveau mot de passe est enregistré
+      change_required: Votre mot de passe a expiré. Veuillez en choisir un autre
     failure:
-      session_limited: 'Votre compte a déjà été utilisé pour se connecter sur un autre appareil. '
-      expired: 'Votre compte est suspendu suite à son inactivité. Veuillez contacter le service de support.'
+      session_limited: Vos identifiants de connexion ont été utilisés dans un autre navigateur. Veuillez vous reconnecter pour continuer dans ce navigateur
+      expired: Votre compte a expiré pour cause d'inactivité. Veuillez contacter l'administrateur du site
