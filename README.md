@@ -13,10 +13,11 @@ A student can run the wizard as many times as he or she needs.
 
 ## Used technologies
 
-* Ruby 2.4.0
-* Rails 4.2.7
+* Ruby 2.6.3
+* Rails 5.2.3
 * Slim
 * Devise
+* devise-security
 * Paperclip
 * RSpec
 * Capybara
@@ -35,3 +36,7 @@ A student can run the wizard as many times as he or she needs.
 * PayPal
 
 You can see the application in action [here](https://umed.herokuapp.com/) deployed at [Heroku](https://www.heroku.com).
+
+### Rake tasks
+
+To populate the local database, you can run `rails db:populate` task.
