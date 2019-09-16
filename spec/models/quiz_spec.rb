@@ -3,16 +3,9 @@ require 'rails_helper'
 describe Quiz, type: :model do
   context "associations" do
     it { should belong_to(:user)}
-    it { should belong_to(:level)}
-    it { should belong_to(:subject)}
-    it { should belong_to(:theme)}
-  end
-
-  context "validations" do
-    it { should validate_presence_of(:user_id)}
-    it { should validate_presence_of(:level_id)}
-    it { should validate_presence_of(:subject_id)}
-    it { should validate_presence_of(:theme_id)}
+    it { should belong_to(:level).without_validating_presence}
+    it { should belong_to(:subject).without_validating_presence}
+    it { should belong_to(:theme).without_validating_presence}
   end
 
   context "#answers" do

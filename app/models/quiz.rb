@@ -1,8 +1,11 @@
 class Quiz < ApplicationRecord
   belongs_to :user
-  belongs_to :level
-  belongs_to :subject
-  belongs_to :theme
+  # If you set the :optional to true, then the presence of the associated
+  # belongs_to association won't be validated.
+  # By default, this option is set to false.
+  belongs_to :level,   optional: true
+  belongs_to :subject, optional: true
+  belongs_to :theme,   optional: true
   serialize :question_ids, Array
   serialize :answer_ids, Array
 
@@ -20,7 +23,6 @@ class Quiz < ApplicationRecord
 
   attr_accessor :form_step
 
-  validates :user_id, presence: true
   validates :level_id,   presence: true,  if: -> { required_for_step?(:level) }
   validates :subject_id, presence: true,  if: -> { required_for_step?(:subject)}
   validates :theme_id,   presence: true,  if: -> { required_for_step?(:theme)}
