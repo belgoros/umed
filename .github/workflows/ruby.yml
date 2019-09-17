@@ -3,7 +3,7 @@ name: Ruby
 on: [push, pull_request]
 
 jobs:
-  build:
+  vm-job:
     runs-on: ubuntu-latest
     services:
       postgres:
@@ -39,13 +39,11 @@ jobs:
         gem install bundler
         bundle install --jobs 4 --retry 3
         bin/rails db:setup
-    - name: Build and test with Rake
+    - name: Build and test with RSpec
       env:
         PGHOST: localhost
         PGUSER: postgres
         PGPORT: ${{ job.services.postgres.ports[5432] }} # get randomly assigned published port
         RAILS_ENV: test
       run: |
-        gem install bundler
-        bundle install --jobs 4 --retry 3
         bundle exec rspec
