@@ -1,3 +1,15 @@
+## 2.0.3/17-09-2019
+
+Implement GitHub actions workflow for testing
+
+## 2.0.2/16-09-2019
+
+Fix deprecation warning about dangerous query method in raw SQL
+
+## 2.0.1/16-09-2019
+
+Fix README Ruby and Rails versions
+
 ## 2.0.0/16-09-2019
 
 * update Raisl to 5.2.3
