@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.6.3'
+ruby '2.6.5'
 
 gem 'activemerchant',              '~> 1.98'
 gem 'aws-sdk',                     '~> 3.0', '>= 3.0.1'
@@ -17,7 +17,7 @@ gem 'jquery-rails',                '~> 4.3', '>= 4.3.5'
 gem 'kaminari',                    '~> 1.1', '>= 1.1.1'
 gem 'nokogiri',                    '~> 1.10', '>= 1.10.4'
 gem 'paperclip',                   '~> 6.1'
-gem 'pg',                          '~> 1.1', '>= 1.1.4'
+gem 'pg',                          '>= 0.18', '< 2.0'
 gem 'puma',                        '~> 4.3'
 gem 'rails',                       '~> 5.2.0'
 gem 'roadie-rails',                '~> 2.1'
