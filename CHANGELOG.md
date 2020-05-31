@@ -12,7 +12,7 @@ Fix README Ruby and Rails versions
 
 ## 2.0.0/16-09-2019
 
-* update Raisl to 5.2.3
+* update Rails to 5.2.3
 * update all the gems to the latest versions, except `fundation-rails`
 
 ## 1.1.0/02-11-2016
