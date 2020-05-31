@@ -1,4 +1,4 @@
-class AddDeviseSecurityExtensionSessionLimitableColumnsToUsers < ActiveRecord::Migration
+class AddDeviseSecurityExtensionSessionLimitableColumnsToUsers < ActiveRecord::Migration[5.2]
   def change
     add_column :users, :unique_session_id, :string, limit: 20
   end

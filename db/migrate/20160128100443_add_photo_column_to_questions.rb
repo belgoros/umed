@@ -1,4 +1,4 @@
-class AddPhotoColumnToQuestions < ActiveRecord::Migration
+class AddPhotoColumnToQuestions < ActiveRecord::Migration[5.2]
   def up
     add_attachment :questions, :photo
   end
