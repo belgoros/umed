@@ -1,3 +1,7 @@
+## 2.0.4/31-05-2020
+
+Disable GitHub actions, use Travis CI
+
 ## 2.0.3/17-09-2019
 
 Implement GitHub actions workflow for testing
